@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@import
+    // abstracts
+    '../scss/abstracts/mixins',
+    '../scss/abstracts/variable',
+
+    // base
+    '../scss/base/font',
+    '../scss/base/reset',
+    '../scss/base/image',
+    '../scss/base/icon',
+
+    // components
+    '../scss/components/button',
+    '../scss/components/input',
+    '../scss/components/modal',
+    '../scss/components/pagination',
+    '../scss/components/table',
+
+    // layout
+    '../scss/layout/common',
+    '../scss/layout/header',
+    '../scss/layout/content',
+    '../scss/layout/aside';
