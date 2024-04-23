@@ -1,4 +1,17 @@
 .icon {
-
+  @each $icon24 in user, cart {
+    &.#{$icon24} {
+      background: center / contain no-repeat url($icon-path + 'icon_24_#{$icon24}.svg');
+      min-width: 2.4rem;
+      min-height: 2.4rem;
+    }
+  }
+  @each $icon28 in envelope {
+    &.#{$icon28} {
+      background: center / contain no-repeat url($icon-path + 'icon_28_#{$icon28}.svg');
+      min-width: 2.8rem;
+      min-height: 2.8rem;
+    }
+  }
 }
 

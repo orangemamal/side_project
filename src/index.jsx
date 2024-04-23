@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import Root from "./routes/Root";
+import Login from "./routes/Login";
+import Frame from "./routes/Frame";
 import ErrorPage from "./routes/ErrorPage";
+
+import Home from "./components/Home";
+import Shop from "./components/Shop";
 
 import './assets/css/bootstrap.min.css';
 import './assets/css/main.css';
@@ -20,12 +24,21 @@ import {
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Login />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/main/*",
+    element: <Frame />,
     errorElement: <ErrorPage />,
     children: [
       {
-        // path: "contacts/:contactId",
-        // element: <Contact />,
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "shop",
+        element: <Shop />,
       },
     ],
   },

@@ -1,4 +1,5 @@
 {
+  "parser": "babel-eslint", // The keyword 'import' is reserved eslint 해결 방안
   "plugins": [
     "testing-library",
     "jest-dom"
