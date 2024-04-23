@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -39,7 +40,11 @@ export default function Footer() {
 
         <div className="row g-5 mb-5">
           <div className="col-lg-4">
-            <div className="mb-4 footer-logo-wrap"><a href="#" className="footer-logo">Furni<span>.</span></a></div>
+            <div className="mb-4 footer-logo-wrap">
+              <Link className="footer-logo" to="/home">
+                <img src={require("assets/images/img_logo_color.svg").default} alt="FurNi"/>
+              </Link>
+            </div>
             <p className="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
               malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
               Pellentesque

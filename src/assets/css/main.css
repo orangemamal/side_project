@@ -902,6 +902,7 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 .footer-section {
   padding: 80px 0;
   background: white;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
 }
 .footer-section .relative {
   position: relative;
@@ -930,10 +931,13 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   font-size: 18px;
   font-weight: 500;
   color: #3b5d50;
+  margin-bottom: 0.8rem;
 }
 .footer-section .subscription-form .form-control {
+  min-width: 16rem;
   height: 50px;
   border-radius: 10px;
+  padding: 1.2rem;
 }
 .footer-section .subscription-form .form-control:active, .footer-section .subscription-form .form-control:focus {
   outline: none;
@@ -941,20 +945,19 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   border-color: #3b5d50;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
 }
-.footer-section .subscription-form .form-control::-webkit-input-placeholder {
-  font-size: 14px;
-}
-.footer-section .subscription-form .form-control::-moz-placeholder {
-  font-size: 14px;
-}
-.footer-section .subscription-form .form-control:-ms-input-placeholder {
-  font-size: 14px;
-}
-.footer-section .subscription-form .form-control:-moz-placeholder {
-  font-size: 14px;
+.footer-section .subscription-form .form-control::-webkit-input-placeholder, .footer-section .subscription-form .form-control::-moz-placeholder, .footer-section .subscription-form .form-control:-ms-input-placeholder, .footer-section .subscription-form .form-control:-moz-placeholder {
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
 }
 .footer-section .subscription-form .btn {
   border-radius: 10px !important;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-section .subscription-form .btn .fa-paper-plane {
+  font-size: 14px;
 }
 .footer-section .sofa-img {
   position: absolute;
@@ -976,11 +979,8 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 .footer-section .links-wrap ul li {
   margin-bottom: 10px;
 }
-.footer-section .footer-logo-wrap .footer-logo {
-  font-size: 32px;
-  font-weight: 500;
-  text-decoration: none;
-  color: #3b5d50;
+.footer-section .footer-logo-wrap .footer-logo img {
+  height: 3.2rem;
 }
 .footer-section .custom-social li {
   margin: 2px;
@@ -1044,6 +1044,10 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   color: rgba(255, 255, 255, 0.5);
   margin-botom: 30px;
 }
+.hero p.multi_btn_wrap .btn {
+  font: 1.2rem/1.5rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 500;
+}
 .hero .hero-img-wrap {
   position: relative;
 }
@@ -1091,6 +1095,102 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   .hero .hero-img-wrap:after {
     top: -40px;
   }
+}
+
+.app {
+  height: 100%;
+}
+.app .login {
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.app .login .input_field_window {
+  width: 60rem;
+  display: flex;
+  background: white;
+  border-radius: 1.2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px 0 rgba(59, 93, 80, 0.4);
+}
+.app .login .input_field_window .side {
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem 1.6rem;
+}
+.app .login .input_field_window .side.left {
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  background: #3b5d50;
+  border-radius: 1.2rem 0 0 1.2rem;
+}
+.app .login .input_field_window .side.left img {
+  height: 4rem;
+  margin: 2.4rem 0;
+}
+.app .login .input_field_window .side.left .comment {
+  font: 1.8rem/2.3rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 100;
+  color: white;
+  opacity: 0.6;
+}
+.app .login .input_field_window .side.left .comment.top {
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+}
+.app .login .input_field_window .side.right {
+  width: 50%;
+  justify-content: center;
+}
+.app .login .input_field_window .side.right h3 {
+  margin-bottom: 6rem;
+  font: 3.2rem/4rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #3b5d50;
+  font-weight: 700;
+}
+.app .login .input_field_window .side.right input {
+  height: 4rem;
+  border-radius: 0.8rem;
+  border: 1px solid #ced4da;
+  margin-bottom: 1.6rem;
+  padding: 0.8rem 1.2rem;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #3b5d50;
+}
+.app .login .input_field_window .side.right input:last-of-type {
+  margin-bottom: 0;
+}
+.app .login .input_field_window .side.right .sign_up_wrap {
+  margin: 6rem 0 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #9FA4A8;
+}
+.app .login .input_field_window .side.right button.login_btn {
+  background: #3b5d50;
+  border-radius: 5rem;
+  color: white;
+  height: 4rem;
+  font-weight: 700;
+  font: 1.8rem/2.3rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 700;
+  transition: all 0.4s;
+}
+.app .login .input_field_window .side.right button.login_btn:hover {
+  opacity: 0.4;
+}
+.app .login .input_field_window .side.right button.sign_up {
+  color: #3b5d50;
+  font-weight: 700;
+  transition: all 0.4s;
+}
+.app .login .input_field_window .side.right button.sign_up:hover {
+  opacity: 0.4;
+  text-decoration: underline;
 }
 
 body {

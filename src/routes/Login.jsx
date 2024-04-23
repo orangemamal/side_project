@@ -10,10 +10,26 @@ export default function Login() {
   }
 
   return (
-    <div>
-      <input type="text"/>
-      <input type="password"/>
-      <button onClick={() => loginCheck()}>LOGIN</button>
+    <div className="app">
+      <div className="login">
+        <div className="input_field_window">
+          <div className="side left">
+            <div className="comment top">DESIGN FURNITURE</div>
+            <img src={require("assets/images/img_logo.svg").default} alt="FurNi"/>
+            <div className="comment">Login to Your Account</div>
+          </div>
+          <div className="side right">
+            <h3>WELCOME</h3>
+            <input type="text" placeholder="ID"/>
+            <input type="password" placeholder="Password"/>
+            <div className="sign_up_wrap">
+              <div><span>FurNi</span>가 처음이신가요?</div>
+              <button className="sign_up">회원가입</button>
+            </div>
+            <button className="login_btn" onClick={() => loginCheck()}>LOGIN</button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

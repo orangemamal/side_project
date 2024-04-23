@@ -5,41 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/icon_24_cart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/icon_24_user.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/icon_28_envelope.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/layout/_footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/layout/_hero.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Hero.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navigation.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Shop.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/img_logo_color.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/scss/layout/_login.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/bag.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/cart.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/cross.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/envelope-outline.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/return.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/support.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/truck.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/user.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/abstracts/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/abstracts/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/abstracts/_variable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/abstracts/_variable.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/base/_icon.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/base/_icon.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_aside.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_content.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_content.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_nav.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_hero.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Root.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Frame.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Shop.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Shop.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,30 +44,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/workSpace/post-saas-vue",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "C:\\Users\\netsro3\\Desktop\\studium\\template\\side_project\\node_modules\\eslint",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "watcher.settings",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/workSpace/post-saas-vue&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Users\\netsro3\\Desktop\\studium\\template\\side_project\\node_modules\\eslint&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\js" />
@@ -99,11 +76,11 @@
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\images" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\icons" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\css" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\public" />
-      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\js" />
     </key>
   </component>
   <component name="RunManager">
@@ -136,7 +113,8 @@
       <workItem from="1713428637171" duration="4202000" />
       <workItem from="1713486819469" duration="719000" />
       <workItem from="1713487556468" duration="78000" />
-      <workItem from="1713487655314" duration="50783000" />
+      <workItem from="1713487655314" duration="51753000" />
+      <workItem from="1713848347449" duration="7192000" />
     </task>
     <servers />
   </component>

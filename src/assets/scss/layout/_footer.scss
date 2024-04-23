@@ -1,6 +1,7 @@
 .footer-section {
   padding: 80px 0;
   background: $white;
+  @include font(1.4rem);
   .relative {
     position: relative;
   }
@@ -25,31 +26,33 @@
       font-size: 18px;
       font-weight: 500;
       color: $primary;
+      margin-bottom: 0.8rem;
     }
     .form-control {
+      min-width: 16rem;
       height: 50px;
       border-radius: 10px;
+      padding: 1.2rem;
       &:active, &:focus {
         outline: none;
         box-shadow: none;
         border-color: $primary;
         box-shadow: 0 1px 4px 0 rgba($black, .2);
       }
-      &::-webkit-input-placeholder {
-        font-size: 14px;
-      }
-      &::-moz-placeholder {
-        font-size: 14px;
-      }
-      &:-ms-input-placeholder {
-        font-size: 14px;
-      }
-      &:-moz-placeholder {
-        font-size: 14px;
+      &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder {
+        @include font(1.4rem);
       }
     }
     .btn {
       border-radius: 10px!important;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .fa-paper-plane {
+        font-size: 14px;
+      }
     }
   }
 
@@ -76,10 +79,9 @@
   }
   .footer-logo-wrap {
     .footer-logo {
-      font-size: 32px;
-      font-weight: 500;
-      text-decoration: none;
-      color: $primary;
+      img {
+        height: 3.2rem;
+      }
     }
   }
   .custom-social {

@@ -9,7 +9,6 @@
   }
 
   .intro-excerpt {
-
     position: relative;
     z-index: 4;
     @media (min-width: $lg) {
@@ -28,6 +27,12 @@
   p {
     color: rgba($white, .5);
     margin-botom: 30px;
+    &.multi_btn_wrap {
+      .btn {
+        @include font(1.2rem);
+        font-weight: $medium;
+      }
+    }
   }
   .hero-img-wrap {
     position: relative;
