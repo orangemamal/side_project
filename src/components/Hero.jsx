@@ -5,23 +5,23 @@ export default function Hero() {
   return (
     <div className="hero">
       <div className="container">
-        <div className="row justify-content-between">
+        <div className="row justify-content-between position">
           <div className="col-lg-5">
             <div className="intro-excerpt">
               <h1>
                 Modern Interior<br/>
                 <span clsas="d-block">DESIGN STUDIO</span>
               </h1>
-              <p className="mb-4">
+              <p className="sub_info mb-4">
                 놓기만 해도 인테리어가 되는 가구<br/>
                 FurNi를 만나보세요
               </p>
               <p className="multi_btn_wrap">
                 <Link to="#">
-                  <button className="btn btn-secondary me-3">쇼핑하기</button>
+                  <button className="btn btn-secondary me-3">구매하기</button>
                 </Link>
                 <Link to="#">
-                  <button className="btn btn-white-outline">둘러보기</button>
+                  <button className="btn btn-white-outline">상세보기</button>
                 </Link>
               </p>
             </div>

@@ -1,12 +1,12 @@
 import React from 'react';
-import Slick from "./Slick";
+import Slick from "../Slick";
 
 const Home = () => {
 
   const itemsProduct = [1, 2, 3];
 
   return (
-    <div className="main_content">
+    <main>
       <div className="product-section">
         <div className="container">
           <div className="row">
@@ -206,7 +206,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 };
 

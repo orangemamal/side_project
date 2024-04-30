@@ -1,32 +1,21 @@
 .hero {
   background: $primary;
-  padding: calc(4rem - 30px) 0 0;
-  @media (min-width: $md) {
-    padding: calc(4rem - 30px) 0 4rem 0;
-  }
-  @media (min-width: $lg) {
-    padding: calc(8rem - 30px) 0 8rem 0;
-  }
-
+  padding: 3rem 0 0 0;
   .intro-excerpt {
     position: relative;
     z-index: 4;
-    @media (min-width: $lg) {
-      max-width: 450px;
+    .sub_info {
+      font-size: 1.4rem;
     }
   }
   h1 {
-    font-weight: 700;
+    font-weight: $bold;
     color: $white;
-    margin-bottom: 30px;
-
-    @media (min-width: $xxl) {
-      font-size: 54px;
-    }
+    margin-bottom: 3rem;
   }
   p {
     color: rgba($white, .5);
-    margin-botom: 30px;
+    margin-bottom: 30px;
     &.multi_btn_wrap {
       .btn {
         @include font(1.2rem);
@@ -34,45 +23,118 @@
       }
     }
   }
-  .hero-img-wrap {
+  .position {
     position: relative;
-    img {
-      position: relative;
-      top: 0px;
-      right: 0px;
-      z-index: 2;
-      max-width: 780px;
-      left: -20px;
-      @media (min-width: $md) {
-        right: 0px;
-        left: -100px;
-      }
-      @media (min-width: $lg) {
-        left: 0px;
-        top: -80px;
+    .hero-img-wrap {
+      img.img-fluid {
         position: absolute;
-        right: -50px;
+        z-index: 2;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
       }
-      @media (min-width: $xl) {
-        left: 0px;
-        top: -80px;
+      &:after {
+        content: "";
+        position: absolute;
+        width: 255px;
+        height: 217px;
+        background-image: url($img-path + 'dots-light.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
         right: -100px;
+        top: -0px;
       }
-
     }
-    &:after {
-      content: "";
-      position: absolute;
-      width: 255px;
-      height: 217px;
-      background-image: url($img-path + 'dots-light.svg');
-      background-size: contain;
-      background-repeat: no-repeat;
-      right: -100px;
-      top: -0px;
-      @media (min-width: $xl) {
-        top: -40px;
+  }
+}
+
+@media (max-width: $sm) {
+  .hero {
+    height: 60vh;
+    .position {
+      .hero-img-wrap {
+        img.img-fluid {
+          top: 30rem;
+          right: unset;
+          left: 0;
+          max-height: unset;
+          min-width: 100vh;
+        }
       }
+    }
+  }
+}
+
+@media (min-width: $sm) {
+  .hero {
+    height: 60vh;
+    .position {
+      .hero-img-wrap {
+        img.img-fluid {
+          top: 30rem;
+          left: 20rem;
+          min-width: 100%;
+          min-height: calc(100% + 20rem);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .hero {
+    height: unset;
+    .position {
+      .hero-img-wrap {
+        img.img-fluid {
+          top: 50%;
+          right: 0;
+          left: unset;
+          min-width: unset;
+          max-height: calc(100% + 10rem);
+          min-height: unset;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $lg) {
+  .hero {
+    padding: calc(8rem - 30px) 0 8rem 0;
+    .intro-excerpt {
+      max-width: 450px;
+    }
+    .position {
+      .hero-img-wrap {
+        img.img-fluid {
+          top: 50%;
+          right: 0;
+          left: unset;
+          min-width: unset;
+          max-height: calc(100% + 24rem);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $xl) {
+  .hero {
+    .position {
+      .hero-img-wrap {
+        &:after {
+          top: -40px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $xxl) {
+  .hero {
+    h1 {
+      font-size: 54px;
     }
   }
 }

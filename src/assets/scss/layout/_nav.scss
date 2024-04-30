@@ -11,10 +11,18 @@ nav {
     }
     .navbar-toggler {
       border-color: transparent;
+      width: 3.2rem;
+      height: 3.2rem;
+      padding: 0;
       &:active, &:focus {
         box-shadow: none;
         outline: none;
       }
+      .navbar-toggler-icon {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
     }
     .custom-navbar-nav {
       li {
@@ -69,6 +77,18 @@ nav {
         margin-right: 0px;
         &:first-child {
           margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $md) {
+  .collapse .navbar-collapse {
+    &.show {
+      .custom-navbar-nav.navbar-nav {
+        .nav-item {
+          background: black;
         }
       }
     }

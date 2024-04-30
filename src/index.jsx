@@ -5,8 +5,8 @@ import Login from "./routes/Login";
 import Frame from "./routes/Frame";
 import ErrorPage from "./routes/ErrorPage";
 
-import Home from "./components/Home";
-import Shop from "./components/Shop";
+import Home from "./components/pageComp/Home";
+import Shop from "./components/pageComp/Shop";
 
 import './assets/css/bootstrap.min.css';
 import './assets/css/main.css';
