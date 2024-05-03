@@ -7,6 +7,10 @@ import ErrorPage from "./routes/ErrorPage";
 
 import Home from "./components/pageComp/Home";
 import Shop from "./components/pageComp/Shop";
+import Services from "./components/pageComp/Services";
+import Blog from "./components/pageComp/Blog";
+import About from "./components/pageComp/About";
+import Contact from "./components/pageComp/Contact";
 
 import './assets/css/bootstrap.min.css';
 import './assets/css/main.css';
@@ -37,8 +41,28 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "home",
+        element: <Home />,
+      },
+      {
         path: "shop",
         element: <Shop />,
+      },
+      {
+        path: "Services",
+        element: <Services />,
+      },
+      {
+        path: "Blog",
+        element: <Blog />,
+      },
+      {
+        path: "About",
+        element: <About />,
+      },
+      {
+        path: "Contact",
+        element: <Contact />,
       },
     ],
   },

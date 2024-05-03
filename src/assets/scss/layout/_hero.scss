@@ -73,8 +73,9 @@
         img.img-fluid {
           top: 30rem;
           left: 20rem;
-          min-width: 100%;
-          min-height: calc(100% + 20rem);
+          min-width: 130vw;
+          min-height: 100%;
+          object-fit: contain;
         }
       }
     }
@@ -91,7 +92,7 @@
           right: 0;
           left: unset;
           min-width: unset;
-          max-height: calc(100% + 10rem);
+          max-height: calc(100%);
           min-height: unset;
         }
       }
@@ -112,7 +113,7 @@
           right: 0;
           left: unset;
           min-width: unset;
-          max-height: calc(100% + 24rem);
+          max-height: calc(100% + 6rem);
         }
       }
     }
