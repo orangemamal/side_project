@@ -1,6 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
-export default function Cart() {
+export default function Cart({ onPageRender }) {
+
+  useEffect(() => {
+    onPageRender();
+  }, [onPageRender]);
+
   return (
     <div className="untree_co-section">
       <div className="container">

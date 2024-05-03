@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 export default function Hero({ onCartPage, onCheckoutPage }) {
   let content;
 
+  console.log(onCartPage)
+  console.log(onCheckoutPage)
+
   if (onCartPage) {
     content = (
       <div className="hero">

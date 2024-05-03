@@ -20,18 +20,18 @@ export default function Frame() {
 
   const handleCartPageRender = () => {
     setOnCartPage(true);
-    console.log(Cart)
+    setOnCheckoutPage(false);
   }
   const handleCheckoutPageRender = () => {
     setOnCheckoutPage(true);
-    console.log(Checkout)
+    setOnCartPage(false);
   }
 
   return (
     <div className="app">
 
       <Navigation />
-      <Hero hideContent={[onCartPage, onCheckoutPage]} />
+      <Hero onCartPage={onCartPage} onCheckoutPage={onCheckoutPage} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

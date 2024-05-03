@@ -69,7 +69,7 @@ const Home = () => {
               <div className="row my-5">
 
                 {servicesItems.map((item, index) => (
-                  <div className="col-6 col-md-6">
+                  <div className="col-6 col-md-6" key={index}>
                     <div className="feature">
                       <div className="icon">
                         <img src={require(`assets/icons/${item.keyword}.svg`)} alt="Image" className="imf-fluid" />

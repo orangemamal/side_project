@@ -5,28 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/routes/Cart.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/Checkout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/main.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/components/_button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/components/_button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_common.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_common.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/main.css.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pageComp/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageComp/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageComp/Blog.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageComp/Blog.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pageComp/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageComp/Contact.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/pageComp/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageComp/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageComp/Services.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageComp/Services.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Checkout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Frame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Frame.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Login.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +118,7 @@
       <workItem from="1714635480444" duration="261000" />
       <workItem from="1714636324857" duration="962000" />
       <workItem from="1714694547273" duration="2559000" />
-      <workItem from="1714713784878" duration="12503000" />
+      <workItem from="1714713784878" duration="14755000" />
     </task>
     <servers />
   </component>

@@ -1,13 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 
-export default function Cart() {
+export default function Cart({ onPageRender }) {
 
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate('/main/checkout');
   };
+
+  useEffect(() => {
+    onPageRender();
+  }, [onPageRender]);
 
   return (
     <div className="untree_co-section before-footer-section">
@@ -43,8 +47,14 @@ export default function Cart() {
                         <div className="input-group-prepend">
                           <button className="btn btn-outline-black decrease" type="button">&minus;</button>
                         </div>
-                        <input type="text" className="form-control text-center quantity-amount" value="1" placeholder=""
-                               aria-label="Example text with button addon" aria-describedby="button-addon1"/>
+                        <input
+                          type="text"
+                          className="form-control text-center quantity-amount"
+                          defaultValue="1"
+                          placeholder=""
+                          aria-label="Example text with button addon"
+                          aria-describedby="button-addon1"
+                        />
                         <div className="input-group-append">
                           <button className="btn btn-outline-black increase" type="button">&plus;</button>
                         </div>
@@ -68,8 +78,14 @@ export default function Cart() {
                         <div className="input-group-prepend">
                           <button className="btn btn-outline-black decrease" type="button">&minus;</button>
                         </div>
-                        <input type="text" className="form-control text-center quantity-amount" value="1" placeholder=""
-                               aria-label="Example text with button addon" aria-describedby="button-addon1"/>
+                        <input
+                          type="text"
+                          className="form-control text-center quantity-amount"
+                          defaultValue="1"
+                          placeholder=""
+                          aria-label="Example text with button addon"
+                          aria-describedby="button-addon1"
+                        />
                         <div className="input-group-append">
                           <button className="btn btn-outline-black increase" type="button">&plus;</button>
                         </div>
@@ -98,7 +114,7 @@ export default function Cart() {
             </div>
             <div className="row">
               <div className="col-md-12">
-                <label className="text-black h4" for="couponInput">Coupon</label>
+                <label className="text-black h4" htmlFor="couponInput">Coupon</label>
                 <p>Enter your coupon code if you have one.</p>
               </div>
               <div className="col-md-8 mb-3 mb-md-0">
