@@ -5,6 +5,25 @@ const Home = () => {
 
   const itemsProduct = [1, 2, 3];
 
+  const servicesItems = [
+    {
+      keyword: 'truck',
+      title: 'Fast & Free Shipping',
+    },
+    {
+      keyword: 'bag',
+      title: 'Easy to Shop',
+    },
+    {
+      keyword: 'support',
+      title: '24/7 Support',
+    },
+    {
+      keyword: 'return',
+      title: 'Hassle Free Returns',
+    },
+  ];
+
   return (
     <main>
       <div className="product-section">
@@ -48,44 +67,18 @@ const Home = () => {
               </p>
 
               <div className="row my-5">
-                <div className="col-6 col-md-6">
-                  <div className="feature">
-                    <div className="icon">
-                      <img src={require("assets/icons/truck.svg").default} alt="Image" className="imf-fluid" />
-                    </div>
-                    <h3>Fast &amp; Free Shipping</h3>
-                    <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                  </div>
-                </div>
 
-                <div className="col-6 col-md-6">
-                  <div className="feature">
-                    <div className="icon">
-                      <img src={require("assets/icons/bag.svg").default} alt="Image" className="imf-fluid" />
+                {servicesItems.map((item, index) => (
+                  <div className="col-6 col-md-6">
+                    <div className="feature">
+                      <div className="icon">
+                        <img src={require(`assets/icons/${item.keyword}.svg`)} alt="Image" className="imf-fluid" />
+                      </div>
+                      <h3>{item.title}</h3>
+                      <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
                     </div>
-                    <h3>Easy to Shop</h3>
-                    <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
                   </div>
-                </div>
-
-                <div className="col-6 col-md-6">
-                  <div className="feature">
-                    <div className="icon">
-                      <img src={require("assets/icons/support.svg").default} alt="Image" className="imf-fluid" />                    </div>
-                    <h3>24/7 Support</h3>
-                    <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                  </div>
-                </div>
-
-                <div className="col-6 col-md-6">
-                  <div className="feature">
-                    <div className="icon">
-                      <img src={require("assets/icons/return.svg").default} alt="Image" className="imf-fluid" />
-                    </div>
-                    <h3>Hassle Free Returns</h3>
-                    <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
-                  </div>
-                </div>
+                ))}
 
               </div>
             </div>

@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom/client';
 import Login from "./routes/Login";
 import Frame from "./routes/Frame";
 import ErrorPage from "./routes/ErrorPage";
+import Cart from "./routes/Cart";
+import Checkout from "./routes/Checkout";
 
 import Home from "./components/pageComp/Home";
 import Shop from "./components/pageComp/Shop";
@@ -63,6 +65,14 @@ const router = createBrowserRouter([
       {
         path: "Contact",
         element: <Contact />,
+      },
+      {
+        path: "Cart",
+        element: <Cart />,
+      },
+      {
+        path: "Checkout",
+        element: <Checkout />,
       },
     ],
   },

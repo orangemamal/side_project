@@ -290,24 +290,6 @@ input:focus {
   min-height: 2.8rem;
 }
 
-a {
-  text-decoration: none;
-  transition: 0.3s all ease;
-  color: #2f2f2f;
-  text-decoration: underline;
-}
-a:hover {
-  color: #2f2f2f;
-  text-decoration: none;
-}
-a.more {
-  font-weight: 600;
-}
-
-.container {
-  padding: 0 2.4rem;
-}
-
 .btn {
   font-weight: 600;
   padding: 12px 30px;
@@ -352,7 +334,26 @@ a.more {
   color: white;
 }
 
-.section-title {
+a {
+  text-decoration: none;
+  transition: 0.3s all ease;
+  color: #2f2f2f;
+  text-decoration: underline;
+}
+a:hover {
+  color: #2f2f2f;
+  text-decoration: none;
+}
+a.more {
+  font-weight: 600;
+}
+
+.container {
+  padding: 0 2.4rem;
+}
+.container .section-title {
+  font: 3.6rem/4.5rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 700;
   color: #2f2f2f;
 }
 
@@ -606,6 +607,7 @@ a.more {
 .testimonial-slider-wrap .item .testimonial-block .author-info .author-pic img {
   max-width: 80px;
   border-radius: 50%;
+  margin: 0 auto;
 }
 .testimonial-slider-wrap .item .testimonial-block .author-info h3 {
   font-size: 14px;
@@ -912,9 +914,12 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   margin-right: 20px;
 }
 
-@media (min-width: 768px) {
-  .collapse .navbar-collapse.show .custom-navbar-nav.navbar-nav .nav-item {
-    background: black;
+@media (max-width: 768px) {
+  nav .container .collapse.navbar-collapse.show .custom-navbar-nav.navbar-nav {
+    margin: 0.8rem 0;
+  }
+  nav .container .collapse.navbar-collapse.show .custom-navbar-nav.navbar-nav .nav-item {
+    margin: 0.8rem 0;
   }
 }
 .footer-section {
@@ -1201,10 +1206,19 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 .app .login .input_field_window .side.right .sign_up_wrap {
   margin: 6rem 0 1.6rem;
-  display: flex;
-  justify-content: space-between;
   font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
   color: #9FA4A8;
+}
+.app .login .input_field_window .side.right .sign_up_wrap .flat {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+.app .login .input_field_window .side.right .sign_up_wrap .flat:last-of-type {
+  margin-bottom: 0;
+}
+.app .login .input_field_window .side.right .sign_up_wrap .flat span {
+  color: #474C52;
 }
 .app .login .input_field_window .side.right button.login_btn {
   background: #3b5d50;

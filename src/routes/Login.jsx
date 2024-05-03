@@ -23,8 +23,14 @@ export default function Login() {
             <input type="text" placeholder="아이디"/>
             <input type="password" placeholder="비밀번호"/>
             <div className="sign_up_wrap">
-              <div><span>FurNi</span>가 처음이신가요?</div>
-              <button className="sign_up">회원가입</button>
+              <div className="flat">
+                <div><span>FurNi</span>가 처음이신가요?</div>
+                <button className="sign_up">회원가입</button>
+              </div>
+              <div className="flat">
+                <div><span>비밀번호</span>를 잃어버리셨나요?</div>
+                <button className="sign_up">비밀번호 찾기</button>
+              </div>
             </div>
             <button className="login_btn" onClick={() => loginCheck()}>LOGIN</button>
           </div>

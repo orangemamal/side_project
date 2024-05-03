@@ -61,10 +61,19 @@
           }
           .sign_up_wrap {
             margin: 6rem 0 1.6rem;
-            display: flex;
-            justify-content: space-between;
             @include font(1.3rem);
             color: $gray400;
+            .flat {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 0.8rem;
+              &:last-of-type {
+                margin-bottom: 0;
+              }
+              span {
+                color: $gray600;
+              }
+            }
           }
           button {
             &.login_btn {

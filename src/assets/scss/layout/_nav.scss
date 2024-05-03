@@ -85,12 +85,17 @@ nav {
   }
 }
 
-@media (min-width: $md) {
-  .collapse .navbar-collapse {
-    &.show {
-      .custom-navbar-nav.navbar-nav {
-        .nav-item {
-          background: black;
+@media (max-width: $md) {
+  nav {
+    .container {
+      .collapse.navbar-collapse {
+        &.show {
+          .custom-navbar-nav.navbar-nav {
+            margin: 0.8rem 0;
+            .nav-item {
+              margin: 0.8rem 0;
+            }
+          }
         }
       }
     }
