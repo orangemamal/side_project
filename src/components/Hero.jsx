@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Hero({ onCartPage, onCheckoutPage }) {
   let content;
+  let basicSetHero = true;
 
   console.log(onCartPage)
   console.log(onCheckoutPage)

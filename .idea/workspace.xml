@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/routes/ThankYou.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageComp/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageComp/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageComp/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageComp/Contact.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/pageComp/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/pageComp/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Cart.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Checkout.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Frame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Frame.jsx" afterDir="false" />
     </list>
@@ -48,7 +45,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "C:/Users/netsro3/Desktop/studium/template/side_project/src/routes",
+    "last_opened_file_path": "C:/workSpace/kt-pass-app",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -66,18 +63,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components\pageComp" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\routes" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\js" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\css" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets" />
-      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\routes" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components\pageComp" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\original" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\images" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components" />
-      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\icons" />
     </key>
   </component>
   <component name="RunManager">
@@ -118,7 +115,7 @@
       <workItem from="1714635480444" duration="261000" />
       <workItem from="1714636324857" duration="962000" />
       <workItem from="1714694547273" duration="2559000" />
-      <workItem from="1714713784878" duration="14755000" />
+      <workItem from="1714713784878" duration="16726000" />
     </task>
     <servers />
   </component>
