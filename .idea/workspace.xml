@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/routes/ThankYou.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Hero.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Checkout.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Checkout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Frame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Frame.jsx" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2fGINz3L4QqMgVUCRCDmxaHb9N2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/workSpace/kt-pass-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "C:\\Users\\netsro3\\Desktop\\studium\\template\\side_project\\node_modules\\eslint",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components\pageComp" />
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\routes" />
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\js" />
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\css" />
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\routes" />
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components\pageComp" />
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\original" />
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\images" />
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="furni-1.0.0" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="furni-1.0.0" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="" />
+      <created>1713420951555</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1713420951555</updated>
+      <workItem from="1713420952601" duration="932000" />
+      <workItem from="1713425640772" duration="97000" />
+      <workItem from="1713425753036" duration="2679000" />
+      <workItem from="1713428471238" duration="124000" />
+      <workItem from="1713428637171" duration="4202000" />
+      <workItem from="1713486819469" duration="719000" />
+      <workItem from="1713487556468" duration="78000" />
+      <workItem from="1713487655314" duration="51753000" />
+      <workItem from="1713848347449" duration="7245000" />
+      <workItem from="1713859133896" duration="404000" />
+      <workItem from="1713861700261" duration="10804000" />
+      <workItem from="1714467469096" duration="224000" />
+      <workItem from="1714635480444" duration="261000" />
+      <workItem from="1714636324857" duration="962000" />
+      <workItem from="1714694547273" duration="2559000" />
+      <workItem from="1714713784878" duration="16726000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
