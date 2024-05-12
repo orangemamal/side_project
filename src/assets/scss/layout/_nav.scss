@@ -1,0 +1,103 @@
+nav {
+  &.custom-navbar {
+    background: $primary !important;
+    padding: 2rem 0;
+    .navbar-brand {
+      @include font(3.2rem);
+      font-weight: 600;
+      display: flex;
+      justify-content: center;
+      img {
+        height: 2.8rem;
+      }
+    }
+    .navbar-toggler {
+      border-color: transparent;
+      width: 3.2rem;
+      height: 3.2rem;
+      padding: 0;
+      &:active, &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+      .navbar-toggler-icon {
+        width: 3.2rem;
+        height: 3.2rem;
+      }
+
+    }
+    .custom-navbar-nav {
+      li {
+        @include font(1.4rem);
+        height: unset;
+        position: relative;
+        padding: 0 0.4rem !important;
+        opacity: 0.5;
+        color: $white !important;
+        transition: .3s all ease;
+        cursor: pointer;
+        @media (min-width: $lg) {
+          margin: 0 1.4rem;
+        }
+        &:before {
+          @media (min-width: $md) {
+            content: "";
+            position: absolute;
+            bottom: -0.8rem;
+            left: 0;
+            background: $secondary;
+            border-radius: 5rem;
+            height: 0.4rem;
+            opacity: 1;
+            visibility: visible;
+            width: 0;
+            transition: 0.15s all ease-in;
+          }
+        }
+        &:hover {
+          opacity: 1;
+          &:before {
+            width: calc(100%);
+          }
+        }
+        &.active {
+          opacity: 1;
+          &:before {
+            width: calc(100%);
+          }
+        }
+      }
+    }
+    .custom-navbar-cta {
+      margin-left: 0!important;
+      flex-direction: row;
+      @media (min-width: $md) {
+        margin-left: 40px!important;
+      }
+      li {
+        margin-left: 0px;
+        margin-right: 0px;
+        &:first-child {
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  nav {
+    .container {
+      .collapse.navbar-collapse {
+        &.show {
+          .custom-navbar-nav.navbar-nav {
+            margin: 0.8rem 0;
+            .nav-item {
+              margin: 0.8rem 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

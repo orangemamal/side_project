@@ -1,0 +1,113 @@
+.footer-section {
+  padding: 80px 0;
+  background: $white;
+  @include font(1.4rem);
+  .relative {
+    position: relative;
+  }
+  a {
+    text-decoration: none;
+    color: $dark;
+    transition: .3s all ease;
+    &:hover {
+      color: rgba($dark, .5);
+    }
+  }
+  .subscription-form {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+    margin-top: 100px;
+    @media (min-width: $lg) {
+      margin-top: 0px;
+      margin-bottom: 80px;
+    }
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      color: $primary;
+      margin-bottom: 0.8rem;
+    }
+    .form-control {
+      min-width: 16rem;
+      height: 50px;
+      border-radius: 10px;
+      padding: 1.2rem;
+      &:active, &:focus {
+        outline: none;
+        box-shadow: none;
+        border-color: $primary;
+        box-shadow: 0 1px 4px 0 rgba($black, .2);
+      }
+      &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder {
+        @include font(1.4rem);
+      }
+    }
+    .btn {
+      border-radius: 10px!important;
+      width: 5rem;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .fa-paper-plane {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .sofa-img {
+    position: absolute;
+    top: -200px;
+    z-index: 1;
+    right: 0;
+    img {
+      max-width: 380px;
+    }
+  }
+
+  .links-wrap {
+    margin-top: 0px;
+    @media (min-width: $lg) {
+      margin-top: 54px;
+    }
+    ul {
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .footer-logo-wrap {
+    .footer-logo {
+      img {
+        height: 3.2rem;
+      }
+    }
+  }
+  .custom-social {
+    li {
+      margin: 2px;
+      display: inline-block;
+      a {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        display: inline-block;
+        background: $mainLight;
+        color: $primary;
+        border-radius: 50%;
+        &:hover {
+          background: $primary;
+          color: $white;
+        }
+      }
+    }
+  }
+  .border-top {
+    border-color: $mainLight;
+    &.copyright {
+      font-size: 14px!important;
+    }
+  }
+}

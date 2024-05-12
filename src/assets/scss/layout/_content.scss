@@ -1,0 +1,17 @@
+body {
+  overflow-x: hidden;
+  position: relative;
+  font-weight: 400;
+  line-height: 28px;
+  color: $body_color;
+  background-color: $lighter;
+  #root {
+    width: 100%;
+    height: 100%;
+    .app {
+      width: 100%;
+      min-height: 100%;
+      position: relative;
+    }
+  }
+}
