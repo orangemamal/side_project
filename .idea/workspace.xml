@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/couch.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/couch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/img_logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/img_logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/img_logo_color.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/img_logo_color.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/sofa.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/sofa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/abstracts/_variable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/abstracts/_variable.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_login.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Frame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Frame.jsx" afterDir="false" />
     </list>
-=======
-    <list default="true" id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="" />
->>>>>>> 96a3e029658887b31c08fb2d11fb3d434271681a
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,30 +40,6 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/netsro3/Desktop/studium/template/side_project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;C:\\Users\\netsro3\\Desktop\\studium\\template\\side_project\\node_modules\\eslint&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-=======
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
@@ -69,7 +47,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/user/Desktop/개발 공부/side_project-main",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/Users/netsro3/Desktop/studium/template/side_project",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -83,9 +62,8 @@
     "settings.editor.selected.configurable": "watcher.settings",
     "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
->>>>>>> 96a3e029658887b31c08fb2d11fb3d434271681a
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components\pageComp" />
@@ -95,10 +73,10 @@
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\images" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\routes" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components\pageComp" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\original" />
-      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\images" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components" />
     </key>
   </component>
@@ -141,12 +119,8 @@
       <workItem from="1714636324857" duration="962000" />
       <workItem from="1714694547273" duration="2559000" />
       <workItem from="1714713784878" duration="16726000" />
-<<<<<<< HEAD
       <workItem from="1715128042964" duration="34000" />
-      <workItem from="1715591466268" duration="111000" />
-=======
-      <workItem from="1715506639881" duration="2092000" />
->>>>>>> 96a3e029658887b31c08fb2d11fb3d434271681a
+      <workItem from="1715591466268" duration="4182000" />
     </task>
     <servers />
   </component>

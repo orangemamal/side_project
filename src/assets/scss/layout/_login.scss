@@ -104,3 +104,71 @@
     }
   }
 }
+
+@media screen and (max-width: $lg) {
+  .app {
+    .login {
+      .input_field_window {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+        background: $primary;
+        .side {
+          &.left {
+            width: 100%;
+            border-radius: 0;
+            background: unset;
+            padding: 0;
+            .comment {
+              @include font(1.6rem);
+              font-weight: $light;
+              &.top {
+                display: none;
+              }
+            }
+            img {
+              height: 6rem;
+            }
+          }
+          &.right {
+            width: 100%;
+            background: unset;
+            padding: 2.4rem 4.8rem;
+            margin-top: 4.8rem;
+            h3 {
+              display: none;
+            }
+            input {
+              background: $mainLight;
+              &::placeholder {
+                color: $body_color;
+              }
+            }
+            .sign_up_wrap {
+              .flat {
+                @include font(1.6rem);
+                color: rgba(255, 255, 255, 0.4);
+                margin-bottom: 1.6rem;
+                span {
+                  color: $white;
+                }
+                button {
+                  color: $white;
+                }
+              }
+            }
+            button.login_btn {
+              background: $white;
+              color: $primary;
+              height: 4.8rem;
+              margin-top: 4.8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
