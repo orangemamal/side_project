@@ -1285,6 +1285,7 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
     color: #6a6a6a;
   }
   .app .login .input_field_window .side.right .sign_up_wrap .flat {
+    font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
     color: rgba(255, 255, 255, 0.4);
     margin-bottom: 1.6rem;
   }
