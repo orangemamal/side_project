@@ -1031,6 +1031,7 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 
 .hero {
+  overflow: hidden;
   background: #4D869C;
   padding: 3rem 0 0 0;
 }
