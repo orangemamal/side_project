@@ -6,6 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/src/assets/images/couch.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/couch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/img_logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/img_logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/img_logo_color.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/img_logo_color.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/sofa.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/sofa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/abstracts/_variable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/abstracts/_variable.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/Frame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Frame.jsx" afterDir="false" />
+>>>>>>> 1921150d45f5a22092c681e5e59955f6152ab622
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +43,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -54,6 +65,30 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "js.linters.configure.manually.selectedeslint": "true",
+    "last_opened_file_path": "C:/Users/netsro3/Desktop/studium/template/side_project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "C:\\Users\\netsro3\\Desktop\\studium\\template\\side_project\\node_modules\\eslint",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> 1921150d45f5a22092c681e5e59955f6152ab622
   }
 }</component>
   <component name="RecentsManager">
@@ -65,10 +100,10 @@
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\images" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\routes" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components\pageComp" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\original" />
-      <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\assets\images" />
       <recent name="C:\Users\netsro3\Desktop\studium\template\side_project\src\components" />
     </key>
   </component>
@@ -111,8 +146,13 @@
       <workItem from="1714636324857" duration="962000" />
       <workItem from="1714694547273" duration="2559000" />
       <workItem from="1714713784878" duration="16726000" />
+<<<<<<< HEAD
       <workItem from="1715506639881" duration="3269000" />
       <workItem from="1715611549375" duration="306000" />
+=======
+      <workItem from="1715128042964" duration="34000" />
+      <workItem from="1715591466268" duration="4182000" />
+>>>>>>> 1921150d45f5a22092c681e5e59955f6152ab622
     </task>
     <servers />
   </component>
