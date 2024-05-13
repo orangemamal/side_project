@@ -42,7 +42,6 @@ export default function Frame() {
     setOnCheckoutPage(true);
     setOnCartPage(false);
   }
-git
   return (
     <div className="app">
 
