@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Frame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Frame.jsx" afterDir="false" />
     </list>
+=======
+    <list default="true" id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="" />
+>>>>>>> 96a3e029658887b31c08fb2d11fb3d434271681a
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,6 +38,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
@@ -56,6 +61,29 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+=======
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/user/Desktop/개발 공부/side_project-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "C:\\Users\\netsro3\\Desktop\\studium\\template\\side_project\\node_modules\\eslint",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "watcher.settings",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+>>>>>>> 96a3e029658887b31c08fb2d11fb3d434271681a
   }
 }</component>
   <component name="RecentsManager">
@@ -113,8 +141,12 @@
       <workItem from="1714636324857" duration="962000" />
       <workItem from="1714694547273" duration="2559000" />
       <workItem from="1714713784878" duration="16726000" />
+<<<<<<< HEAD
       <workItem from="1715128042964" duration="34000" />
       <workItem from="1715591466268" duration="111000" />
+=======
+      <workItem from="1715506639881" duration="2092000" />
+>>>>>>> 96a3e029658887b31c08fb2d11fb3d434271681a
     </task>
     <servers />
   </component>

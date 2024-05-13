@@ -42,6 +42,10 @@ export default function Frame() {
     setOnCheckoutPage(true);
     setOnCartPage(false);
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 96a3e029658887b31c08fb2d11fb3d434271681a
   return (
     <div className="app">
 
