@@ -984,12 +984,13 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 .footer-section .sofa-img {
   position: absolute;
-  top: -200px;
+  top: -14rem;
   z-index: 1;
   right: 0;
 }
 .footer-section .sofa-img img {
-  max-width: 380px;
+  opacity: 0.8;
+  max-width: 30rem;
 }
 .footer-section .links-wrap {
   margin-top: 0px;
@@ -1051,8 +1052,12 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   margin-bottom: 30px;
 }
 .hero p.multi_btn_wrap .btn {
+  color: white;
   font: 1.2rem/1.5rem "Spoqa Han Sans Neo", "sans-serif";
   font-weight: 500;
+}
+.hero p.multi_btn_wrap .btn.btn-secondary:hover {
+  border: 1px solid white;
 }
 .hero .position {
   position: relative;
@@ -1318,6 +1323,11 @@ body #root .app {
   width: 100%;
   min-height: 100%;
   position: relative;
+}
+
+.testimonial-section .container .row.justify-content-center .slick-slider.slick-initialized button.slick-arrow::before {
+  color: #4D869C;
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
 }
 
 /*# sourceMappingURL=main.css.map */

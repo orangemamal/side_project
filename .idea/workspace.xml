@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0dd6ac0c-6e92-4be6-bfb9-39e08e40fb21" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/scss/layout/_slick.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/couch.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/couch.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/img_logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/img_logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/img_logo_color.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/img_logo_color.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/images/sofa.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/images/sofa.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/abstracts/_variable.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/abstracts/_variable.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_hero.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_hero.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/assets/scss/layout/_login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/layout/_login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/routes/Frame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes/Frame.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +124,7 @@
       <workItem from="1714694547273" duration="2559000" />
       <workItem from="1714713784878" duration="16726000" />
       <workItem from="1715128042964" duration="34000" />
-      <workItem from="1715591466268" duration="4182000" />
+      <workItem from="1715591466268" duration="5776000" />
     </task>
     <servers />
   </component>

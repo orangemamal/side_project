@@ -1,0 +1,21 @@
+.testimonial-section {
+  .container {
+    .row {
+      &.justify-content-center {
+        .slick-slider.slick-initialized {
+          button.slick-arrow {
+            &::before {
+              color: $primary;
+              @include font(1.6rem);
+            }
+            &.slick-prev {
+            }
+            &.slick-next {
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

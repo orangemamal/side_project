@@ -18,8 +18,12 @@
     margin-bottom: 30px;
     &.multi_btn_wrap {
       .btn {
+        color: $white;
         @include font(1.2rem);
         font-weight: $medium;
+        &.btn-secondary:hover {
+          border: 1px solid $white;
+        }
       }
     }
   }

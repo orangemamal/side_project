@@ -58,11 +58,12 @@
 
   .sofa-img {
     position: absolute;
-    top: -200px;
+    top: -14rem;
     z-index: 1;
     right: 0;
     img {
-      max-width: 380px;
+      opacity: 0.8;
+      max-width: 30rem;
     }
   }
 
