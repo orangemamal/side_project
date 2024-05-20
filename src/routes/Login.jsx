@@ -14,9 +14,8 @@ export default function Login() {
       <div className="login">
         <div className="input_field_window">
           <div className="side left">
-            <div className="comment top">DESIGN FURNITURE</div>
+            <div className="comment top">가구를 디자인하다</div>
             <img src={require("assets/images/img_logo.svg").default} alt="FurNi"/>
-            <div className="comment">Login to Your Account</div>
           </div>
           <div className="side right">
             <h3>WELCOME.</h3>

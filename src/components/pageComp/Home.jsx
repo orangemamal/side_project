@@ -3,7 +3,7 @@ import Slick from "../Slick";
 
 const Home = () => {
 
-  const itemsProduct = [1, 2, 3];
+  const itemsProduct = [ 1, 2, 3];
 
   const servicesItems = [
     {
