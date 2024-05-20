@@ -348,6 +348,10 @@ a.more {
   font-weight: 600;
 }
 
+p {
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+}
+
 .container {
   padding: 0 2.4rem;
 }

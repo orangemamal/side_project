@@ -31,10 +31,11 @@ const Home = () => {
           <div className="row">
 
             <div className="col-md-12 col-lg-3 mb-5 mb-lg-0">
-              <h2 className="mb-4 section-title">Crafted with excellent material.</h2>
-              <p className="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam
-                vulputate
-                velit imperdiet dolor tempor tristique. </p>
+              <h2 className="mb-4 section-title">다양한 의자를<br/>만나보세요</h2>
+              <p className="mb-4">
+                트렌디함을 담은 감성,<br/>
+                가구가 작품이 되는 공간
+              </p>
               <p><a href="shop.html" className="btn">Explore</a></p>
             </div>
 
