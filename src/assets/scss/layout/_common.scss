@@ -3,12 +3,10 @@ a {
   transition: .3s all ease;
   color: $dark;
   text-decoration: underline;
-
   &:hover {
     color: $dark;
     text-decoration: none;
   }
-
   &.more {
     font-weight: 600;
   }
@@ -17,7 +15,6 @@ a {
 p {
   @include font(1.4rem);
 }
-
 .container {
   padding: 0 2.4rem;
   .section-title {
@@ -30,7 +27,6 @@ p {
 // Product Section
 .product-section {
   padding: 7rem 0;
-
   .product-item {
     text-align: center;
     text-decoration: none;
@@ -38,29 +34,24 @@ p {
     position: relative;
     padding-bottom: 50px;
     cursor: pointer;
-
     .product-thumbnail {
       margin-bottom: 30px;
       position: relative;
       top: 0;
       transition: .3s all ease;
     }
-
     h3 {
       font-weight: 600;
       font-size: 16px;
     }
-
     strong {
       font-weight: 800 !important;
       font-size: 18px !important;
     }
-
     h3, strong {
       color: $dark;
       text-decoration: none;
     }
-
     .icon-cross {
       position: absolute;
       width: 35px;
@@ -75,7 +66,6 @@ p {
       opacity: 0;
       visibility: hidden;
       transition: .3s all ease;
-
       img {
         position: absolute;
         left: 50%;
@@ -83,7 +73,6 @@ p {
         transform: translate(-50%, -50%);
       }
     }
-
     &:before {
       bottom: 0;
       left: 0;
@@ -96,18 +85,15 @@ p {
       border-radius: 10px;
       transition: .3s all ease;
     }
-
     &:hover {
       .product-thumbnail {
         top: -25px;
       }
-
       .icon-cross {
         bottom: 0;
         opacity: 1;
         visibility: visible;
       }
-
       &:before {
         height: 70%;
       }
@@ -118,10 +104,11 @@ p {
 // Why Choose us section
 .why-choose-section {
   padding: 7rem 0;
-
+  .section-title {
+    margin-bottom: 1.6rem;
+  }
   .img-wrap {
     position: relative;
-
     &:before {
       position: absolute;
       content: "";
@@ -133,7 +120,6 @@ p {
       transform: translate(-40%, -40%);
       z-index: -1;
     }
-
     img {
       border-radius: 20px;
     }

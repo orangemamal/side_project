@@ -5,21 +5,24 @@
   color: $white;
   background: $dark;
   border-color: $dark;
+  @include font(1.3rem);
   &:hover {
     color: $white;
     background: darken($dark, 5%);
     border-color: darken($dark, 5%);
   }
   &:active, &:focus {
-    outline: none!important;
+    outline: none !important;
     box-shadow: none;
   }
   &.btn-primary {
     background: $primary;
     border-color: $primary;
+    transition: all 0.3s;
     &:hover {
-      background: darken($primary, 5%);
-      border-color: darken($primary, 5%);
+      background: darken($primary, 10%);
+      box-shadow: 0 0 8px 0 rgba(77, 134, 156, 0.6);
+      border-color: darken($primary, 10%);
     }
   }
   &.btn-secondary {

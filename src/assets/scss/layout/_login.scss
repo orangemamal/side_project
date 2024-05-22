@@ -57,6 +57,7 @@
             transition: all 0.5s;
             &:focus {
               border: 1px solid $primary;
+              box-shadow: 0 0 8px 0 rgba(77, 134, 156, 0.6);
             }
             &:last-of-type {
               margin-bottom: 0;
@@ -75,7 +76,7 @@
               }
               span {
                 font-weight: $bold;
-                color: $gray600;
+                color: $primary;
               }
             }
           }

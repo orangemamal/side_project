@@ -297,6 +297,7 @@ input:focus {
   color: white;
   background: #2f2f2f;
   border-color: #2f2f2f;
+  font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
 }
 .btn:hover {
   color: white;
@@ -310,10 +311,12 @@ input:focus {
 .btn.btn-primary {
   background: #4D869C;
   border-color: #4D869C;
+  transition: all 0.3s;
 }
 .btn.btn-primary:hover {
-  background: #45778b;
-  border-color: #45778b;
+  background: #3c697a;
+  box-shadow: 0 0 8px 0 rgba(77, 134, 156, 0.6);
+  border-color: #3c697a;
 }
 .btn.btn-secondary {
   color: #2f2f2f;
@@ -437,6 +440,9 @@ p {
 
 .why-choose-section {
   padding: 7rem 0;
+}
+.why-choose-section .section-title {
+  margin-bottom: 1.6rem;
 }
 .why-choose-section .img-wrap {
   position: relative;
@@ -1213,6 +1219,7 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 .app .login .input_field_window .side.right input:focus {
   border: 1px solid #4D869C;
+  box-shadow: 0 0 8px 0 rgba(77, 134, 156, 0.6);
 }
 .app .login .input_field_window .side.right input:last-of-type {
   margin-bottom: 0;
@@ -1232,7 +1239,7 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 .app .login .input_field_window .side.right .sign_up_wrap .flat span {
   font-weight: 700;
-  color: #474C52;
+  color: #4D869C;
 }
 .app .login .input_field_window .side.right button.login_btn {
   background: #4D869C;
