@@ -4,14 +4,23 @@
       &.justify-content-center {
         .slick-slider.slick-initialized {
           button.slick-arrow {
+            background: $primary;
+            border-radius: 5rem;
+            width: 6rem;
+            height: 6rem;
             &::before {
-              color: $primary;
-              @include font(1.6rem);
+              color: $white;
+              @include font(2.8rem);
             }
             &.slick-prev {
+              &::before {
+                content: '<';
+              }
             }
             &.slick-next {
-
+              &::before {
+                content: '>';
+              }
             }
           }
         }

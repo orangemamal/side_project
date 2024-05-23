@@ -33,18 +33,24 @@ const Home = () => {
     {
       keyword: 'bag',
       title: '쉬운 구매 방법',
-      content: '매장에서 구매하는 것보다 쉽고 빠른 온라인 쇼핑을 제공합니다.',
+      content: '저희는 매장에서 구매하는 것보다 쉽고 빠른 온라인 쇼핑을 제공합니다.',
     },
     {
       keyword: 'support',
       title: '365 서비스 지원',
-      content: '24시간 이주',
+      content: '저희는 365일 항상 고객 서비스 센터를 운영 중입니다.',
     },
     {
       keyword: 'return',
       title: '무료 반품 보장',
-      content: '',
+      content: '저희는 고객을 위해 언제든 무료 반품을 해드립니다.',
     },
+  ];
+
+  const itemsSideProduct = [
+    {no: 1, product: '프리미엄 침대형의자', productInfo: '최상의 편안함을 제공하는 완벽한 휴식 공간입니다.'},
+    {no: 2, product: '프리미엄 소파형의자', productInfo: '고급스러운 디자인과 편안함을 겸비한 최고의 선택입니다.'},
+    {no: 3, product: '프리미엄 회전의자', productInfo: '자유로운 움직임과 스타일리시한 편안함을 선사합니다.'},
   ];
 
   const formatNumber = (number) => {
@@ -129,18 +135,19 @@ const Home = () => {
               </div>
             </div>
             <div className="col-lg-5 ps-lg-5">
-              <h2 className="section-title mb-4">We Help You Make Modern Interior Design</h2>
-              <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac
-                aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant morbi
-                tristique senectus et netus et malesuada</p>
-
+              <h2 className="section-title mb-4">
+                고객의 인테리어를 도와드립니다
+              </h2>
+              <p>
+                세심한 전문가 상담과 맞춤형 디자인으로 최상의 인테리어를 제공합니다.<br/> 최신 트렌드와 고객의 취향을 반영하여 특별한 공간을 완성해 드립니다.
+              </p>
               <ul className="list-unstyled custom-list my-4">
-                <li>Donec vitae odio quis nisl dapibus malesuada</li>
-                <li>Donec vitae odio quis nisl dapibus malesuada</li>
-                <li>Donec vitae odio quis nisl dapibus malesuada</li>
-                <li>Donec vitae odio quis nisl dapibus malesuada</li>
+                <li>전문가 상담</li>
+                <li>맞춤형 디자인</li>
+                <li>최신 트렌드</li>
+                <li>특별한 공간</li>
               </ul>
-              <p><a herf="#" className="btn">Explore</a></p>
+              <p><a herf="#" className="btn">살펴보기</a></p>
             </div>
           </div>
         </div>
@@ -150,7 +157,7 @@ const Home = () => {
         <div className="container">
           <div className="row">
 
-            {itemsProduct.map((item, index) => (
+            {itemsSideProduct.map((item, index) => (
               <div className="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0" key={index}>
                 <div className="product-item-sm d-flex">
                   <div className="thumbnail">
@@ -161,9 +168,9 @@ const Home = () => {
                     />
                   </div>
                   <div className="pt-3">
-                    <h3>Nordic Chair</h3>
-                    <p>Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio </p>
-                    <p><a href="#">Read More</a></p>
+                    <h3>{item.product}</h3>
+                    <p>{item.productInfo}</p>
+                    <p className="read_more"><a href="#">자세히 보기</a></p>
                   </div>
                 </div>
               </div>
@@ -177,7 +184,7 @@ const Home = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-7 mx-auto text-center">
-              <h2 className="section-title">Testimonials</h2>
+              <h2 className="section-title">고객 리뷰</h2>
             </div>
           </div>
 
