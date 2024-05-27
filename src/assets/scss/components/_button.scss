@@ -6,9 +6,10 @@
   background: $dark;
   border-color: $dark;
   @include font(1.3rem);
+  transition: all 0.5s;
   &:hover {
     color: $white;
-    background: darken($dark, 5%);
+    background: darken($dark, 20%);
     border-color: darken($dark, 5%);
   }
   &:active, &:focus {

@@ -45,7 +45,7 @@ export default function Navigation() {
               <li
                 key={index}
                 className={`nav-item ${index === activeIndex ? 'active' : ''}`}
-                onClick={() => handleItemClick(index, `/main/${item.toLowerCase().replace(/\s/g, '-')}`)}
+                onClick={() => handleItemClick(index, `/${item.toLowerCase().replace(/\s/g, '-')}`)}
               >
                 {item}
               </li>
@@ -54,7 +54,7 @@ export default function Navigation() {
 
           <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
             <li>
-              <Link className="nav-link" to="#">
+              <Link className="nav-link" to="/Login">
                 <div className="icon user" />
               </Link>
             </li>

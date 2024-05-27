@@ -298,10 +298,11 @@ input:focus {
   background: #2f2f2f;
   border-color: #2f2f2f;
   font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
+  transition: all 0.5s;
 }
 .btn:hover {
   color: white;
-  background: #222222;
+  background: black;
   border-color: #222222;
 }
 .btn:active, .btn:focus {
@@ -393,10 +394,15 @@ p {
 .product-section .product-item h3 {
   font-weight: 600;
   font-size: 16px;
+  margin-bottom: 0.8rem;
 }
 .product-section .product-item strong {
   font-weight: 800 !important;
-  font-size: 18px !important;
+  font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
+}
+.product-section .product-item strong span {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 300;
 }
 .product-section .product-item h3, .product-section .product-item strong {
   color: #2f2f2f;
@@ -730,6 +736,22 @@ p {
 .blog-section {
   padding: 7rem 0 12rem 0;
 }
+.blog-section .section_title_wrap {
+  border-bottom: 1px solid #CACDD2;
+  padding-bottom: 1.6rem;
+}
+.blog-section .section_title_wrap .text-start {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
+.blog-section .section_title_wrap .text-start a {
+  color: #9FA4A8;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+}
+.blog-section .section_title_wrap .text-start a:hover {
+  color: #4D869C;
+}
 .blog-section .post-entry a {
   text-decoration: none;
 }
@@ -746,16 +768,20 @@ p {
   padding-right: 15px;
 }
 .blog-section .post-entry .post-content-entry h3 {
-  font-size: 16px;
-  margin-bottom: 0;
+  font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
+  margin-bottom: 0.4rem;
   font-weight: 600;
-  margin-bottom: 7px;
+  color: #27282C;
 }
-.blog-section .post-entry .post-content-entry .meta {
-  font-size: 14px;
+.blog-section .post-entry .post-content-entry .meta .author {
+  margin-right: 0.8rem;
+  color: #73787E;
+  font: 1.5rem/1.9rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 500;
 }
-.blog-section .post-entry .post-content-entry .meta a {
-  font-weight: 600;
+.blog-section .post-entry .post-content-entry .meta .update {
+  font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #9FA4A8;
 }
 .blog-section .post-entry:hover .post-thumbnail img, .blog-section .post-entry:focus .post-thumbnail img {
   opacity: 0.7;
@@ -967,6 +993,21 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   padding: 80px 0;
   background: white;
   font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #474C52;
+}
+.footer-section .menu_wrap .left_side .support .center {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 500;
+  color: #9FA4A8;
+}
+.footer-section .menu_wrap .left_side .support .customer_center {
+  font: 2.8rem/3.5rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+.footer-section .menu_wrap .left_side .support div:nth-of-type(n+3) {
+  margin-bottom: 0.4rem;
+  color: #73787E;
 }
 .footer-section .relative {
   position: relative;
@@ -1002,15 +1043,19 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   height: 50px;
   border-radius: 10px;
   padding: 1.2rem;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+}
+.footer-section .subscription-form .form-control[type=text] {
+  width: 14rem;
+}
+.footer-section .subscription-form .form-control[type=email] {
+  width: 24rem;
 }
 .footer-section .subscription-form .form-control:active, .footer-section .subscription-form .form-control:focus {
   outline: none;
   box-shadow: none;
   border-color: #4D869C;
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
-}
-.footer-section .subscription-form .form-control::-webkit-input-placeholder, .footer-section .subscription-form .form-control::-moz-placeholder, .footer-section .subscription-form .form-control:-ms-input-placeholder, .footer-section .subscription-form .form-control:-moz-placeholder {
-  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
 }
 .footer-section .subscription-form .btn {
   border-radius: 10px !important;
@@ -1100,6 +1145,12 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 .hero p.multi_btn_wrap .btn.btn-secondary:hover {
   border: 1px solid white;
+}
+.hero p.multi_btn_wrap .btn.btn-white-outline {
+  background: rgba(255, 255, 255, 0.2);
+}
+.hero p.multi_btn_wrap .btn.btn-white-outline:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 .hero .position {
   position: relative;
@@ -1371,6 +1422,9 @@ body #root .app {
   position: relative;
 }
 
+.testimonial-section .container .row .section-title {
+  margin-bottom: 1.6rem;
+}
 .testimonial-section .container .row.justify-content-center .slick-slider.slick-initialized button.slick-arrow {
   background: #4D869C;
   border-radius: 5rem;
@@ -1386,6 +1440,19 @@ body #root .app {
 }
 .testimonial-section .container .row.justify-content-center .slick-slider.slick-initialized button.slick-arrow.slick-next::before {
   content: ">";
+}
+.testimonial-section .container .row.justify-content-center .slick-slider.slick-initialized .slick-dots li {
+  margin: 0;
+}
+.testimonial-section .container .row.justify-content-center .slick-slider.slick-initialized .slick-dots li button {
+  padding: 0;
+}
+.testimonial-section .container .row.justify-content-center .slick-slider.slick-initialized .slick-dots li button::before {
+  line-height: 2rem;
+  font-size: 1rem;
+}
+.testimonial-section .container .row.justify-content-center .slick-slider.slick-initialized .slick-dots li.slick-active button::before {
+  color: #4D869C;
 }
 
 /*# sourceMappingURL=main.css.map */

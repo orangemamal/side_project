@@ -18,10 +18,10 @@ const Home = () => {
     3: product3,
   };
 
-  const postItems = [
-    {no: 1, product: 'Nordic Chair', price: 50000},
-    {no: 2, product: 'Nordic Chair', price: 50000},
-    {no: 3, product: 'Nordic Chair', price: 50000},
+  const blogItems = [
+    {no: 1, title: 'FurNi의 홈 데코 팁과 트렌드', author: '아리아나 그란데', update: '2024년 5월 12일'},
+    {no: 2, title: 'FurNi 가구로 완성하는 스타일리시한 집', author: '비욘세', update: '2024년 5월 24일'},
+    {no: 3, title: 'FurNi의 최신 가구 리뷰 및 추천', author: '브루노 마스', update: '2024년 5월 27일'},
   ]
 
   const servicesItems = [
@@ -77,11 +77,11 @@ const Home = () => {
                 <a className="product-item" href="cart.html">
                   <img src={require(`assets/images/product-${item.no}.png`)} className="img-fluid product-thumbnail" />
                   <h3 className="product-title">{ item.product }</h3>
-                  <strong className="product-price">{ formatNumber(item.price) }</strong>
+                  <strong className="product-price">{ formatNumber(item.price) }<span>원</span></strong>
 
                   <span className="icon-cross">
-                      <img src={require("assets/icons/cross.svg").default} className="img-fluid" />
-                    </span>
+                    <img src={require("assets/icons/cross.svg").default} className="img-fluid" />
+                  </span>
                 </a>
               </div>
             ))}
@@ -204,9 +204,9 @@ const Home = () => {
 
       <div className="blog-section">
         <div className="container">
-          <div className="row mb-5">
+          <div className="row mb-5 section_title_wrap">
             <div className="col-md-6">
-              <h2 className="section-title">Recent Blog</h2>
+              <h2 className="section-title">FurNi's Blog</h2>
             </div>
             <div className="col-md-6 text-start text-md-end">
               <a href="#" className="more">View All Posts</a>
@@ -215,17 +215,17 @@ const Home = () => {
 
           <div className="row">
 
-            {postItems.map((item, index) => (
+            {blogItems.map((item, index) => (
               <div className="col-12 col-sm-6 col-md-4 mb-4 mb-md-0" key={index}>
                 <div className="post-entry">
                   <a href="#" className="post-thumbnail">
                     <img src={require(`assets/images/post-${item.no}.jpg`)} alt="Image" className="img-fluid" />
                   </a>
                   <div className="post-content-entry">
-                    <h3><a href="#">First Time Home Owner Ideas</a></h3>
+                    <h3>{item.title}</h3>
                     <div className="meta">
-                      <span>by <a href="#">Kristin Watson</a></span>
-                      <span>on <a href="#">Dec 19, 2021</a></span>
+                      <span className="author">{item.author}</span>
+                      <span className="update">{item.update}</span>
                     </div>
                   </div>
                 </div>

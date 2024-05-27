@@ -17,7 +17,7 @@ export default function Footer() {
                   <span className="me-1">
                     <div className="icon envelope" />
                   </span>
-                <span>Subscribe to Newsletter</span>
+                <span>이메일로 FurNi의 최신 뉴스 구독하기</span>
               </h3>
 
               <form action="#" className="row g-3">
@@ -38,17 +38,21 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="row g-5 mb-5">
-          <div className="col-lg-4">
+        <div className="row g-5 mb-5 menu_wrap">
+          <div className="col-lg-4 left_side">
             <div className="mb-4 footer-logo-wrap">
               <Link className="footer-logo" to="/home">
                 <img src={require("assets/images/img_logo_color.svg").default} alt="FurNi"/>
               </Link>
             </div>
-            <p className="mb-4">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus
-              malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.
-              Pellentesque
-              habitant</p>
+            <p className="mb-4 support">
+              <div className="center">고객센터</div>
+              <div className="customer_center">1544-8282</div>
+              <div>고객님의 따뜻한 한마디, 감사합니다</div>
+              <div>일반상담 : PM 01:00 ~ PM 04:00</div>
+              <div>카카오톡상담 : AM 10:00 ~ PM 04:00</div>
+              <div>점심시간 : PM 12:00 ~ PM 01:00</div>
+            </p>
 
             <ul className="list-unstyled custom-social">
               <li><a href="#"><span className="fa fa-brands fa-facebook-f"></span></a></li>
@@ -58,7 +62,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="col-lg-8">
+          <div className="col-lg-8 right_side">
             <div className="row links-wrap">
               <div className="col-6 col-sm-6 col-md-3">
                 <ul className="list-unstyled">

@@ -29,12 +29,12 @@ import {
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "Login",
     element: <Login />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/main/*",
+    path: "/*",
     element: <Frame />,
     errorElement: <ErrorPage />,
     children: [

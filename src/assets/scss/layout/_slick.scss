@@ -1,6 +1,9 @@
 .testimonial-section {
   .container {
     .row {
+      .section-title {
+        margin-bottom: 1.6rem;
+      }
       &.justify-content-center {
         .slick-slider.slick-initialized {
           button.slick-arrow {
@@ -20,6 +23,23 @@
             &.slick-next {
               &::before {
                 content: '>';
+              }
+            }
+          }
+          .slick-dots {
+            li {
+              margin: 0;
+              button {
+                padding: 0;
+                &::before {
+                  line-height: 2rem;
+                  font-size: 1rem;
+                }
+              }
+              &.slick-active {
+                button::before {
+                  color: $primary;
+                }
               }
             }
           }
