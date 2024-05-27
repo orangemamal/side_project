@@ -209,7 +209,7 @@ const Home = () => {
               <h2 className="section-title">FurNi's Blog</h2>
             </div>
             <div className="col-md-6 text-start text-md-end">
-              <a href="#" className="more">View All Posts</a>
+              <a href="#" className="more">자세히 보기</a>
             </div>
           </div>
 
