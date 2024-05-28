@@ -2,6 +2,24 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 export default function Footer() {
+
+  const itemsCustomSocial = [
+    {no: 1, logo: 'fa-facebook-f', link: '#'},
+    {no: 2, logo: 'fa-twitter', link: '#'},
+    {no: 3, logo: 'fa-instagram', link: '#'},
+    {no: 3, logo: 'fa-linkedin', link: '#'},
+  ];
+
+  const itemsLinkWrap = [
+    {title: '무통장 입금계좌',
+      detail: [
+        {list_1: '국민 123456-12-123456'},
+        {list_2: '농협 123456-12-123456'},
+        {list_3: '예금주 : (주)FurNi'},
+      ]
+    },
+  ];
+
   return (
     <footer className="footer-section">
       <div className="container relative">
@@ -45,58 +63,39 @@ export default function Footer() {
                 <img src={require("assets/images/img_logo_color.svg").default} alt="FurNi"/>
               </Link>
             </div>
-            <p className="mb-4 support">
-              <div className="center">고객센터</div>
-              <div className="customer_center">1544-8282</div>
-              <div>고객님의 따뜻한 한마디, 감사합니다</div>
-              <div>일반상담 : PM 01:00 ~ PM 04:00</div>
-              <div>카카오톡상담 : AM 10:00 ~ PM 04:00</div>
-              <div>점심시간 : PM 12:00 ~ PM 01:00</div>
-            </p>
+            <div className="mb-4 support">
+              <p className="center">고객센터</p>
+              <p className="customer_center">1544-8282</p>
+              <p>고객님의 따뜻한 한마디, 감사합니다</p>
+              <p>일반상담 : PM 01:00 ~ PM 04:00</p>
+              <p>카카오톡상담 : AM 10:00 ~ PM 04:00</p>
+              <p>점심시간 : PM 12:00 ~ PM 01:00</p>
+            </div>
 
             <ul className="list-unstyled custom-social">
-              <li><a href="#"><span className="fa fa-brands fa-facebook-f"></span></a></li>
-              <li><a href="#"><span className="fa fa-brands fa-twitter"></span></a></li>
-              <li><a href="#"><span className="fa fa-brands fa-instagram"></span></a></li>
-              <li><a href="#"><span className="fa fa-brands fa-linkedin"></span></a></li>
+              {itemsCustomSocial.map((item, index) => (
+                <li key={index}><a href={`${item.link}`}><span className={`fa fa-brands ${item.logo}`}></span></a></li>
+              ))}
             </ul>
           </div>
 
           <div className="col-lg-8 right_side">
             <div className="row links-wrap">
-              <div className="col-6 col-sm-6 col-md-3">
-                <ul className="list-unstyled">
-                  <li><a href="#">About us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">Contact us</a></li>
-                </ul>
-              </div>
+              {itemsLinkWrap.map((item, index) => (
+                <div className="col-6 col-sm-6 col-md-3" key={index}>
+                  <h4>{item.title}</h4>
+                  <ul className="list-unstyled">
+                    {item.detail.forEach((detailItems) => {
+                      console.log(detailItems)
+                    })}
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact us</a></li>
+                  </ul>
+                </div>
+              ))}
 
-              <div className="col-6 col-sm-6 col-md-3">
-                <ul className="list-unstyled">
-                  <li><a href="#">Support</a></li>
-                  <li><a href="#">Knowledge base</a></li>
-                  <li><a href="#">Live chat</a></li>
-                </ul>
-              </div>
-
-              <div className="col-6 col-sm-6 col-md-3">
-                <ul className="list-unstyled">
-                  <li><a href="#">Jobs</a></li>
-                  <li><a href="#">Our team</a></li>
-                  <li><a href="#">Leadership</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                </ul>
-              </div>
-
-              <div className="col-6 col-sm-6 col-md-3">
-                <ul className="list-unstyled">
-                  <li><a href="#">Nordic Chair</a></li>
-                  <li><a href="#">Kruzo Aero</a></li>
-                  <li><a href="#">Ergonomic Chair</a></li>
-                </ul>
-              </div>
             </div>
           </div>
 
