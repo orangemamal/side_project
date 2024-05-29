@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import {Link} from "react-router-dom";
+
 
 export default function Footer() {
 
@@ -10,7 +11,7 @@ export default function Footer() {
     {no: 3, logo: 'fa-linkedin', link: '#'},
   ];
 
-  const itemsLinkWrap = [
+  const itemsLinkWrapFirst = [
     {title: '무통장 입금계좌',
       detail: [
         {list_1: '국민 123456-12-123456'},
@@ -19,6 +20,41 @@ export default function Footer() {
       ]
     },
   ];
+  const itemsLinkWrapSecond = [
+    {title: '교환·반품',
+      detail: [
+        {list_1: '제품 배송중이나 제품자체의 하자가 있는 경우 절차를 안내해드립니다.'},
+        {list_2: '반품시 보내주실 주소'},
+        {list_3: '서울특별시 종로구 청와대로 1'},
+      ]
+    },
+  ];
+  const itemsLinkWrapThird = [
+    {title: 'FurNi 멤버쉽',
+      detail: [
+        {list_1: 'FurNi 회원이시라구요?'},
+        {list_2: '할인쿠폰 및 적립금 등 다양하게 할인 받으세요'},
+      ]
+    },
+  ];
+  const itemsLinkWrapFourth = [
+    {title: '이용가이드',
+      detail: [
+        {list_1: 'FurNi데코시리즈'},
+        {list_2: '브랜드스토리'},
+        {list_3: '이벤트'},
+        {list_4: '협찬문의'},
+        {list_6: '고객센터'},
+        {list_7: '배송문의'},
+        {list_8: '이용약관'},
+        {list_9: '개인정보처리방침'},
+        {list_10: '포토리뷰'},
+      ]
+    },
+  ];
+
+  const currentYear = useMemo(() => new Date().getFullYear(), [])
+
 
   return (
     <footer className="footer-section">
@@ -51,10 +87,12 @@ export default function Footer() {
                   </button>
                 </div>
               </form>
-
             </div>
+
           </div>
         </div>
+
+        <div data-type="line"/>
 
         <div className="row g-5 mb-5 menu_wrap">
           <div className="col-lg-4 left_side">
@@ -81,18 +119,61 @@ export default function Footer() {
 
           <div className="col-lg-8 right_side">
             <div className="row links-wrap">
-              {itemsLinkWrap.map((item, index) => (
-                <div className="col-6 col-sm-6 col-md-3" key={index}>
+              {itemsLinkWrapFirst.map((item, index) => (
+                <div className="bundle col-6 col-sm-6 col-md-3" key={index}>
                   <h4>{item.title}</h4>
-                  <ul className="list-unstyled">
-                    {item.detail.forEach((detailItems) => {
-                      console.log(detailItems)
-                    })}
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Contact us</a></li>
+                  {item.detail.map((detailItem, detailIndex) => (
+                    <ul className="list-unstyled" key={detailIndex}>
+                      <li><a href="#">{detailItem.list_1}</a></li>
+                      <li><a href="#">{detailItem.list_2}</a></li>
+                      <li><a href="#">{detailItem.list_3}</a></li>
                   </ul>
+                  ))}
+                </div>
+              ))}
+
+              {itemsLinkWrapSecond.map((item, index) => (
+                <div className="bundle col-6 col-sm-6 col-md-3" key={index}>
+                  <h4>{item.title}</h4>
+                  {item.detail.map((detailItem, detailIndex) => (
+                    <ul className="list-unstyled" key={detailIndex}>
+                      <li><a href="#">{detailItem.list_1}</a></li>
+                      <li><a href="#">{detailItem.list_2}</a></li>
+                      <li><a href="#">{detailItem.list_3}</a></li>
+                    </ul>
+                  ))}
+                </div>
+              ))}
+
+              {itemsLinkWrapThird.map((item, index) => (
+                <div className="bundle col-6 col-sm-6 col-md-3" key={index}>
+                  <h4>{item.title}</h4>
+                  {item.detail.map((detailItem, detailIndex) => (
+                    <ul className="list-unstyled" key={detailIndex}>
+                      <li><a href="#">{detailItem.list_1}</a></li>
+                      <li><a href="#">{detailItem.list_2}</a></li>
+                    </ul>
+                  ))}
+                </div>
+              ))}
+
+              {itemsLinkWrapFourth.map((item, index) => (
+                <div className="bundle col-6 col-sm-6 col-md-3" key={index}>
+                  <h4>{item.title}</h4>
+                  {item.detail.map((detailItem, detailIndex) => (
+                    <ul className="list-unstyled" key={detailIndex}>
+                      <li><a href="#">{detailItem.list_1}</a></li>
+                      <li><a href="#">{detailItem.list_2}</a></li>
+                      <li><a href="#">{detailItem.list_3}</a></li>
+                      <li><a href="#">{detailItem.list_4}</a></li>
+                      <li><a href="#">{detailItem.list_5}</a></li>
+                      <li><a href="#">{detailItem.list_6}</a></li>
+                      <li><a href="#">{detailItem.list_7}</a></li>
+                      <li><a href="#">{detailItem.list_8}</a></li>
+                      <li><a href="#">{detailItem.list_9}</a></li>
+                      <li><a href="#">{detailItem.list_10}</a></li>
+                    </ul>
+                  ))}
                 </div>
               ))}
 
@@ -104,11 +185,10 @@ export default function Footer() {
         <div className="border-top copyright">
           <div className="row pt-4">
             <div className="col-lg-6">
-              <p className="mb-2 text-center text-lg-start">Copyright &copy;
-                <script>document.write(new Date().getFullYear());</script>
-                . All Rights Reserved. &mdash; Designed with love by <a
-                  href="https://untree.co">Untree.co</a> Distributed
-                By <a href="https://themewagon.com">ThemeWagon</a>
+              <p className="mb-2 text-center text-lg-start">
+                Copyright &copy; {currentYear}. All Rights Reserved.<br/>
+                Designed with love by <a href="https://untree.co">Untree.co </a>
+                Distributed By <a href="https://themewagon.com">ThemeWagon</a>
               </p>
             </div>
 

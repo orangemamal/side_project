@@ -46,19 +46,23 @@ export default function Frame() {
     <div className="app">
 
       <Navigation />
-      <Hero onCartPage={onCartPage} onCheckoutPage={onCheckoutPage} />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
-        <Route path="/Services" element={<Services />} />
-        <Route path="/Blog" element={<Blog />} />
-        <Route path="/About-us" element={<About />} />
-        <Route path="/Contact-us" element={<Contact />} />
-        <Route path="/Cart" element={<Cart onPageRender={handleCartPageRender} />} />
-        <Route path="/Checkout" element={<Checkout onPageRender={handleCheckoutPageRender} />} />
-        <Route path="/ThankYou" element={<ThankYou onPageRender={handleCartPageRender} />} />
-      </Routes>
+
+      <div className="main_frame">
+        <Hero onCartPage={onCartPage} onCheckoutPage={onCheckoutPage} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/Services" element={<Services />} />
+          <Route path="/Blog" element={<Blog />} />
+          <Route path="/About-us" element={<About />} />
+          <Route path="/Contact-us" element={<Contact />} />
+          <Route path="/Cart" element={<Cart onPageRender={handleCartPageRender} />} />
+          <Route path="/Checkout" element={<Checkout onPageRender={handleCheckoutPageRender} />} />
+          <Route path="/ThankYou" element={<ThankYou onPageRender={handleCartPageRender} />} />
+        </Routes>
+      </div>
+
       <Footer />
 
     </div>

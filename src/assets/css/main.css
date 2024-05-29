@@ -894,8 +894,14 @@ textarea {
 }
 
 nav.custom-navbar {
+  width: 100%;
+  height: 7.4rem;
   background: #4D869C !important;
   padding: 2rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 8000;
+  box-shadow: 0 6px 6px 0 rgba(77, 134, 156, 0.24);
 }
 nav.custom-navbar .navbar-brand {
   font: 3.2rem/4rem "Spoqa Han Sans Neo", "sans-serif";
@@ -995,6 +1001,9 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
   color: #474C52;
 }
+.footer-section .menu_wrap {
+  justify-content: space-between;
+}
 .footer-section .menu_wrap .left_side .support .center {
   font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
   font-weight: 500;
@@ -1021,7 +1030,6 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   color: rgba(47, 47, 47, 0.5);
 }
 .footer-section .subscription-form {
-  margin-bottom: 40px;
   position: relative;
   z-index: 2;
   margin-top: 100px;
@@ -1068,6 +1076,12 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 .footer-section .subscription-form .btn .fa-paper-plane {
   font-size: 14px;
 }
+.footer-section [data-type=line] {
+  width: 100%;
+  height: 1px;
+  background: #dee2e6;
+  margin: 2rem 0 4rem;
+}
 .footer-section .sofa-img {
   position: absolute;
   top: -14rem;
@@ -1079,15 +1093,34 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   max-width: 30rem;
 }
 .footer-section .links-wrap {
-  margin-top: 0px;
+  margin-top: 0;
+  display: flex;
+  justify-content: end;
+}
+.footer-section .links-wrap .bundle {
+  width: 20%;
+  padding: 0 3.2rem;
+}
+.footer-section .links-wrap .bundle h4 {
+  font: 1.8rem/2.3rem "Spoqa Han Sans Neo", "sans-serif";
+  margin-bottom: 2rem;
+}
+.footer-section .links-wrap .bundle ul li {
+  margin-bottom: 0.8rem;
+}
+.footer-section .links-wrap .bundle ul li a {
+  color: #9FA4A8;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  transition: all 0.3s;
+}
+.footer-section .links-wrap .bundle ul li a:hover {
+  font-weight: 500;
+  color: #4D869C;
 }
 @media (min-width: 992px) {
   .footer-section .links-wrap {
     margin-top: 54px;
   }
-}
-.footer-section .links-wrap ul li {
-  margin-bottom: 10px;
 }
 .footer-section .footer-logo-wrap .footer-logo img {
   height: 3.2rem;
@@ -1114,9 +1147,9 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   border-color: #dce5e4;
 }
 .footer-section .border-top.copyright {
-  font-size: 14px !important;
+  color: #CACDD2;
+  font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
 }
-
 .hero {
   overflow: hidden;
   background: #4D869C;
@@ -1420,6 +1453,9 @@ body #root .app {
   width: 100%;
   min-height: 100%;
   position: relative;
+}
+body #root .app .main_frame {
+  margin-top: 7.44rem;
 }
 
 .testimonial-section .container .row .section-title {
