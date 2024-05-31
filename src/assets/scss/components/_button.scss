@@ -3,10 +3,10 @@
   padding: 12px 30px;
   border-radius: 30px;
   color: $white;
-  background: $dark;
-  border-color: $dark;
   @include font(1.3rem);
   transition: all 0.5s;
+  background: $gray600;
+  border-color: $gray600;
   &:hover {
     color: $white;
     background: darken($dark, 20%);

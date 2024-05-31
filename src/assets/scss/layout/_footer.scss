@@ -107,10 +107,27 @@
     justify-content: end;
     .bundle {
       width: 20%;
-      padding: 0 3.2rem;
+      margin-right: 4rem;
+      padding: 0;
+      &:first-of-type {
+        width: auto;
+        white-space: nowrap;
+      }
+      &:last-of-type {
+        margin-right: 0;
+      }
+      .list-unstyled {
+        &.not_link {
+          color: $gray600;
+        }
+      }
       h4 {
         @include font(1.8rem);
         margin-bottom: 2rem;
+        color: $gray800;
+        font-weight: $medium;
+        padding-bottom: 0.4rem;
+        border-bottom: 1px solid $gray200;
       }
       ul {
         li {
@@ -164,7 +181,7 @@
       color: $gray200;
       @include font(1.3rem);
       .text-lg-start {
-
+        @include font(1.3rem);
       }
     }
   }

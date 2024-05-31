@@ -27,8 +27,9 @@ p {
 .list-unstyled {
   &.custom-list {
     li {
-      @include font(1.6rem);
+      @include font(1.5rem);
       color: $primary;
+      font-weight: $medium;
       &::before {
         top: 50%;
         transform: translateY(-50%);

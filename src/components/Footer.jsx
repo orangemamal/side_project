@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import {Link} from "react-router-dom";
 
-
 export default function Footer() {
 
   const itemsCustomSocial = [
@@ -44,11 +43,11 @@ export default function Footer() {
         {list_2: '브랜드스토리'},
         {list_3: '이벤트'},
         {list_4: '협찬문의'},
-        {list_6: '고객센터'},
-        {list_7: '배송문의'},
-        {list_8: '이용약관'},
-        {list_9: '개인정보처리방침'},
-        {list_10: '포토리뷰'},
+        {list_5: '고객센터'},
+        {list_6: '배송문의'},
+        {list_7: '이용약관'},
+        {list_8: '개인정보처리방침'},
+        {list_9: '포토리뷰'},
       ]
     },
   ];
@@ -123,10 +122,10 @@ export default function Footer() {
                 <div className="bundle col-6 col-sm-6 col-md-3" key={index}>
                   <h4>{item.title}</h4>
                   {item.detail.map((detailItem, detailIndex) => (
-                    <ul className="list-unstyled" key={detailIndex}>
-                      <li><a href="#">{detailItem.list_1}</a></li>
-                      <li><a href="#">{detailItem.list_2}</a></li>
-                      <li><a href="#">{detailItem.list_3}</a></li>
+                    <ul className="list-unstyled not_link" key={detailIndex}>
+                      <li>{detailItem.list_1}</li>
+                      <li>{detailItem.list_2}</li>
+                      <li>{detailItem.list_3}</li>
                   </ul>
                   ))}
                 </div>
@@ -136,10 +135,10 @@ export default function Footer() {
                 <div className="bundle col-6 col-sm-6 col-md-3" key={index}>
                   <h4>{item.title}</h4>
                   {item.detail.map((detailItem, detailIndex) => (
-                    <ul className="list-unstyled" key={detailIndex}>
-                      <li><a href="#">{detailItem.list_1}</a></li>
-                      <li><a href="#">{detailItem.list_2}</a></li>
-                      <li><a href="#">{detailItem.list_3}</a></li>
+                    <ul className="list-unstyled not_link" key={detailIndex}>
+                      <li>{detailItem.list_1}</li>
+                      <li>{detailItem.list_2}</li>
+                      <li>{detailItem.list_3}</li>
                     </ul>
                   ))}
                 </div>
@@ -171,7 +170,6 @@ export default function Footer() {
                       <li><a href="#">{detailItem.list_7}</a></li>
                       <li><a href="#">{detailItem.list_8}</a></li>
                       <li><a href="#">{detailItem.list_9}</a></li>
-                      <li><a href="#">{detailItem.list_10}</a></li>
                     </ul>
                   ))}
                 </div>
