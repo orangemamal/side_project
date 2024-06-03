@@ -51,10 +51,10 @@ export default function Frame() {
         <Hero onCartPage={onCartPage} onCheckoutPage={onCheckoutPage} />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Shop" element={<Shop />} />
           <Route path="/Services" element={<Services />} />
-          <Route path="/SectionBlog" element={<Blog />} />
+          <Route path="/Blog" element={<Blog />} />
           <Route path="/About-us" element={<About />} />
           <Route path="/Contact-us" element={<Contact />} />
           <Route path="/Cart" element={<Cart onPageRender={handleCartPageRender} />} />

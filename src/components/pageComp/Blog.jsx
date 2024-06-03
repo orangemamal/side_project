@@ -6,7 +6,6 @@ export default function Blog() {
 
 console.log("clicked")
 
-
   return (
     <main>
       <div className="blog-section">
