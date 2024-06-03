@@ -75,10 +75,10 @@ export default function Footer() {
 
               <form action="#" className="row g-3">
                 <div className="col-auto">
-                  <input type="text" className="form-control" placeholder="Enter your name" />
+                  <input type="text" className="form-control" placeholder="성함" />
                 </div>
                 <div className="col-auto">
-                  <input type="email" className="form-control" placeholder="Enter your email" />
+                  <input type="email" className="form-control" placeholder="이메일" />
                 </div>
                 <div className="col-auto">
                   <button className="btn btn-primary">

@@ -38,7 +38,7 @@ p {
   }
 }
 
-// Product Section
+// SectionProduct Section
 .product-section {
   padding: 7rem 0;
   .product-item {
@@ -123,6 +123,13 @@ p {
 // Why Choose us section
 .why-choose-section {
   padding: 7rem 0;
+  &.service {
+    h3 {
+      margin-bottom: 0.8rem;
+      @include font(1.5rem);
+      font-weight: $bold;
+    }
+  }
   .section-title {
     margin-bottom: 1.6rem;
   }
@@ -302,7 +309,7 @@ p {
   }
 }
 
-// Testimonial Section
+// SectionTestimonial Section
 .testimonial-section {
   padding: 3rem 0 7rem 0;
 }
@@ -431,7 +438,7 @@ p {
   }
 }
 
-// Blog Section
+// SectionBlog Section
 .before-footer-section {
   padding: 7rem 0 12rem 0 !important;
 }

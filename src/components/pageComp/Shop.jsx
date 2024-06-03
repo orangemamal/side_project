@@ -5,43 +5,43 @@ export default function Shop() {
   const itemsProduct = [
     {
       id: 1,
-      productName: "Nordic Chair",
+      productName: "프리미엄 침대형의자",
       price: 50000,
     },
     {
       id: 2,
-      productName: "Nordic Chair",
+      productName: "프리미엄 소파형의자",
+      price: 100000,
+    },
+    {
+      id: 3,
+      productName: "프리미엄 회전의자",
+      price: 80000,
+    },
+    {
+      id: 1,
+      productName: "프리미엄 침대형의자",
+      price: 30000,
+    },
+    {
+      id: 2,
+      productName: "프리미엄 소파형의자",
       price: 50000,
     },
     {
       id: 3,
-      productName: "Nordic Chair",
-      price: 50000,
+      productName: "프리미엄 회전의자",
+      price: 120000,
     },
     {
       id: 1,
-      productName: "Nordic Chair",
-      price: 50000,
+      productName: "프리미엄 소파형의자",
+      price: 70000,
     },
     {
       id: 2,
-      productName: "Nordic Chair",
-      price: 50000,
-    },
-    {
-      id: 3,
-      productName: "Nordic Chair",
-      price: 50000,
-    },
-    {
-      id: 1,
-      productName: "Nordic Chair",
-      price: 50000,
-    },
-    {
-      id: 2,
-      productName: "Nordic Chair",
-      price: 50000,
+      productName: "프리미엄 회전의자",
+      price: 80000,
     },
   ];
 

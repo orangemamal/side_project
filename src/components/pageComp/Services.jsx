@@ -1,31 +1,35 @@
 import React from 'react';
-import Slick from "../Slick";
+import SectionProduct from "../sectionComp/SectionProduct";
+import SectionTestimonial from "../sectionComp/SectionTestimonial";
 
 export default function Services() {
-  const itemsProduct = [1, 2, 3];
 
   const servicesItems = [
     {
       keyword: 'truck',
-      title: 'Fast & Free Shipping',
+      title: '빠른 무료 배송',
+      content: '저희는 그 어느 회사보다 빠른 배송을 보장드립니다.',
     },
     {
       keyword: 'bag',
-      title: 'Easy to Shop',
+      title: '쉬운 구매 방법',
+      content: '저희는 매장에서 구매하는 것보다 쉽고 빠른 온라인 쇼핑을 제공합니다.',
     },
     {
       keyword: 'support',
-      title: '24/7 Support',
+      title: '365 서비스 지원',
+      content: '저희는 365일 항상 고객 서비스 센터를 운영 중입니다.',
     },
     {
       keyword: 'return',
-      title: 'Hassle Free Returns',
+      title: '무료 반품 보장',
+      content: '저희는 고객을 위해 언제든 무료 반품을 해드립니다.',
     },
   ];
 
   return (
     <main>
-      <div className="why-choose-section">
+      <div className="why-choose-section service">
         <div className="container">
           <div className="row my-5">
 
@@ -36,7 +40,7 @@ export default function Services() {
                     <img src={require(`assets/icons/${item.keyword}.svg`)} alt="Image" className="imf-fluid" />
                   </div>
                   <h3>{item.title}</h3>
-                  <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate.</p>
+                  <p>{item.content}</p>
                 </div>
               </div>
             ))}
@@ -46,53 +50,11 @@ export default function Services() {
       </div>
 
       <div className="product-section pt-0">
-        <div className="container">
-          <div className="row">
-
-            <div className="col-md-12 col-lg-3 mb-5 mb-lg-0">
-              <h2 className="mb-4 section-title">Crafted with excellent material.</h2>
-              <p className="mb-4">Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. </p>
-              <p><a href="#" className="btn">Explore</a></p>
-            </div>
-
-            {itemsProduct.map((item, index) => (
-              <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0" key={index}>
-                <a className="product-item" href="#">
-                  <img src={require(`assets/images/product-${item}.png`)} className="img-fluid product-thumbnail" />
-                    <h3 className="product-title">Nordic Chair</h3>
-                    <strong className="product-price">$50.00</strong>
-
-                    <span className="icon-cross">
-                  <img src={require("assets/icons/cross.svg").default} className="img-fluid" />
-                </span>
-                </a>
-              </div>
-            ))}
-
-          </div>
-        </div>
+        <SectionProduct />
       </div>
 
       <div className="testimonial-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-7 mx-auto text-center">
-              <h2 className="section-title">Testimonials</h2>
-            </div>
-          </div>
-
-          <div className="row justify-content-center">
-            <div className="col-lg-12">
-              <div className="testimonial-slider-wrap text-center">
-                <div className="testimonial-slider">
-
-                  <Slick />
-
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <SectionTestimonial />
       </div>
 
     </main>

@@ -54,7 +54,7 @@ export default function Frame() {
           <Route path="/home" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/Services" element={<Services />} />
-          <Route path="/Blog" element={<Blog />} />
+          <Route path="/SectionBlog" element={<Blog />} />
           <Route path="/About-us" element={<About />} />
           <Route path="/Contact-us" element={<Contact />} />
           <Route path="/Cart" element={<Cart onPageRender={handleCartPageRender} />} />

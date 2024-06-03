@@ -33,8 +33,16 @@ export default function Navigation() {
           <img src={require("assets/images/img_logo.svg").default} alt="FurNi"/>
         </Link>
 
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni"
-                aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation"  onClick={toggleMenu}>
+        <button
+            className="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarsFurni"
+            aria-controls="navbarsFurni"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            onClick={toggleMenu}
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
 
