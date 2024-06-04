@@ -1,5 +1,4 @@
 a {
-  text-decoration: none;
   transition: .3s all ease;
   color: $dark;
   text-decoration: underline;
@@ -507,6 +506,56 @@ p {
 
 .untree_co-section {
   padding: 7rem 0;
+  .container {
+    .frame {
+      padding: 0 2.4rem;
+      .img-fluid {
+        border-radius: 1.6rem;
+        border: 4px solid rgba(77, 134, 156, 0.2);
+      }
+      h3 {
+        @include font(2rem);
+        a {
+          text-decoration: none;
+        }
+      }
+      .position {
+        @include font(1.4rem);
+        color: $primary;
+        margin-top: 0.4rem;
+      }
+      .see_more {
+        margin-top: 1.6rem;
+        a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 0.8rem 1.6rem;
+          border-radius: 5rem;
+          background: $primary;
+          text-decoration: none;
+          div {
+            color: $white;
+            font-weight: $regular;
+            margin-right: 0.4rem;
+          }
+          i {
+            color: $white;
+            opacity: 0.4;
+            text-align: center;
+            line-height: 1.8rem;
+            display: flex;
+            align-items: center;
+            &::before {
+              width: 1.8rem;
+              height: 1.8rem;
+              margin: auto 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 .form-control {

@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionTestimonial from "../sectionComp/SectionTestimonial";
 import SectionWhyChoose from "../sectionComp/SectionWhyChoose";
+import SectionTeam from "../sectionComp/SectionTeam";
 
 export default function About() {
 
@@ -11,7 +12,7 @@ export default function About() {
       </div>
 
       <div className="untree_co-section">
-
+        <SectionTeam />
       </div>
 
       <div className="testimonial-section">
