@@ -5,6 +5,7 @@
   color: $gray600;
   .menu_wrap {
     justify-content: space-between;
+    margin-bottom: 8rem !important;
     .left_side {
       .support {
         .center {
@@ -22,9 +23,6 @@
           color: $gray500;
         }
       }
-    }
-    .right_side {
-
     }
   }
   .relative {

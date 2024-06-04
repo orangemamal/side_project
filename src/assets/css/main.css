@@ -1009,6 +1009,7 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 .footer-section .menu_wrap {
   justify-content: space-between;
+  margin-bottom: 8rem !important;
 }
 .footer-section .menu_wrap .left_side .support .center {
   font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
@@ -1184,6 +1185,7 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   z-index: 4;
 }
 .hero .intro-excerpt .sub_info {
+  color: #EAEBED;
   font-size: 1.4rem;
 }
 .hero h1 {
