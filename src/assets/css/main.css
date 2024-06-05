@@ -797,6 +797,9 @@ p {
 }
 .untree_co-section .container .frame {
   padding: 0 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .untree_co-section .container .frame .img-fluid {
   border-radius: 1.6rem;
@@ -804,6 +807,7 @@ p {
 }
 .untree_co-section .container .frame h3 {
   font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 700;
 }
 .untree_co-section .container .frame h3 a {
   text-decoration: none;
@@ -829,16 +833,19 @@ p {
   color: white;
   font-weight: 400;
   margin-right: 0.4rem;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
 }
 .untree_co-section .container .frame .see_more a i {
   color: white;
   opacity: 0.4;
-  text-align: center;
-  line-height: 1.8rem;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 .untree_co-section .container .frame .see_more a i::before {
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.8rem;
   width: 1.8rem;
   height: 1.8rem;
   margin: auto 0;
