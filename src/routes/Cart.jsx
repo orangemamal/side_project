@@ -13,91 +13,114 @@ export default function Cart({ onPageRender }) {
     onPageRender();
   }, [onPageRender]);
 
+  const tableHeader = [
+    {
+      id: "thumbnail",
+      name: '이미지',
+    },
+    {
+      id: "name",
+      name: '상품',
+    },
+    {
+      id: "price",
+      name: '가격',
+    },
+    {
+      id: "quantity",
+      name: '갯수',
+    },
+    {
+      id: "total",
+      name: '합계',
+    },
+    {
+      id: "remove",
+      name: '삭제',
+    },
+  ];
+
+  const products = [
+    {
+      id: 1,
+      name: '프리미엄 회전의자',
+      price: 50000,
+      quantity: 1,
+      imageUrl: require('assets/images/product-1.png')
+    },
+    {
+      id: 2,
+      name: '프리미엄 침대형의자',
+      price: 80000,
+      quantity: 1,
+      imageUrl: require('assets/images/product-2.png')
+    }
+  ];
+
   return (
     <div className="untree_co-section before-footer-section">
       <div className="container">
         <div className="row mb-5">
           <form className="col-md-12" method="post">
             <div className="site-blocks-table">
-              <table className="table">
 
+              <table className="table">
                 <thead>
                   <tr>
-                    <th className="product-thumbnail">Image</th>
-                    <th className="product-name">Product</th>
-                    <th className="product-price">Price</th>
-                    <th className="product-quantity">Quantity</th>
-                    <th className="product-total">Total</th>
-                    <th className="product-remove">Remove</th>
+                    {tableHeader.map((item, index) => (
+                      <th key={index} className={`product-${item.id}`}>{item.name}</th>
+                    ))}
                   </tr>
                 </thead>
 
                 <tbody>
-                  <tr>
-                    <td className="product-thumbnail">
-                      <img src={require("assets/images/product-1.png")} alt="Image" className="img-fluid"/>
-                    </td>
-                    <td className="product-name">
-                      <h2 className="h5 text-black">Product 1</h2>
-                    </td>
-                    <td>$49.00</td>
-                    <td>
-                      {/* max-width: 120px */}
-                      <div className="input-group mb-3 d-flex align-items-center quantity-container">
-                        <div className="input-group-prepend">
-                          <button className="btn btn-outline-black decrease" type="button">&minus;</button>
-                        </div>
-                        <input
-                          type="text"
-                          className="form-control text-center quantity-amount"
-                          defaultValue="1"
-                          placeholder=""
-                          aria-label="Example text with button addon"
-                          aria-describedby="button-addon1"
-                        />
-                        <div className="input-group-append">
-                          <button className="btn btn-outline-black increase" type="button">&plus;</button>
-                        </div>
-                      </div>
+                  {products.map(product => (
+                    <tr key={product.id}>
+                      <td className="product-thumbnail">
+                        <img src={product.imageUrl} alt="Image" className="img-fluid" />
+                      </td>
 
-                    </td>
-                    <td>$49.00</td>
-                    <td><a href="#" className="btn btn-black btn-sm">X</a></td>
-                  </tr>
+                      <td className="product-name">
+                        <h2 className="h5 text-black">{product.name}</h2>
+                      </td>
 
-                  <tr>
-                    <td className="product-thumbnail">
-                      <img src={require("assets/images/product-2.png")} alt="Image" className="img-fluid"/>
-                    </td>
-                    <td className="product-name">
-                      <h2 className="h5 text-black">Product 2</h2>
-                    </td>
-                    <td>$49.00</td>
-                    <td>
-                      <div className="input-group mb-3 d-flex align-items-center quantity-container">
-                        <div className="input-group-prepend">
-                          <button className="btn btn-outline-black decrease" type="button">&minus;</button>
-                        </div>
-                        <input
-                          type="text"
-                          className="form-control text-center quantity-amount"
-                          defaultValue="1"
-                          placeholder=""
-                          aria-label="Example text with button addon"
-                          aria-describedby="button-addon1"
-                        />
-                        <div className="input-group-append">
-                          <button className="btn btn-outline-black increase" type="button">&plus;</button>
-                        </div>
-                      </div>
+                      <td>{product.price.toLocaleString()}원</td>
 
-                    </td>
-                    <td>$49.00</td>
-                    <td><a href="#" className="btn btn-black btn-sm">X</a></td>
-                  </tr>
+                      <td className="quantity_group">
+                        <div className="input-group mb-3 d-flex align-items-center quantity-container">
+
+                          <div className="input-group-prepend">
+                            <button className="btn btn-outline-black decrease" type="button">
+                              <i className="fa-solid fa-circle-minus"></i>
+                            </button>
+                          </div>
+                          <input
+                            type="text"
+                            className="form-control text-center quantity-amount"
+                            defaultValue={product.quantity}
+                            placeholder=""
+                            aria-label="Example text with button addon"
+                            aria-describedby="button-addon1"
+                          />
+                          <div className="input-group-append">
+                            <button className="btn btn-outline-black increase" type="button">
+                              <i className="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </div>
+
+                        </div>
+                      </td>
+
+                      <td>{(product.price * product.quantity).toLocaleString()}원</td>
+
+                      <td className="delete">
+                        <i className="fa-solid fa-trash-can fa-lg"></i>
+                      </td>
+                    </tr>
+                  ))}
                 </tbody>
-
               </table>
+
             </div>
           </form>
         </div>

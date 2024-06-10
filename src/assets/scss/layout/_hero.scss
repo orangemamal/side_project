@@ -5,16 +5,21 @@
   .intro-excerpt {
     position: relative;
     z-index: 4;
+    h1 {
+      font-weight: $bold;
+      color: $white;
+      margin-bottom: 3rem;
+      i {
+        opacity: 0.4;
+        margin-right: 1.6rem;
+      }
+    }
     .sub_info {
       color: $gray100;
       font-size: 1.4rem;
     }
   }
-  h1 {
-    font-weight: $bold;
-    color: $white;
-    margin-bottom: 3rem;
-  }
+
   p {
     color: rgba($white, .5);
     margin-bottom: 30px;

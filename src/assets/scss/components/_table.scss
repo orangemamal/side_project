@@ -1,105 +1,27 @@
-//.default_table {
-//  .entire_count_wrap {
-//    padding-bottom: 1rem;
-//    color: $gray80;
-//    @include font(1.4rem);
-//    .hasComment {
-//      display: flex;
-//      justify-content: space-between;
-//    }
-//    span {
-//      font-weight: $bold;
-//    }
-//  }
-//  table {
-//    width: 100%;
-//    table-layout: fixed;
-//    word-break:break-word;
-//    @include font(1.4rem);
-//    thead {
-//      background: $subColor;
-//      height: 4rem;
-//      border-radius: 0.4rem;
-//      tr {
-//        th {
-//          font-weight: $medium;
-//        }
-//      }
-//    }
-//    tbody {
-//      tr {
-//        height: 4rem;
-//        border-bottom: 1px solid $gray20;
-//        td {
-//          color: $gray100;
-//          text-align: center;
-//        }
-//      }
-//    }
-//  }
-//  &.select_possible {
-//    tbody {
-//      tr:hover, tr:active {
-//        background: $gray20;
-//        td {
-//          color: $mainColor;
-//          font-weight: $medium;
-//          cursor: pointer;
-//        }
-//      }
-//    }
-//  }
-//  &.modal {
-//    padding: 0.8rem 0;
-//    &:not(:first-child) {
-//      padding: 4rem 0 0.8rem;
-//    }
-//    table {
-//      thead {
-//        background: $gray20;
-//        tr {
-//          th {
-//            color: $black;
-//            font-weight: $bold;
-//            &:first-child {
-//              padding-left: 4rem;
-//              text-align: left;
-//            }
-//            &:last-child {
-//              padding-right: 4rem;
-//              text-align: right;
-//            }
-//          }
-//        }
-//      }
-//      tbody {
-//        tr {
-//          td {
-//            color: $black;
-//            &:first-child {
-//              padding-left: 4rem;
-//              text-align: left;
-//            }
-//            &:last-child {
-//              padding-right: 4rem;
-//              text-align: right;
-//            }
-//          }
-//        }
-//      }
-//    }
-//  }
-//  &.chart {
-//    margin-top: 2rem;
-//    display: flex;
-//    justify-content: center;
-//    table {
-//      width: 60rem;
-//      thead {
-//        tr {
-//          background: $gray20;
-//        }
-//      }
-//    }
-//  }
-//}
+table {
+  &.table {
+    thead {
+
+    }
+    tbody {
+      tr {
+        td {
+          @include font(1.6rem);
+          h2 {
+            @include font(1.6rem);
+          }
+          &.delete {
+            @include font(1.4rem);
+            cursor: pointer;
+            color: $gray500;
+          }
+          &.quantity_group {
+            .decrease, .increase {
+              @include font(1.6rem);
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -338,6 +338,21 @@ input:focus {
   color: white;
 }
 
+table.table tbody tr td {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+}
+table.table tbody tr td h2 {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+}
+table.table tbody tr td.delete {
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  cursor: pointer;
+  color: #73787E;
+}
+table.table tbody tr td.quantity_group .decrease, table.table tbody tr td.quantity_group .increase {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+}
+
 a {
   transition: 0.3s all ease;
   color: #2f2f2f;
@@ -875,7 +890,7 @@ p {
 }
 
 .service {
-  line-height: 1.5;
+  align-items: center;
 }
 .service .service-icon {
   border-radius: 10px;
@@ -886,6 +901,23 @@ p {
   background: #4D869C;
   margin-right: 20px;
   color: white;
+}
+.service .service-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.contact_input_group {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+}
+.contact_input_group .form-group label.text-black {
+  color: #EAEBED;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  margin-bottom: 0.8rem;
+}
+.contact_input_group .form-group input.form-control {
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  padding: 1.6rem;
 }
 
 textarea {
@@ -1238,14 +1270,18 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   position: relative;
   z-index: 4;
 }
-.hero .intro-excerpt .sub_info {
-  color: #EAEBED;
-  font-size: 1.4rem;
-}
-.hero h1 {
+.hero .intro-excerpt h1 {
   font-weight: 700;
   color: white;
   margin-bottom: 3rem;
+}
+.hero .intro-excerpt h1 i {
+  opacity: 0.4;
+  margin-right: 1.6rem;
+}
+.hero .intro-excerpt .sub_info {
+  color: #EAEBED;
+  font-size: 1.4rem;
 }
 .hero p {
   color: rgba(255, 255, 255, 0.5);

@@ -503,7 +503,6 @@ p {
   }
 }
 
-
 .untree_co-section {
   padding: 7rem 0;
   .container {
@@ -594,8 +593,7 @@ p {
 }
 
 .service {
-  line-height: 1.5;
-
+  align-items: center;
   .service-icon {
     border-radius: 10px;
     flex: 0 0 50px;
@@ -605,6 +603,25 @@ p {
     background: $primary;
     margin-right: 20px;
     color: $white;
+    svg {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}
+
+.contact_input_group {
+  @include font(1.6rem);
+  .form-group {
+    label.text-black {
+      color: $gray100;
+      @include font(1.4rem);
+      margin-bottom: 0.8rem;
+    }
+    input.form-control {
+      @include font(1.6rem);
+      padding: 1.6rem;
+    }
   }
 }
 

@@ -15,7 +15,11 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
           <div className="row justify-content-between">
             <div className="col-lg-5">
               <div className="intro-excerpt">
-                <h1>Cart</h1>
+                <h1>
+                  <i className="fa-solid fa-cart-flatbed"></i>
+                  <span>장바구니</span>
+                </h1>
+
               </div>
             </div>
           </div>
@@ -29,7 +33,10 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
           <div className="row justify-content-between">
             <div className="col-lg-5">
               <div className="intro-excerpt">
-                <h1>Checkout</h1>
+                <h1>
+                  <i className="fa-solid fa-credit-card"></i>
+                  <span>결재하기</span>
+                </h1>
               </div>
             </div>
           </div>
