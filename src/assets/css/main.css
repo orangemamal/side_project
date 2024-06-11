@@ -349,8 +349,19 @@ table.table tbody tr td.delete {
   cursor: pointer;
   color: #73787E;
 }
+table.table tbody tr td.quantity_group .quantity-container {
+  justify-content: center;
+}
+table.table tbody tr td.quantity_group .quantity-container input.quantity-amount.table_input {
+  height: 4rem;
+  border-radius: 0.8rem;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  width: 10rem;
+  flex: unset;
+}
 table.table tbody tr td.quantity_group .decrease, table.table tbody tr td.quantity_group .increase {
-  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #4D869C;
 }
 
 a {

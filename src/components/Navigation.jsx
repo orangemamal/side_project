@@ -53,7 +53,7 @@ export default function Navigation() {
               <li
                 key={index}
                 className={`nav-item ${index === activeIndex ? 'active' : ''}`}
-                onClick={() => handleItemClick(index, `/${item.toLowerCase().replace(/\s/g, '-')}`)}
+                onClick={() => handleItemClick(index, `/${item.replace(/\s/g, '-')}`)}
               >
                 {item}
               </li>
@@ -67,7 +67,7 @@ export default function Navigation() {
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="cart">
+              <Link className="nav-link" to="/Cart">
                 <div className="icon cart" />
               </Link>
             </li>

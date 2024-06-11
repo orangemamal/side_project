@@ -57,6 +57,14 @@ export default function Cart({ onPageRender }) {
     }
   ];
 
+  const minusQuantity = (item) => {
+    --item.quantity
+  }
+  const plusQuantity = (item) => {
+    ++item.quantity
+    console.log(++item.quantity)
+  }
+
   return (
     <div className="untree_co-section before-footer-section">
       <div className="container">
@@ -90,20 +98,20 @@ export default function Cart({ onPageRender }) {
                         <div className="input-group mb-3 d-flex align-items-center quantity-container">
 
                           <div className="input-group-prepend">
-                            <button className="btn btn-outline-black decrease" type="button">
+                            <button onClick={() => minusQuantity(product)} className="btn btn-outline-black decrease" type="button">
                               <i className="fa-solid fa-circle-minus"></i>
                             </button>
                           </div>
                           <input
                             type="text"
-                            className="form-control text-center quantity-amount"
+                            className="form-control text-center quantity-amount table_input"
                             defaultValue={product.quantity}
                             placeholder=""
                             aria-label="Example text with button addon"
                             aria-describedby="button-addon1"
                           />
                           <div className="input-group-append">
-                            <button className="btn btn-outline-black increase" type="button">
+                            <button onClick={() => plusQuantity(product)} className="btn btn-outline-black increase" type="button">
                               <i className="fa-solid fa-circle-plus"></i>
                             </button>
                           </div>

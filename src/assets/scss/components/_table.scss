@@ -16,8 +16,19 @@ table {
             color: $gray500;
           }
           &.quantity_group {
+            .quantity-container {
+              justify-content: center;
+              input.quantity-amount.table_input {
+                height: 4rem;
+                border-radius: 0.8rem;
+                @include font(1.4rem);
+                width: 10rem;
+                flex: unset;
+              }
+            }
             .decrease, .increase {
-              @include font(1.6rem);
+              @include font(2rem);
+              color: $primary;
             }
           }
         }

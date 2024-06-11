@@ -1,14 +1,21 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link } from "react-router-dom";
 
 export default function Hero({ onCartPage, onCheckoutPage }) {
   let content;
-  let basicSetHero = true;
+
+  const [cartPage, setCartPage] = useState(onCartPage)
+  const [checkoutPage, setCheckoutPage] = useState(onCheckoutPage)
+
+  useEffect(() => {
+    setCartPage(onCartPage)
+    setCheckoutPage(onCheckoutPage)
+  }, [onCartPage, onCheckoutPage]) // 의존성 배열에 값을 추가 해야 값이 변경될 때 마다 체크함
 
   console.log(onCartPage)
   console.log(onCheckoutPage)
 
-  if (onCartPage) {
+  if (cartPage) {
     content = (
       <div className="hero">
         <div className="container">
@@ -19,14 +26,13 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
                   <i className="fa-solid fa-cart-flatbed"></i>
                   <span>장바구니</span>
                 </h1>
-
               </div>
             </div>
           </div>
         </div>
       </div>
     );
-  } else if (onCheckoutPage) {
+  } else if (checkoutPage) {
     content = (
       <div className="hero">
         <div className="container">

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import { useLocation } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
@@ -34,14 +34,16 @@ export default function Frame() {
     }
   }, [location]);
 
-  const handleCartPageRender = () => {
+  const handleCartPageRender = useCallback(() => {
     setOnCartPage(true);
     setOnCheckoutPage(false);
-  }
-  const handleCheckoutPageRender = () => {
+  }, []);
+
+  const handleCheckoutPageRender = useCallback(() => {
     setOnCheckoutPage(true);
     setOnCartPage(false);
-  }
+  }, []);
+
   return (
     <div className="app">
 
@@ -68,4 +70,3 @@ export default function Frame() {
     </div>
   );
 }
-
