@@ -693,10 +693,6 @@ textarea {
   input {
     border-radius: 10px !important;
   }
-
-  .btn {
-
-  }
 }
 
 .text-primary {
@@ -706,14 +702,37 @@ textarea {
 .thankyou-icon {
   position: relative;
   color: $primary;
-
   &:before {
     position: absolute;
     content: "";
     width: 50px;
     height: 50px;
-
     border-radius: 50%;
     background: rgba($primary, .2);
+  }
+}
+
+.coupon_and_pay_wrap {
+  .coupon {
+    label {
+      @include font(2rem);
+      margin-bottom: 0.4rem;
+      & + p {
+        margin-bottom: 0.8rem;
+      }
+    }
+    input {
+      height: 4rem;
+      padding: 0 1.6rem;
+    }
+    button.coupon_btn {
+      height: 4rem;
+    }
+  }
+  .pay {
+    @include font(1.6rem);
+    h3 {
+      @include font(2rem);
+    }
   }
 }

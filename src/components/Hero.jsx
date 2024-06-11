@@ -8,8 +8,13 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
   const [checkoutPage, setCheckoutPage] = useState(onCheckoutPage)
 
   useEffect(() => {
-    setCartPage(onCartPage)
-    setCheckoutPage(onCheckoutPage)
+    // 조건을 걸어서 두번 호출됨을 방지
+    if (onCartPage !== cartPage) {
+      setCartPage(onCartPage);
+    }
+    if (onCheckoutPage !== checkoutPage) {
+      setCheckoutPage(onCheckoutPage);
+    }
   }, [onCartPage, onCheckoutPage]) // 의존성 배열에 값을 추가 해야 값이 변경될 때 마다 체크함
 
   console.log(onCartPage)

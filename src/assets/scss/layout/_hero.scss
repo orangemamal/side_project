@@ -139,6 +139,11 @@
 
 @media (min-width: $xl) {
   .hero {
+    .intro-excerpt {
+      h1 {
+        font-size: 4.6rem;
+      }
+    }
     .position {
       .hero-img-wrap {
         &:after {
