@@ -284,6 +284,11 @@ input:focus {
   min-width: 2.4rem;
   min-height: 2.4rem;
 }
+.icon.radio_inactive {
+  background: center/contain no-repeat url("../icons/icon_24_radio_inactive.svg");
+  min-width: 2.4rem;
+  min-height: 2.4rem;
+}
 .icon.envelope {
   background: center/contain no-repeat url("../icons/icon_28_envelope.svg");
   min-width: 2.8rem;
@@ -338,8 +343,55 @@ input:focus {
   color: white;
 }
 
+.form-group .radio_box {
+  display: flex;
+}
+.form-group .radio_box input[type=radio] {
+  display: none;
+}
+.form-group .radio_box input[type=radio] + label {
+  display: flex;
+  align-items: center;
+}
+.form-group .radio_box input[type=radio] + label h4 {
+  font-weight: 400;
+  color: #9FA4A8;
+  transition: all 0.4s;
+}
+.form-group .radio_box input[type=radio] + label .icon {
+  margin-right: 0.4rem;
+  transition: all 0.4s;
+}
+.form-group .radio_box input[type=radio]:checked + label h4 {
+  font-weight: 700;
+  color: #4D869C;
+}
+.form-group .radio_box input[type=radio]:checked + label .icon {
+  background: center/contain no-repeat url("../icons/icon_24_radio_active.svg");
+}
+.form-group .radio_box .radio_bundle {
+  display: flex;
+  margin-right: 1.6rem;
+}
+
+table.table.cart {
+  margin-bottom: 8rem;
+}
+table.table thead tr th {
+  font: 1.5rem/1.9rem "Spoqa Han Sans Neo", "sans-serif";
+  color: #73787E;
+  padding: 1.6rem;
+}
+table.table tbody {
+  border-top: 1px solid #9FA4A8 !important;
+  border-bottom: 1px solid #4D869C !important;
+}
 table.table tbody tr td {
+  border-bottom: 1px solid #CACDD2 !important;
   font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+}
+table.table tbody tr td:last-of-type {
+  border-bottom: unset;
 }
 table.table tbody tr td h2 {
   font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
@@ -349,6 +401,9 @@ table.table tbody tr td.delete {
   cursor: pointer;
   color: #73787E;
 }
+table.table tbody tr td.product-thumbnail {
+  width: 16rem;
+}
 table.table tbody tr td.quantity_group .quantity-container {
   justify-content: center;
 }
@@ -356,12 +411,16 @@ table.table tbody tr td.quantity_group .quantity-container input.quantity-amount
   height: 4rem;
   border-radius: 0.8rem;
   font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
-  width: 10rem;
+  width: 8rem;
   flex: unset;
 }
 table.table tbody tr td.quantity_group .decrease, table.table tbody tr td.quantity_group .increase {
   font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
   color: #4D869C;
+}
+
+.table > :not(:first-child) {
+  border-top: unset;
 }
 
 a {
@@ -1016,6 +1075,41 @@ textarea {
 }
 .coupon_and_pay_wrap .pay h3 {
   font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.untree_co-section.checkout h2.text-black {
+  font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 500;
+  color: #474C52 !important;
+}
+.untree_co-section.checkout .return_login_box {
+  border-radius: 5rem !important;
+  border: 1px solid rgba(77, 134, 156, 0.3) !important;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  text-align: center;
+  font-weight: 400;
+  color: #73787E;
+}
+.untree_co-section.checkout .return_login_box a {
+  color: #4D869C;
+  font-weight: 700;
+}
+.untree_co-section.checkout .checkout_content .form-group {
+  margin-bottom: 1.6rem;
+}
+.untree_co-section.checkout .checkout_content .form-group label {
+  font: 1.5rem/1.9rem "Spoqa Han Sans Neo", "sans-serif";
+}
+.untree_co-section.checkout .checkout_content .form-group label .text-danger {
+  margin-left: 0.4rem;
+  font: 1.2rem/1.5rem "Spoqa Han Sans Neo", "sans-serif";
+  line-height: 1.9rem;
+}
+[data-type-divider=line] {
+  height: 1px;
+  width: 100%;
+  background: #CACDD2;
+  margin: 5.6rem 0;
 }
 
 nav.custom-navbar {

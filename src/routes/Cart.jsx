@@ -6,7 +6,7 @@ export default function Cart({ onPageRender }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/main/checkout');
+    navigate('/Checkout');
   };
 
   useEffect(() => {
@@ -16,19 +16,19 @@ export default function Cart({ onPageRender }) {
   const tableHeader = [
     {
       id: "thumbnail",
-      name: '이미지',
+      name: '상품 이미지',
     },
     {
       id: "name",
-      name: '상품',
+      name: '상품 이름',
     },
     {
       id: "price",
-      name: '가격',
+      name: '상품 가격',
     },
     {
       id: "quantity",
-      name: '갯수',
+      name: '수량',
     },
     {
       id: "total",
@@ -36,7 +36,7 @@ export default function Cart({ onPageRender }) {
     },
     {
       id: "remove",
-      name: '삭제',
+      name: '지우기',
     },
   ];
 
@@ -90,7 +90,7 @@ export default function Cart({ onPageRender }) {
           <form className="col-md-12" method="post">
             <div className="site-blocks-table">
 
-              <table className="table">
+              <table className="table cart">
                 <thead>
                   <tr>
                     {tableHeader.map((item, index) => (

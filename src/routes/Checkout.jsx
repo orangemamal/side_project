@@ -1,67 +1,114 @@
 import React, {useEffect} from 'react';
-import { useNavigate } from 'react-router-dom';
+import {Link, useNavigate} from 'react-router-dom';
 
 export default function Cart({ onPageRender }) {
 
-  const navigate = useNavigate();
+  const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate('/main/ThankYou');
-  };
+    navigate('/main/ThankYou')
+  }
 
   useEffect(() => {
     onPageRender();
   }, [onPageRender]);
 
   return (
-    <div className="untree_co-section">
+    <div className="untree_co-section checkout">
       <div className="container">
+
         <div className="row mb-5">
           <div className="col-md-12">
-            <div className="border p-4 rounded" role="alert">
-              Returning customer? <a href="#">Click here</a> to login
+            <div className="return_login_box border p-4 rounded" role="alert">
+              FurNi의 다양한 할인 혜택을 받고 싶으시다면<br/>
+              회원 가입과 로그인을 위해 <Link to="/Login">여기</Link>를 클릭해주세요.
             </div>
           </div>
         </div>
-        <div className="row">
+
+        {/* left_side */}
+        <div className="row checkout_content left">
           <div className="col-md-6 mb-5 mb-md-0">
-            <h2 className="h3 mb-3 text-black">Billing Details</h2>
+            <h2 className="h3 mb-3 text-black">주문 정보</h2>
             <div className="p-3 p-lg-5 border bg-white">
-              <div className="form-group">
-                <label htmlFor="c_country" className="text-black">Country <span className="text-danger">*</span></label>
-                <select id="c_country" className="form-control">
-                  <option value="1">Select a country</option>
-                  <option value="2">bangladesh</option>
-                  <option value="3">Algeria</option>
-                  <option value="4">Afghanistan</option>
-                  <option value="5">Ghana</option>
-                  <option value="6">Albania</option>
-                  <option value="7">Bahrain</option>
-                  <option value="8">Colombia</option>
-                  <option value="9">Dominican Republic</option>
-                </select>
-              </div>
-              <div className="form-group row">
+              {/*<div className="form-group">*/}
+              {/*  <label htmlFor="c_country" className="text-black">Country <span className="text-danger">*</span></label>*/}
+              {/*  <select id="c_country" className="form-control">*/}
+              {/*    <option value="1">Select a country</option>*/}
+              {/*    <option value="2">bangladesh</option>*/}
+              {/*    <option value="3">Algeria</option>*/}
+              {/*    <option value="4">Afghanistan</option>*/}
+              {/*    <option value="5">Ghana</option>*/}
+              {/*    <option value="6">Albania</option>*/}
+              {/*    <option value="7">Bahrain</option>*/}
+              {/*    <option value="8">Colombia</option>*/}
+              {/*    <option value="9">Dominican Republic</option>*/}
+              {/*  </select>*/}
+              {/*</div>*/}
+
+              <div className="form-group row mt20">
                 <div className="col-md-6">
-                  <label htmlFor="c_fname" className="text-black">First Name <span className="text-danger">*</span></label>
+                  <label htmlFor="c_fname" className="text-black">이름<span className="text-danger">(필수)</span></label>
                   <input type="text" className="form-control" id="c_fname" name="c_fname"/>
                 </div>
                 <div className="col-md-6">
-                  <label htmlFor="c_lname" className="text-black">Last Name <span className="text-danger">*</span></label>
+                  <label htmlFor="c_lname" className="text-black">결재 비밀번호<span className="text-danger">(필수)</span></label>
+                  <input type="text" className="form-control" id="c_lname" name="c_lname"/>
+                </div>
+              </div>
+
+              <div className="form-group row">
+                <div className="col-md-6">
+                  <label htmlFor="c_fname" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
+                  <input type="text" className="form-control" id="c_fname" name="c_fname"/>
+                </div>
+                <div className="col-md-6">
+                  <label htmlFor="c_lname" className="text-black">이메일</label>
+                  <input type="text" className="form-control" id="c_lname" name="c_lname"/>
+                </div>
+              </div>
+
+              <div data-type-divider="line" />
+
+              <div className="form-group row">
+                <div className="col-md-12">
+                  <label className="text-black">배송지 선택</label>
+                  <div className="radio_box">
+
+                    <span className="radio_bundle">
+                      <input type="radio" id="sameOrder" name="delivery" />
+                      <label htmlFor="sameOrder">
+                        <div className="icon radio_inactive" />
+                        <h4>주문자 정보와 동일</h4>
+                      </label>
+                    </span>
+
+                    <span className="radio_bundle">
+                      <input type="radio" id="selfWrite" name="delivery" />
+                      <label htmlFor="selfWrite">
+                        <div className="icon radio_inactive" />
+                        <h4>직접입력</h4>
+                      </label>
+                    </span>
+
+                  </div>
+                </div>
+              </div>
+
+              <div className="form-group row mt20">
+                <div className="col-md-6">
+                  <label htmlFor="c_fname" className="text-black">이름<span className="text-danger">(필수)</span></label>
+                  <input type="text" className="form-control" id="c_fname" name="c_fname"/>
+                </div>
+                <div className="col-md-6">
+                  <label htmlFor="c_lname" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
                   <input type="text" className="form-control" id="c_lname" name="c_lname"/>
                 </div>
               </div>
 
               <div className="form-group row">
                 <div className="col-md-12">
-                  <label htmlFor="c_companyname" className="text-black">Company Name </label>
-                  <input type="text" className="form-control" id="c_companyname" name="c_companyname"/>
-                </div>
-              </div>
-
-              <div className="form-group row">
-                <div className="col-md-12">
-                  <label htmlFor="c_address" className="text-black">Address <span className="text-danger">*</span></label>
+                  <label htmlFor="c_address" className="text-black">주소<span className="text-danger">(필수 항목)</span></label>
                   <input type="text" className="form-control" id="c_address" name="c_address"
                          placeholder="Street address"/>
                 </div>
@@ -214,22 +261,24 @@ export default function Cart({ onPageRender }) {
                 <textarea name="c_order_notes" id="c_order_notes" cols="30" rows="5" className="form-control"
                           placeholder="Write your notes here..."></textarea>
               </div>
-
             </div>
           </div>
-          <div className="col-md-6">
+
+
+          {/* right_side */}
+          <div className="col-md-6 checkout_content right">
 
             <div className="row mb-5">
               <div className="col-md-12">
-                <h2 className="h3 mb-3 text-black">Coupon Code</h2>
+                <h2 className="h3 mb-3 text-black">할인 쿠폰</h2>
                 <div className="p-3 p-lg-5 border bg-white">
 
-                  <label htmlFor="c_code" className="text-black mb-3">Enter your coupon code if you have one</label>
+                  <label htmlFor="c_code" className="text-black mb-3">가지고 계신 쿠폰 번호를 입력해주세요.</label>
                   <div className="input-group w-75 couponcode-wrap">
                     <input type="text" className="form-control me-2" id="c_code" placeholder="Coupon Code"
                            aria-label="Coupon Code" aria-describedby="button-addon2" />
                       <div className="input-group-append">
-                        <button className="btn btn-black btn-sm" type="button" id="button-addon2">Apply</button>
+                        <button className="btn btn-black btn-sm" type="button" id="button-addon2">쿠폰 적용하기</button>
                       </div>
                   </div>
 

@@ -1,244 +1,34 @@
-//input {
-//  &.type_id,
-//  &.type_password {
-//    width: 100%;
-//    height: 3.6rem;
-//    border-radius: 5rem;
-//    @include font(1.4rem);
-//    background: $white;
-//    text-align: center;
-//    color: $mainColor;
-//    padding: 0;
-//
-//    &::placeholder {
-//      color: #A7B0BE;
-//    }
-//  }
-//}
-//
-//:is(input[type="text"], input[type="password"]) {
-//  padding: 0 1.6rem;
-//  &::placeholder {
-//    opacity: 1;
-//    transition: all 0.3s;
-//  }
-//  &:focus::placeholder {
-//    opacity: 0;
-//  }
-//}
-//
-//input, select {
-//  @include font(1.5rem);
-//  height: 3.2rem;
-//  width: 16rem;
-//  border-radius: 5rem;
-//  padding-left: 1.6rem;
-//  border: 1px solid $gray40;
-//  transition: all 0.4s;
-//  background: $gray0;
-//  cursor: pointer;
-//  &:disabled {
-//    background: $gray0;
-//    color: rgb(170, 170, 170);
-//    opacity: 0.7;
-//    cursor: auto;
-//  }
-//}
-//
-//input[type="text"]:focus {
-//  border: 1px solid $mainColor;
-//  background: $white;
-//}
-//
-//.function_group {
-//  display: flex;
-//
-//  label {
-//    display: flex;
-//    align-items: center;
-//    min-width: 8rem;
-//    @include font(1.5rem);
-//    color: $gray100;
-//    margin-right: 1rem;
-//  }
-//
-//  &.select {
-//    select {
-//      -moz-appearance: none; /* Firefox */
-//      -webkit-appearance: none; /* Safari and Chrome */
-//      appearance: none;
-//      padding: 0 1.6rem;
-//      background: center / contain no-repeat url($icon-path + 'icon_20_selectArrow.svg');
-//      background-size: 2rem 2rem;
-//      background-position: right 1rem bottom 50%;
-//      background-color: $gray0;
-//      transition: all 0.4s;
-//      &:focus {
-//        outline: 1px solid $mainColor;
-//        background-color: $white;
-//      }
-//    }
-//  }
-//
-//  &.radio {
-//    margin-right: 2rem;
-//
-//    &:last-child {
-//      margin-right: 0;
-//    }
-//
-//    .radiobox_wrap {
-//      display: flex;
-//      align-items: center;
-//
-//      input[type="radio"] {
-//        display: none;
-//
-//        &:checked + label {
-//          font-weight: $bold;
-//          color: $mainColor;
-//          transition: all 0.4s;
-//
-//          .icon.radio_unactive.checked {
-//            background: center / contain no-repeat url($icon-path + 'icon_24_radio_active.svg');
-//            width: 2.4rem;
-//            height: 2.4rem;
-//          }
-//        }
-//      }
-//    }
-//
-//    label {
-//      min-width: auto;
-//      color: $gray60;
-//      margin-right: 0;
-//
-//      .icon {
-//        margin-right: 0.4rem;
-//      }
-//    }
-//  }
-//
-//  &.date_picker {
-//    .datepicker_wrap {
-//      display: flex;
-//      align-items: center;
-//
-//      .vdp-datepicker {
-//        position: relative;
-//
-//        input {
-//          padding-left: 1.6rem;
-//          cursor: pointer;
-//          width: 16rem;
-//        }
-//
-//        & > div:first-child {
-//          &::after {
-//            content: '';
-//            display: block;
-//            background: center / contain no-repeat url($icon-path + 'icon_24_calendar.svg');
-//            width: 2.4rem;
-//            height: 2.4rem;
-//            position: absolute;
-//            right: 1rem;
-//            top: 50%;
-//            transform: translateY(-50%);
-//          }
-//        }
-//
-//        .vdp-datepicker__calendar {
-//          border-radius: 0.8rem;
-//          border: unset;
-//          box-shadow: $boxShadow;
-//          padding: 0.8rem;
-//
-//          header {
-//            @include font(1.4rem);
-//            color: $mainColor;
-//            font-weight: $medium;
-//            display: flex;
-//            align-items: center;
-//
-//            span {
-//              height: 4rem;
-//              line-height: 4rem;
-//
-//              &:hover {
-//                background: $subColor;
-//              }
-//
-//              &.prev:after {
-//                border-right: 10px solid $mainColor;
-//                border-radius: 0.2rem;
-//              }
-//
-//              &.next:after {
-//                border-left: 10px solid $mainColor;
-//                border-radius: 0.2rem;
-//              }
-//            }
-//          }
-//
-//          span.cell {
-//            @include font(1.2rem);
-//            line-height: 4rem;
-//            color: $gray100;
-//
-//            &.disabled {
-//              color: $gray20;
-//
-//              &.day:hover {
-//                border: unset;
-//              }
-//            }
-//
-//            &.day.blank:hover, &.day-header:hover {
-//              border: 1px solid transparent;
-//            }
-//
-//            &.day-header {
-//              background: $subColor;
-//              margin-bottom: 0.8rem;
-//            }
-//
-//            &.day:hover {
-//              border: 1px solid $mainColor;
-//              border-radius: 0.4rem;
-//            }
-//
-//            &.highlight-start,
-//            &.highlight-end {
-//              background: $chartBlue;
-//              color: $white;
-//              border-radius: 0.4rem;
-//
-//              &.highlighted {
-//                background: $chartBlue;
-//              }
-//
-//              &.selected {
-//                background: $mainColor;
-//                color: $white;
-//                border-radius: 0.4rem;
-//              }
-//            }
-//
-//            &.highlighted {
-//              background: $subColor;
-//              font-weight: $bold;
-//              color: $mainColor;
-//            }
-//          }
-//        }
-//      }
-//
-//      .hyphen {
-//        width: 6px;
-//        height: 1px;
-//        background: $gray40;
-//        margin: 0 1rem;
-//      }
-//    }
-//  }
-//}
+.form-group {
+  .radio_box {
+    display: flex;
+    input[type=radio] {
+      display: none;
+      & + label {
+        display: flex;
+        align-items: center;
+        h4 {
+          font-weight: $regular;
+          color: $gray400;
+          transition: all 0.4s;
+        }
+        .icon {
+          margin-right: 0.4rem;
+          transition: all 0.4s;
+        }
+      }
+      &:checked + label {
+        h4 {
+          font-weight: $bold;
+          color: $primary;
+        }
+        .icon {
+          background: center / contain no-repeat url($icon-path + 'icon_24_radio_active.svg');
+        }
+      }
+    }
+    .radio_bundle {
+      display: flex;
+      margin-right: 1.6rem;
+    }
+  }
+}

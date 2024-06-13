@@ -1,5 +1,5 @@
 .icon {
-  @each $icon24 in user, cart {
+  @each $icon24 in user, cart, radio_inactive {
     &.#{$icon24} {
       background: center / contain no-repeat url($icon-path + 'icon_24_#{$icon24}.svg');
       min-width: 2.4rem;

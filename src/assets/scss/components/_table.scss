@@ -1,11 +1,26 @@
 table {
   &.table {
+    &.cart {
+      margin-bottom: 8rem;
+    }
     thead {
-
+      tr {
+        th {
+          @include font(1.5rem);
+          color: $gray500;
+          padding: 1.6rem;
+        }
+      }
     }
     tbody {
+      border-top: 1px solid $gray400 !important;
+      border-bottom: 1px solid $primary !important;
       tr {
         td {
+          border-bottom: 1px solid $gray200 !important;
+          &:last-of-type {
+            border-bottom: unset;
+          }
           @include font(1.6rem);
           h2 {
             @include font(1.6rem);
@@ -15,6 +30,9 @@ table {
             cursor: pointer;
             color: $gray500;
           }
+          &.product-thumbnail {
+            width: 16rem;
+          }
           &.quantity_group {
             .quantity-container {
               justify-content: center;
@@ -22,7 +40,7 @@ table {
                 height: 4rem;
                 border-radius: 0.8rem;
                 @include font(1.4rem);
-                width: 10rem;
+                width: 8rem;
                 flex: unset;
               }
             }
@@ -35,4 +53,8 @@ table {
       }
     }
   }
+}
+
+.table>:not(:first-child) {
+  border-top: unset;
 }

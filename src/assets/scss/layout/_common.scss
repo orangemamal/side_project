@@ -736,3 +736,51 @@ textarea {
     }
   }
 }
+
+.untree_co-section {
+  &.checkout {
+    h2.text-black {
+      @include font(2rem);
+      font-weight: $medium;
+      color: $gray600 !important;
+    }
+    .return_login_box {
+      border-radius: 5rem !important;
+      border: 1px solid rgba(77, 134, 156, 0.3) !important;
+      @include font(1.4rem);
+      text-align: center;
+      font-weight: $regular;
+      color: $gray500;
+      a {
+        color: $primary;
+        font-weight: $bold;
+      }
+    }
+    .checkout_content {
+      .form-group {
+        margin-bottom: 1.6rem;
+        label {
+          @include font(1.5rem);
+          .text-danger {
+            margin-left: 0.4rem;
+            @include font(1.2rem);
+            line-height: 1.9rem;
+          }
+        }
+      }
+      &.left {
+
+      }
+      &.right {
+
+      }
+    }
+  }
+}
+
+[data-type-divider="line"] {
+  height: 1px;
+  width: 100%;
+  background: $gray200;
+  margin: 5.6rem 0;
+}
