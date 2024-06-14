@@ -759,6 +759,18 @@ textarea {
     .checkout_content {
       .form-group {
         margin-bottom: 1.6rem;
+        .form-control {
+          padding: 0 1.6rem;
+          @include font(1.6rem);
+          height: 4rem;
+        }
+        .post_num {
+          display: flex;
+          button {
+            margin-left: 1.6rem;
+            white-space: nowrap;
+          }
+        }
         label {
           @include font(1.5rem);
           .text-danger {

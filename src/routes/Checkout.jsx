@@ -102,20 +102,27 @@ export default function Cart({ onPageRender }) {
                 </div>
                 <div className="col-md-6">
                   <label htmlFor="c_lname" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
-                  <input type="text" className="form-control" id="c_lname" name="c_lname"/>
+                  <input type="text" className="form-control" id="c_lname" name="c_lname" placeholder="" />
                 </div>
               </div>
 
               <div className="form-group row">
                 <div className="col-md-12">
                   <label htmlFor="c_address" className="text-black">주소<span className="text-danger">(필수 항목)</span></label>
-                  <input type="text" className="form-control" id="c_address" name="c_address"
-                         placeholder="Street address"/>
+                  <div className="post_num">
+                    <input type="text" className="form-control" id="c_address" name="c_address" />
+                    {/* daum postcode service api 연동하기 */}
+                    <button className="btn btn-primary">우편번호</button>
+                  </div>
                 </div>
               </div>
 
               <div className="form-group mt-3">
-                <input type="text" className="form-control" placeholder="Apartment, suite, unit etc. (optional)"/>
+                <input type="text" className="form-control" />
+              </div>
+
+              <div className="form-group mt-3">
+                <input type="text" className="form-control" placeholder="상세 주소" />
               </div>
 
               <div className="form-group row">
