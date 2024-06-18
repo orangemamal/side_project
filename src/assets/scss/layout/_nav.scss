@@ -40,11 +40,12 @@ nav {
         padding: 0 0.4rem !important;
         opacity: 0.5;
         color: $white !important;
-        transition: .3s all ease;
         cursor: pointer;
         margin: 0 1.4rem;
+        transition: 0.5s all ease;
         &:hover {
-          opacity: 1;
+          text-shadow: #FC0 1px 0 10px;
+          opacity: 0.8;
           &:before {
             width: calc(100%);
           }

@@ -1164,12 +1164,13 @@ nav.custom-navbar .custom-navbar-nav li {
   padding: 0 0.4rem !important;
   opacity: 0.5;
   color: white !important;
-  transition: 0.3s all ease;
   cursor: pointer;
   margin: 0 1.4rem;
+  transition: 0.5s all ease;
 }
 nav.custom-navbar .custom-navbar-nav li:hover {
-  opacity: 1;
+  text-shadow: #FC0 1px 0 10px;
+  opacity: 0.8;
 }
 nav.custom-navbar .custom-navbar-nav li:hover:before {
   width: 100%;

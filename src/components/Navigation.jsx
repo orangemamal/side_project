@@ -1,23 +1,28 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { setPath } from '../store/userCommon';
 
 export default function Navigation() {
   const menuItems = ['Home', 'Shop', 'Services', 'Blog', 'About us', 'Contact us'];
+  const dispatch = useDispatch();
+  const nowPathIndex = useSelector(state => state.userCommon.nowPathIndex);
 
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(null);
   const [isMenuState, setIsMenuState] = useState(false);
+  console.log(activeIndex)
+
+  useEffect(() => {
+    handleItemClick();
+    console.log(nowPathIndex)
+  }, []);
 
   function handleItemClick(index, path) {
     console.log(`${index} : ${path}`);
+    dispatch(setPath({ nowPath: path, nowPathIndex: index })); // Redux 상태 업데이트
     navigate(path);
-    // for(let i = 0; i < menuItems.length; i++) {
-    //   if(index === i) {
-    //     console.log("true")
-    //   } else {
-    //     console.log("false")
-    //   }
-    // }
+
     setActiveIndex(index);
   }
 

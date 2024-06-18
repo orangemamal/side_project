@@ -61,7 +61,7 @@ export default function Contact() {
                   </div>
                   <div className="form-group mb-5">
                     <label className="text-black" htmlFor="email">이메일 주소</label>
-                    <input type="email" className="form-control" id="email" placeholder="ex) asdf1234@domain.co.kr" />
+                    <input type="email" className="form-control" id="email" placeholder="ex) furni1234@domain.co.kr" />
                   </div>
 
                   <div className="form-group mb-5">
