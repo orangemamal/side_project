@@ -53,7 +53,7 @@ const Team = () => {
 
             <p className="see_more mb-0">
               <a href="#" className="more dark">
-                <div>자세히 보기</div>
+                <span>자세히 보기</span>
                 <i className="fa-solid fa-circle-chevron-right"></i>
               </a>
             </p>

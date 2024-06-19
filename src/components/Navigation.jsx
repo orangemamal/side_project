@@ -4,18 +4,24 @@ import { useSelector, useDispatch } from 'react-redux';
 import { setPath } from '../store/userCommon';
 
 export default function Navigation() {
-  const menuItems = ['Home', 'Shop', 'Services', 'Blog', 'About us', 'Contact us'];
+  const menuItems = ['Home', 'Shop', 'Services', 'Blog', 'About', 'Contact'];
   const dispatch = useDispatch();
   const nowPathIndex = useSelector(state => state.userCommon.nowPathIndex);
+  console.log(nowPathIndex)
 
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(null);
   const [isMenuState, setIsMenuState] = useState(false);
-  console.log(activeIndex)
+
 
   useEffect(() => {
-    handleItemClick();
-    console.log(nowPathIndex)
+    if(nowPathIndex === null) {
+      setIsMenuState(0)
+      dispatch(setPath({ nowPath: '/Home' }))
+      handleItemClick(0, '/Home')
+    } else {
+      setActiveIndex(nowPathIndex)
+    }
   }, []);
 
   function handleItemClick(index, path) {
@@ -58,7 +64,7 @@ export default function Navigation() {
               <li
                 key={index}
                 className={`nav-item ${index === activeIndex ? 'active' : ''}`}
-                onClick={() => handleItemClick(index, `/${item.replace(/\s/g, '-')}`)}
+                onClick={() => handleItemClick(index, `/${item}`)}
               >
                 {item}
               </li>
