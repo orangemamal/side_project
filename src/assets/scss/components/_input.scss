@@ -31,4 +31,10 @@
       margin-right: 1.6rem;
     }
   }
+  &.right {
+    display: flex;
+    justify-content: end;
+    margin-top: 4rem;
+    height: 4rem;
+  }
 }

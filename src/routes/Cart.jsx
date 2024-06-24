@@ -199,7 +199,7 @@ export default function Cart({ onPageRender }) {
                   <div className="col-md-12">
                     <button
                       className="btn btn-black btn-lg py-3 btn-block"
-                      onClick={handleClick}>결재하기
+                      onClick={handleClick}>결제하기
                     </button>
                   </div>
                 </div>

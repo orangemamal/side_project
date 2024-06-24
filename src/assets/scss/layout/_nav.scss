@@ -65,8 +65,15 @@ nav {
         margin-left: 40px!important;
       }
       li {
-        margin-left: 0px;
-        margin-right: 0px;
+        margin-left: 0;
+        margin-right: 0;
+        .icon {
+          opacity: 0.6;
+          transition: all 0.3s;
+          &:hover {
+            opacity: 1;
+          }
+        }
         &:first-child {
           margin-right: 20px;
         }

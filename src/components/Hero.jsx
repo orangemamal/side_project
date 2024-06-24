@@ -17,9 +17,6 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
     }
   }, [onCartPage, onCheckoutPage]) // 의존성 배열에 값을 추가 해야 값이 변경될 때 마다 체크함
 
-  console.log(onCartPage)
-  console.log(onCheckoutPage)
-
   if (cartPage) {
     content = (
       <div className="hero">
@@ -46,7 +43,7 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
               <div className="intro-excerpt">
                 <h1>
                   <i className="fa-solid fa-credit-card"></i>
-                  <span>결재하기</span>
+                  <span>결제하기</span>
                 </h1>
               </div>
             </div>

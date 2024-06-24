@@ -13,7 +13,6 @@ export default function Navigation() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [isMenuState, setIsMenuState] = useState(false);
 
-
   useEffect(() => {
     if(nowPathIndex === null) {
       setIsMenuState(0)
@@ -26,10 +25,14 @@ export default function Navigation() {
 
   function handleItemClick(index, path) {
     console.log(`${index} : ${path}`);
-    dispatch(setPath({ nowPath: path, nowPathIndex: index })); // Redux 상태 업데이트
+    dispatch(setPath({ nowPath: path, nowPathIndex: index }));
     navigate(path);
 
     setActiveIndex(index);
+  }
+
+  function resetNavActive() {
+    setActiveIndex(null);
   }
 
   const toggleMenu = () => {
@@ -73,12 +76,12 @@ export default function Navigation() {
 
           <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
             <li>
-              <Link className="nav-link" to="/Login">
+              <Link className="nav-link" to="/Login" onClick={() => resetNavActive()}>
                 <div className="icon user" />
               </Link>
             </li>
             <li>
-              <Link className="nav-link" to="/Cart">
+              <Link className="nav-link" to="/Cart" onClick={() => resetNavActive()}>
                 <div className="icon cart" />
               </Link>
             </li>

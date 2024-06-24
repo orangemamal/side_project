@@ -6,7 +6,7 @@ export default function Login() {
   const navigate = useNavigate();
 
   function loginCheck() {
-    navigate('/main');
+    navigate(-1);
   }
 
   return (

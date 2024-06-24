@@ -1,5 +1,20 @@
 table {
   &.table {
+    th, td {
+      &.center {
+        text-align: center;
+      }
+    }
+    &.order {
+      margin-bottom: 6rem !important;
+      th, td {
+        padding: 1.6rem;
+        color: $gray600;
+      }
+      th {
+        background: $gray50;
+      }
+    }
     &.cart {
       margin-bottom: 8rem;
     }

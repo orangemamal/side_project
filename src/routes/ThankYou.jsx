@@ -5,17 +5,13 @@ export default function ThankYou({ onPageRender }) {
 
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate('/main/checkout');
-  };
-
   useEffect(() => {
     onPageRender();
   }, [onPageRender]);
 
   return (
     <main>
-      <div className="untree_co-section">
+      <div className="untree_co-section thankyou">
         <div className="container">
           <div className="row">
             <div className="col-md-12 text-center pt-5">
@@ -28,9 +24,9 @@ export default function ThankYou({ onPageRender }) {
                         d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm7 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
                 </svg>
               </span>
-              <h2 className="display-3 text-black">Thank you!</h2>
-              <p className="lead mb-5">You order was successfuly completed.</p>
-              <p><Link to="/main/shop" className="btn btn-sm btn-outline-black">Back to shop</Link></p>
+              <h2 className="display-3 text-black">감사합니다!</h2>
+              <p className="lead mb-5">고객님의 주문이 완료되었습니다.</p>
+              <p><Link to="/Home" className="btn btn-sm btn-outline-black">홈으로 돌아가기</Link></p>
             </div>
           </div>
         </div>

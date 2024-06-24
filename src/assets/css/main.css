@@ -373,7 +373,26 @@ input:focus {
   display: flex;
   margin-right: 1.6rem;
 }
+.form-group.right {
+  display: flex;
+  justify-content: end;
+  margin-top: 4rem;
+  height: 4rem;
+}
 
+table.table th.center, table.table td.center {
+  text-align: center;
+}
+table.table.order {
+  margin-bottom: 6rem !important;
+}
+table.table.order th, table.table.order td {
+  padding: 1.6rem;
+  color: #474C52;
+}
+table.table.order th {
+  background: #F7F8FA;
+}
 table.table.cart {
   margin-bottom: 8rem;
 }
@@ -1077,6 +1096,13 @@ textarea {
   font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
 }
 
+.untree_co-section.thankyou h2 {
+  font-weight: 700;
+  margin-bottom: 1.6rem;
+}
+.untree_co-section.thankyou p.lead {
+  margin-bottom: 4rem !important;
+}
 .untree_co-section.checkout h2.text-black {
   font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
   font-weight: 500;
@@ -1098,7 +1124,7 @@ textarea {
   margin-bottom: 1.6rem;
 }
 .untree_co-section.checkout .checkout_content .form-group .form-control {
-  padding: 0 1.6rem;
+  padding: 0.8rem 1.6rem;
   font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
   height: 4rem;
 }
@@ -1117,11 +1143,42 @@ textarea {
   font: 1.2rem/1.5rem "Spoqa Han Sans Neo", "sans-serif";
   line-height: 1.9rem;
 }
+.untree_co-section.checkout .checkout_content.right .coupon_label {
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+}
+.untree_co-section.checkout .checkout_content.right .form-control {
+  height: 4rem;
+  padding: 0 1.6rem;
+}
+.untree_co-section.checkout .checkout_content.right .form-control + .input-group-append button {
+  height: 4rem;
+}
+
 [data-type-divider=line] {
   height: 1px;
   width: 100%;
   background: #CACDD2;
   margin: 5.6rem 0;
+}
+
+.payment_box {
+  border-radius: 0.4rem;
+  background: rgba(77, 134, 156, 0.2);
+  border: 1px solid #4D869C !important;
+}
+.payment_box h3 {
+  color: #4D869C;
+  font-weight: 500;
+  font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
+  text-decoration: unset;
+  marign-bottom: 0.8rem;
+}
+.payment_box .collapse {
+  padding: 0.8rem;
+  font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
+  border-top: 1px solid #4D869C;
+  margin-top: 0.8rem;
+  color: #73787E;
 }
 
 nav.custom-navbar {
@@ -1191,8 +1248,15 @@ nav.custom-navbar .custom-navbar-cta {
   }
 }
 nav.custom-navbar .custom-navbar-cta li {
-  margin-left: 0px;
-  margin-right: 0px;
+  margin-left: 0;
+  margin-right: 0;
+}
+nav.custom-navbar .custom-navbar-cta li .icon {
+  opacity: 0.6;
+  transition: all 0.3s;
+}
+nav.custom-navbar .custom-navbar-cta li .icon:hover {
+  opacity: 1;
 }
 nav.custom-navbar .custom-navbar-cta li:first-child {
   margin-right: 20px;
