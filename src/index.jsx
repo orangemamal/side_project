@@ -9,6 +9,8 @@ import Frame from "./routes/Frame";
 import ErrorPage from "./routes/ErrorPage";
 import Cart from "./routes/Cart";
 import Checkout from "./routes/Checkout";
+import SignUp from "./routes/SignUp";
+import UserInfo from "./routes/UserInfo";
 
 import Home from "./components/pageComp/Home";
 import Shop from "./components/pageComp/Shop";
@@ -34,6 +36,16 @@ const router = createBrowserRouter([
   {
     path: "Login",
     element: <Login />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "SignUp",
+    element: <SignUp />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "UserInfo",
+    element: <UserInfo />,
     errorElement: <ErrorPage />,
   },
   {

@@ -1,0 +1,58 @@
+.app {
+  .user_info_wrap {
+    padding: 3.2rem 0;
+    h2 {
+      @include font(2.4rem);
+      color: $gray500;
+      margin-bottom: 2.4rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .name_box {
+      .fa-circle-user {
+        display: flex;
+        justify-content: center;
+        &::before {
+          font-size: 100px;
+          color: $primary;
+          margin: 0 auto;
+        }
+      }
+      h4 {
+        margin-top: 1.2rem;
+        text-align: center;
+        @include font(1.6rem);
+        font-weight: $medium !important;
+        color: $gray600 !important;
+      }
+    }
+    .info_box_wrap {
+      width: calc(100% - 40rem);
+      margin: 2.4rem auto;
+      border-top: 1px solid $primary;
+      border-bottom: 1px solid $primary;
+      padding: 1.6rem;
+      @include font(1.6rem);
+      .info_box_bundle {
+        display: flex;
+        align-items: center;
+        padding: 1.6rem 0.8rem;
+        border-bottom: 1px solid $gray200;
+        &:last-of-type {
+          border-bottom: unset;
+        }
+        .left {
+          margin-right: 1.6rem;
+          font-weight: $medium;
+        }
+        .right {
+          border-radius: 0.8rem;
+          border: 1px solid $gray200;
+          padding: 0.8rem 1.6rem;
+        }
+      }
+    }
+  }
+}

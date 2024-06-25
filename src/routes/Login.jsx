@@ -5,8 +5,15 @@ export default function Login() {
 
   const navigate = useNavigate();
 
+  function goSignUp() {
+    navigate('/SignUp')
+  }
+
   function loginCheck() {
     navigate(-1);
+  }
+  function notAllow() {
+    alert("구현되지 않았습니다.")
   }
 
   return (
@@ -24,11 +31,11 @@ export default function Login() {
             <div className="sign_up_wrap">
               <div className="flat">
                 <div><span>FurNi</span>가 처음이신가요?</div>
-                <button className="sign_up">회원가입</button>
+                <button className="sign_up" onClick={() => goSignUp()}>회원가입</button>
               </div>
               <div className="flat">
                 <div><span>비밀번호</span>를 잃어버리셨나요?</div>
-                <button className="sign_up">비밀번호 찾기</button>
+                <button className="sign_up" onClick={() => notAllow()}>비밀번호 찾기</button>
               </div>
             </div>
             <button className="login_btn" onClick={() => loginCheck()}>LOGIN</button>

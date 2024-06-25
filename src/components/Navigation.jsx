@@ -76,6 +76,7 @@ export default function Navigation() {
 
           <ul className="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
             <li>
+              {/* 비회원일 경우 /Login , 회원일 경우 /UserInfo */}
               <Link className="nav-link" to="/Login" onClick={() => resetNavActive()}>
                 <div className="icon user" />
               </Link>
