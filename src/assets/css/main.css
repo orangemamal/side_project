@@ -130,6 +130,68 @@
 /* 변수 및 공통 SCSS 정의 */
 /* color setting */
 /* font-weight */
+.animate__animated:hover {
+  animation-duration: 2s;
+  animation-fill-mode: none;
+}
+
+.hover-animate-heartBeat:hover {
+  animation-name: heartBeat;
+}
+
+.animate__animated:hover {
+  animation-duration: 2s;
+  animation-fill-mode: none;
+}
+
+.hover-animate-shakeX:hover {
+  animation-name: shakeX;
+}
+
+img {
+  transition: all 0.5s;
+  transform: scale(100%);
+}
+img.scale:hover {
+  transform: scale(130%);
+}
+img.small {
+  transform: scale(90%);
+}
+img.small.scale:hover {
+  transform: scale(110%);
+}
+
+.animate__animated_scroll {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  visibility: hidden;
+}
+.animate__animated_scroll.fadeInRight {
+  visibility: visible;
+  animation-name: fadeInRight;
+}
+.animate__animated_scroll.fadeInLeft {
+  visibility: visible;
+  animation-name: fadeInLeft;
+}
+.animate__animated_scroll.fadeInUp {
+  visibility: visible;
+  animation-name: fadeInUp;
+}
+.animate__animated_scroll.backInLeft {
+  visibility: visible;
+  animation-name: backInLeft;
+}
+.animate__animated_scroll.backInRight {
+  visibility: visible;
+  animation-name: backInRight;
+}
+.animate__animated_scroll.rotateInDownLeft {
+  visibility: visible;
+  animation-name: rotateInDownLeft;
+}
+
 @font-face {
   font-family: "Spoqa Han Sans Neo";
   font-weight: 700;
@@ -242,7 +304,7 @@ html {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   min-height: -webkit-fill-available;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 
 .flex {
@@ -272,6 +334,18 @@ input:focus {
   -webkit-transform: translateZ(0px);
   -webkit-transform: translate3d(0, 0, 0);
   -webkit-perspective: 1000;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 .icon.user {
@@ -343,6 +417,12 @@ input:focus {
   color: white;
 }
 
+.form-group input {
+  font: 1.5rem/1.9rem "Spoqa Han Sans Neo", "sans-serif";
+}
+.form-group input:read-only {
+  color: #9FA4A8;
+}
 .form-group .radio_box {
   display: flex;
 }
@@ -378,6 +458,60 @@ input:focus {
   justify-content: end;
   margin-top: 4rem;
   height: 4rem;
+}
+
+input[type=password]:not(:placeholder-shown) {
+  font-family: "pass";
+  font: 2.4rem/3rem "Spoqa Han Sans Neo", "sans-serif";
+}
+
+input::placeholder {
+  font-size: 1.6rem !important;
+}
+
+textarea.form-control {
+  padding: 1.6rem;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+}
+
+.modal_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 10000;
+}
+.modal_wrap.show {
+  display: block;
+}
+.modal_wrap .backdrop {
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modal_wrap .modal_content {
+  background: white;
+  padding: 5.6rem 2rem 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.8rem;
+  box-shadow: 0 0 8px 0 rgba(77, 134, 156, 0.6);
+}
+.modal_wrap .modal_content .close_btn {
+  position: absolute;
+  right: 2rem;
+  top: 1.2rem;
+}
+.modal_wrap .modal_content .close_btn .fa-circle-xmark::before {
+  font-size: 32px;
+  color: #4D869C;
 }
 
 table.table th.center, table.table td.center {
@@ -478,6 +612,10 @@ p {
   transform: translateY(-50%);
 }
 
+.mb40 {
+  margin-bottom: 4rem;
+}
+
 .product-section {
   padding: 7rem 0;
 }
@@ -488,6 +626,9 @@ p {
   position: relative;
   padding-bottom: 50px;
   cursor: pointer;
+}
+.product-section .product-item .product-title {
+  font-weight: 500;
 }
 .product-section .product-item .product-thumbnail {
   margin-bottom: 30px;
@@ -502,11 +643,12 @@ p {
 }
 .product-section .product-item strong {
   font-weight: 800 !important;
-  font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
+  font: 2.4rem/3rem "Spoqa Han Sans Neo", "sans-serif";
 }
 .product-section .product-item strong span {
   font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
   font-weight: 300;
+  margin-left: 0.4rem;
 }
 .product-section .product-item h3, .product-section .product-item strong {
   color: #2f2f2f;
@@ -539,7 +681,7 @@ p {
   right: 0;
   position: absolute;
   content: "";
-  background: #dce5e4;
+  background: rgba(77, 134, 156, 0.4);
   height: 0%;
   z-index: -1;
   border-radius: 10px;
@@ -1102,6 +1244,7 @@ textarea {
 }
 .untree_co-section.thankyou p.lead {
   margin-bottom: 4rem !important;
+  font: 1.5rem/1.9rem "Spoqa Han Sans Neo", "sans-serif";
 }
 .untree_co-section.checkout h2.text-black {
   font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
@@ -1252,11 +1395,31 @@ nav.custom-navbar .custom-navbar-cta li {
   margin-right: 0;
 }
 nav.custom-navbar .custom-navbar-cta li .icon {
-  opacity: 0.6;
   transition: all 0.3s;
 }
-nav.custom-navbar .custom-navbar-cta li .icon:hover {
-  opacity: 1;
+nav.custom-navbar .custom-navbar-cta li .icon.user:hover {
+  background: center/contain no-repeat url("../icons/icon_24_user_hover.svg");
+}
+nav.custom-navbar .custom-navbar-cta li .icon.cart:hover {
+  background: center/contain no-repeat url("../icons/icon_24_cart_hover.svg");
+}
+nav.custom-navbar .custom-navbar-cta li .icon.cart {
+  position: relative;
+}
+nav.custom-navbar .custom-navbar-cta li .icon.cart .cart_count {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 5rem;
+  background: #E38A27;
+  color: white;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
 }
 nav.custom-navbar .custom-navbar-cta li:first-child {
   margin-right: 20px;
@@ -1333,7 +1496,7 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 @media (min-width: 992px) {
   .footer-section .subscription-form {
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 80px;
   }
 }
@@ -1341,7 +1504,7 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   font-size: 18px;
   font-weight: 500;
   color: #4D869C;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.6rem;
 }
 .footer-section .subscription-form .form-control {
   min-width: 16rem;
@@ -1468,47 +1631,77 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 .hero {
   overflow: hidden;
   background: #4D869C;
-  padding: 3rem 0 0 0;
+  display: flex;
+  align-items: center;
+  height: calc(100vh - 7.4rem);
 }
-.hero .intro-excerpt {
+.hero.noneMain {
+  height: 30rem;
+}
+.hero .col-lg-5 {
+  width: 100%;
+}
+.hero .col-lg-5 .intro-excerpt {
+  width: 100%;
   position: relative;
   z-index: 4;
 }
-.hero .intro-excerpt h1 {
+.hero .col-lg-5 .intro-excerpt h1 {
+  width: 100%;
   font-weight: 700;
   color: white;
   margin-bottom: 3rem;
+  white-space: nowrap;
 }
-.hero .intro-excerpt h1 i {
+.hero .col-lg-5 .intro-excerpt h1 .top {
+  font-weight: 100;
+  opacity: 0.6;
+}
+.hero .col-lg-5 .intro-excerpt h1 i {
   opacity: 0.4;
   margin-right: 1.6rem;
 }
-.hero .intro-excerpt .sub_info {
+.hero .col-lg-5 .intro-excerpt .sub_info {
+  opacity: 0.8;
   color: #EAEBED;
-  font-size: 1.4rem;
+  font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
+  font-weight: 300 !important;
+  margin-bottom: 2.4rem !important;
 }
-.hero p {
+.hero .col-lg-5 .intro-excerpt .sub_info span {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.hero .col-lg-5 .intro-excerpt .sub_info span:last-of-type {
+  margin-bottom: 0;
+}
+.hero .col-lg-5 p {
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: 30px;
 }
-.hero p.multi_btn_wrap .btn {
+.hero .col-lg-5 p.multi_btn_wrap {
+  margin-bottom: 0;
+}
+.hero .col-lg-5 p.multi_btn_wrap .btn {
   color: white;
   font: 1.2rem/1.5rem "Spoqa Han Sans Neo", "sans-serif";
   font-weight: 500;
 }
-.hero p.multi_btn_wrap .btn.btn-secondary:hover {
+.hero .col-lg-5 p.multi_btn_wrap .btn.btn-secondary:hover {
   border: 1px solid white;
 }
-.hero p.multi_btn_wrap .btn.btn-white-outline {
+.hero .col-lg-5 p.multi_btn_wrap .btn.btn-white-outline {
   background: rgba(255, 255, 255, 0.2);
 }
-.hero p.multi_btn_wrap .btn.btn-white-outline:hover {
+.hero .col-lg-5 p.multi_btn_wrap .btn.btn-white-outline:hover {
   background: rgba(255, 255, 255, 0.4);
 }
 .hero .position {
   position: relative;
 }
 .hero .position .hero-img-wrap img.img-fluid {
+  max-width: unset;
+  opacity: 0.8;
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -1528,70 +1721,142 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 
 @media (max-width: 576px) {
-  .hero {
-    height: 60vh;
+  .hero .position .col-lg-5 {
+    padding-bottom: 22rem;
+  }
+  .hero .position .col-lg-5 .intro-excerpt {
+    max-width: 450px;
+  }
+  .hero .position .col-lg-5 .intro-excerpt h1 {
+    font-size: 40px;
+  }
+  .hero .position .hero-img-wrap::after {
+    right: -20rem;
+    top: 14rem;
+    width: 30rem;
+    height: 30rem;
   }
   .hero .position .hero-img-wrap img.img-fluid {
-    top: 30rem;
-    right: unset;
-    left: 0;
-    max-height: unset;
-    min-width: 100vh;
+    top: 100%;
+    right: -40rem;
+    min-height: 80%;
   }
 }
 @media (min-width: 576px) {
-  .hero {
-    height: 60vh;
+  .hero .position .col-lg-5 {
+    padding-bottom: 22rem;
+  }
+  .hero .position .col-lg-5 .intro-excerpt {
+    max-width: 450px;
+  }
+  .hero .position .col-lg-5 .intro-excerpt h1 {
+    font-size: 60px;
+  }
+  .hero .position .hero-img-wrap::after {
+    right: -20rem;
+    top: 0;
+    width: 30rem;
+    height: 30rem;
   }
   .hero .position .hero-img-wrap img.img-fluid {
-    top: 30rem;
-    left: 20rem;
-    min-width: 130vw;
-    min-height: 100%;
-    object-fit: contain;
+    top: 90%;
+    right: -55rem;
+    min-height: calc(100% + 4rem);
   }
 }
 @media (min-width: 768px) {
-  .hero {
-    height: unset;
+  .hero .position .col-lg-5 {
+    padding-bottom: 0;
+  }
+  .hero .position .col-lg-5 .intro-excerpt {
+    max-width: 450px;
+  }
+  .hero .position .col-lg-5 .intro-excerpt h1 {
+    font-size: 60px;
+  }
+  .hero .position .hero-img-wrap::after {
+    right: -20rem;
+    top: -16rem;
+    width: 30rem;
+    height: 30rem;
   }
   .hero .position .hero-img-wrap img.img-fluid {
-    top: 50%;
-    right: 0;
-    left: unset;
-    min-width: unset;
-    max-height: 100%;
-    min-height: unset;
+    right: -40rem;
+    min-height: calc(100% + 8rem);
   }
 }
 @media (min-width: 992px) {
-  .hero {
-    padding: calc(8rem - 30px) 0 8rem 0;
-  }
-  .hero .intro-excerpt {
+  .hero .col-lg-5 .intro-excerpt {
     max-width: 450px;
   }
-  .hero .position .hero-img-wrap img.img-fluid {
-    top: 50%;
+  .hero .col-lg-5 .intro-excerpt h1 {
+    font-size: 80px;
+  }
+  .hero .col-lg-5 .intro-excerpt .sub_info {
+    font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
+    margin-bottom: 4rem !important;
+  }
+  .hero .position .hero-img-wrap::after {
     right: 0;
-    left: unset;
-    min-width: unset;
-    max-height: calc(100% + 6rem);
+    top: -3rem;
+    width: 30rem;
+    height: 30rem;
+  }
+  .hero .position .hero-img-wrap img.img-fluid {
+    right: 0;
+    opacity: 1;
+    min-height: 80%;
   }
 }
 @media (min-width: 1200px) {
-  .hero .intro-excerpt h1 {
-    font-size: 4.6rem;
+  .hero .intro-excerpt {
+    max-width: 450px;
   }
-  .hero .position .hero-img-wrap:after {
-    top: -40px;
+  .hero .intro-excerpt h1 {
+    font-size: 80px;
+  }
+  .hero .intro-excerpt .sub_info {
+    font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  }
+  .hero .position .hero-img-wrap::after {
+    right: 0;
+    top: -10rem;
+    width: 30rem;
+    height: 30rem;
+  }
+  .hero .position .hero-img-wrap img.img-fluid {
+    min-height: calc(100% + 12rem);
+    max-height: unset;
+    opacity: 0.8;
   }
 }
 @media (min-width: 1400px) {
-  .hero h1 {
-    font-size: 54px;
+  .hero .intro-excerpt {
+    max-width: 450px;
+  }
+  .hero .intro-excerpt h1 {
+    font-size: 80px;
+  }
+  .hero .position .hero-img-wrap::after {
+    top: -16rem;
+    width: 40rem;
+    height: 40rem;
+  }
+  .hero .position .hero-img-wrap img.img-fluid {
+    min-height: calc(100% + 16rem);
   }
 }
+.hero .container .position .slick-slider.slick-initialized {
+  z-index: 10;
+}
+.hero .container .position .slick-slider.slick-initialized .slick-dots li.slick-active button::before {
+  color: white;
+}
+.hero .container .position .slick-slider.slick-initialized .slick-dots li button::before {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+}
+
 .app {
   height: 100%;
 }
@@ -1785,18 +2050,15 @@ body #root .app .main_frame {
   display: flex;
   flex-direction: column;
   background: white;
-  border-radius: 1.2rem;
+  width: 40vw;
+  height: calc(100vh - 8rem);
   position: absolute;
   top: 50%;
   left: 50%;
+  border-radius: 1.2rem;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 10px 0 rgba(59, 93, 80, 0.4);
-  height: calc(100vh - 8rem);
   padding: 2.4rem;
-}
-.app .sign_up_content_wrap .input_field_window .scroll_position {
-  overflow-y: scroll;
-  padding: 0 3.2rem;
 }
 .app .sign_up_content_wrap .input_field_window .scroll_position .divider {
   width: 100%;
@@ -1819,6 +2081,10 @@ body #root .app .main_frame {
   font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
   margin-bottom: 0.8rem;
   justify-content: center;
+}
+.app .sign_up_content_wrap .input_field_window .scroll_position .form-group .stretch {
+  display: flex;
+  width: 100%;
 }
 .app .sign_up_content_wrap .input_field_window .scroll_position .form-group.address {
   margin-bottom: 0;
@@ -1863,6 +2129,16 @@ body #root .app .main_frame {
   display: flex;
   justify-content: center;
   margin-top: 4rem;
+}
+.app .sign_up_content_wrap .input_field_window .scroll_position .signUp_btn_wrap .goBack_btn {
+  width: 100%;
+  height: 4.8rem;
+  background: #2f2f2f;
+  color: white;
+  font: 1.8rem/2.3rem "Spoqa Han Sans Neo", "sans-serif";
+  border-radius: 5rem;
+  font-weight: 700;
+  margin-right: 1.6rem;
 }
 .app .sign_up_content_wrap .input_field_window .scroll_position .signUp_btn_wrap .signUp_btn {
   width: 100%;
@@ -1937,6 +2213,8 @@ body #root .app .main_frame {
   border-radius: 5rem;
   width: 6rem;
   height: 6rem;
+  cursor: pointer;
+  z-index: 1000;
 }
 .testimonial-section .container .row.justify-content-center .slick-slider.slick-initialized button.slick-arrow::before {
   color: white;

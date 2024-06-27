@@ -41,14 +41,14 @@
     z-index: 2;
     margin-top: 100px;
     @media (min-width: $lg) {
-      margin-top: 0px;
+      margin-top: 0;
       margin-bottom: 80px;
     }
     h3 {
       font-size: 18px;
       font-weight: 500;
       color: $primary;
-      margin-bottom: 0.8rem;
+      margin-bottom: 1.6rem;
     }
     .form-control {
       min-width: 16rem;

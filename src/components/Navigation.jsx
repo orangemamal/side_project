@@ -44,7 +44,7 @@ export default function Navigation() {
 
       <div className="container">
         <Link className="navbar-brand" to="/home">
-          <img src={require("assets/images/img_logo.svg").default} alt="FurNi"/>
+          <img className="animate__animated hover-animate-heartBeat" src={require("assets/images/img_logo.svg").default} alt="FurNi"/>
         </Link>
 
         <button
@@ -66,7 +66,7 @@ export default function Navigation() {
             {menuItems.map((item, index) => (
               <li
                 key={index}
-                className={`nav-item ${index === activeIndex ? 'active' : ''}`}
+                className={`nav-item animate__animated hover-animate-heartBeat ${index === activeIndex ? 'active' : ''}`}
                 onClick={() => handleItemClick(index, `/${item}`)}
               >
                 {item}
@@ -78,12 +78,14 @@ export default function Navigation() {
             <li>
               {/* 비회원일 경우 /Login , 회원일 경우 /UserInfo */}
               <Link className="nav-link" to="/Login" onClick={() => resetNavActive()}>
-                <div className="icon user" />
+                <div className="icon user animate__animated hover-animate-heartBeat" />
               </Link>
             </li>
             <li>
               <Link className="nav-link" to="/Cart" onClick={() => resetNavActive()}>
-                <div className="icon cart" />
+                <div className="icon cart animate__animated hover-animate-heartBeat">
+                  <div className="cart_count">{'0'}</div>
+                </div>
               </Link>
             </li>
           </ul>

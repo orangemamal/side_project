@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
 export default function Shop() {
 
@@ -45,8 +45,30 @@ export default function Shop() {
     },
   ];
 
+  const [firstScrollEvent, setFirstScrollEvent] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      console.log(currentScrollY)
+
+      if (currentScrollY > 300) {
+        setFirstScrollEvent(true)
+      } else {
+        setFirstScrollEvent(false)
+      }
+
+    };
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    };
+  }, []);
+
   return (
-    <main>
+    <main className={`animate__animated_scroll ${firstScrollEvent ? 'fadeInUp' : ''}`}>
       <div className="untree_co-section product-section before-footer-section">
         <div className="container">
           <div className="row">
@@ -54,9 +76,9 @@ export default function Shop() {
             {itemsProduct.map((item, index) => (
               <div className="col-12 col-md-4 col-lg-3 mb-5" key={index}>
                 <a className="product-item" href="#">
-                  <img src={require(`assets/images/product-${item.id}.png`)} className="img-fluid product-thumbnail" />
+                  <img src={require(`assets/images/product-${item.id}.png`)} className="img-fluid product-thumbnail scale" />
                   <h3 className="product-title">{item.productName}</h3>
-                  <strong className="product-price">{item.price.toLocaleString()}원</strong>
+                  <strong className="product-price">{item.price.toLocaleString()}<span>원</span></strong>
                   <span className="icon-cross">
                     <img src={require("assets/icons/cross.svg").default} className="img-fluid" />
                   </span>

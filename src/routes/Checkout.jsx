@@ -1,9 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
+import DaumPostcode from 'react-daum-postcode';
+import {useDispatch, useSelector} from 'react-redux';
+import {setPostData} from "../store/userCommon";
 
 export default function Cart({ onPageRender }) {
 
   const navigate = useNavigate()
+  const dispatch = useDispatch();
 
   const handleClick = () => {
     navigate('/ThankYou')
@@ -31,6 +35,99 @@ export default function Cart({ onPageRender }) {
   const showThirdDetailComment = () => {
     setThirdIsActive(!thirdIsActive)
   };
+
+  const [postState, setPostState] = useState(false);
+  const [showModalValue, setShowModalValue] = useState(false);
+  const [inputAddressValue, setInputAddressValue] = useState('');
+  const [inputZipCodeValue, setInputZipCodeValue] = useState('');
+
+  const postCodeStyle = {
+    width: '40rem',
+    height: '50rem',
+    border: '4px double rgba(77, 134, 156, 0.4)',
+    padding: '0.8rem',
+    borderRadius: '0.8rem',
+    display: postState ? 'block' : 'none',
+  };
+
+  const onCompletePost = data => {
+    console.log(data)
+    dispatch(setPostData({ postCode: data.zonecode, address: data.address }))
+
+    setInputZipCodeValue(data.zonecode)
+    setInputAddressValue(data.address)
+
+    setShowModalValue(false)
+    setPostState(false)
+  };
+
+  const postCode = useSelector(state => state.userCommon.postCode);
+  const address = useSelector(state => state.userCommon.address);
+
+  const handlePostCode = () => {
+    setInputZipCodeValue(postCode);
+  }
+  const handleAddress = () => {
+    setInputAddressValue(address);
+  }
+
+  const showPostModal = () => {
+    setShowModalValue(true)
+    setPostState(true)
+  }
+  const closeModal = () => {
+    setShowModalValue(false)
+    setPostState(false)
+  }
+
+  const [nameInputValue, setNameInputValue] = useState('');
+  const [phoneInputValue, setPhoneCheckInputValue] = useState('');
+
+  const nameHandleChange = (event) => {
+    setNameInputValue(event.target.value);
+  };
+  const phoneHandleChange = (event) => {
+    if (/^\d*$/.test(event.target.value) && event.target.value.length <= 11) {
+      setPhoneCheckInputValue(event.target.value);
+    }
+  };
+
+  const [orderPassword, setOrderPassword] = useState('');
+
+  const numberMaxLength = (event) => {
+    if (/^\d*$/.test(event.target.value) && event.target.value.length <= 4) {
+      setOrderPassword(event.target.value)
+    }
+  }
+
+  const [nameInputValueSecond, setNameInputValueSecond] = useState('');
+  const [phoneInputValueSecond, setPhoneCheckInputValueSecond] = useState('');
+
+  const nameHandleChangeSecond = (event) => {
+    setNameInputValueSecond(event.target.value);
+  };
+
+  const phoneHandleChangeSecond = (event) => {
+    if (/^\d*$/.test(event.target.value) && event.target.value.length <= 11) {
+      setPhoneCheckInputValueSecond(event.target.value);
+    }
+  };
+
+  const orderInfoPatch = () => {
+    console.log(nameInputValue)
+    console.log(phoneInputValue)
+
+    if(nameInputValue !== '' || phoneInputValue !== '') {
+      setNameInputValueSecond(nameInputValue)
+      setPhoneCheckInputValueSecond(phoneInputValue)
+    } else {
+      alert("이름 또는 휴대전화 정보를 작성하지 않으셨어요!")
+    }
+
+    console.log(nameInputValueSecond) // 이름도 같음
+    console.log(phoneInputValueSecond) // 클릭시에 여기에 넘겨야함 set에
+  }
+
 
   return (
     <div className="untree_co-section checkout">
@@ -67,23 +164,47 @@ export default function Cart({ onPageRender }) {
 
               <div className="form-group row mt20">
                 <div className="col-md-6">
-                  <label htmlFor="c_fname" className="text-black">이름<span className="text-danger">(필수)</span></label>
-                  <input type="text" className="form-control" id="c_fname" name="c_fname"/>
+                  <label htmlFor="input_01" className="text-black">이름<span className="text-danger">(필수)</span></label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="input_01"
+                    name="c_fname"
+                    value={nameInputValue}
+                    onChange={nameHandleChange}
+                  />
                 </div>
                 <div className="col-md-6">
-                  <label htmlFor="c_lname" className="text-black">결제 비밀번호<span className="text-danger">(필수)</span></label>
-                  <input type="text" className="form-control" id="c_lname" name="c_lname"/>
+                  <label htmlFor="input_02" className="text-black">주문조회 비밀번호<span className="text-danger">(필수)</span></label>
+                  <input
+                    type="number"
+                    className="form-control"
+                    id="input_02"
+                    name="c_lname"
+                    placeholder="숫자 4자리"
+                    maxLength="4"
+                    onChange={numberMaxLength}
+                    value={orderPassword}
+                  />
                 </div>
               </div>
 
               <div className="form-group row">
                 <div className="col-md-6">
-                  <label htmlFor="c_fname" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
-                  <input type="text" className="form-control" id="c_fname" name="c_fname"/>
+                  <label htmlFor="input_03" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
+                  <input
+                    type="number"
+                    className="form-control"
+                    id="input_03"
+                    name="c_fname"
+                    value={phoneInputValue}
+                    onChange={phoneHandleChange}
+                    placeholder="'-'없이 입력해주세요."
+                  />
                 </div>
                 <div className="col-md-6">
-                  <label htmlFor="c_lname" className="text-black">이메일</label>
-                  <input type="text" className="form-control" id="c_lname" name="c_lname"/>
+                  <label htmlFor="input_04" className="text-black">이메일</label>
+                  <input type="text" className="form-control" id="input_04" name="c_lname"/>
                 </div>
               </div>
 
@@ -95,7 +216,7 @@ export default function Cart({ onPageRender }) {
                   <div className="radio_box">
 
                     <span className="radio_bundle">
-                      <input type="radio" id="sameOrder" name="delivery" />
+                      <input type="radio" id="sameOrder" name="delivery" onClick={() => orderInfoPatch()} />
                       <label htmlFor="sameOrder">
                         <div className="icon radio_inactive" />
                         <h4>주문자 정보와 동일</h4>
@@ -116,28 +237,59 @@ export default function Cart({ onPageRender }) {
 
               <div className="form-group row mt20">
                 <div className="col-md-6">
-                  <label htmlFor="c_fname" className="text-black">이름<span className="text-danger">(필수)</span></label>
-                  <input type="text" className="form-control" id="c_fname" name="c_fname"/>
+                  <label htmlFor="input_05" className="text-black">이름<span className="text-danger">(필수)</span></label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="input_05"
+                    name="c_fname"
+                    value={nameInputValueSecond}
+                    onChange={nameHandleChangeSecond}
+                  />
                 </div>
+
                 <div className="col-md-6">
-                  <label htmlFor="c_lname" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
-                  <input type="text" className="form-control" id="c_lname" name="c_lname" placeholder="" />
+                  <label htmlFor="input_06" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="input_06"
+                    name="c_lname"
+                    value={phoneInputValueSecond}
+                    onChange={phoneHandleChangeSecond}
+                    placeholder="'-'없이 입력해주세요."
+                  />
                 </div>
               </div>
 
               <div className="form-group row">
                 <div className="col-md-12">
-                  <label htmlFor="c_address" className="text-black">주소<span className="text-danger">(필수 항목)</span></label>
+                  <label htmlFor="input_07" className="text-black">주소<span className="text-danger">(필수 항목)</span></label>
                   <div className="post_num">
-                    <input type="text" className="form-control" id="c_address" name="c_address" />
-                    {/* daum postcode service api 연동하기 */}
-                    <button className="btn btn-primary">우편번호</button>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="input_07"
+                      name="c_address"
+                      onChange={handlePostCode}
+                      value={postCode}
+                      onClick={() => showPostModal()}
+                      readOnly
+                    />
+                    <button className="btn btn-primary" onClick={() => showPostModal()}>우편번호</button>
                   </div>
                 </div>
               </div>
 
               <div className="form-group mt-3">
-                <input type="text" className="form-control" />
+                <input
+                  type="text"
+                  className="form-control"
+                  onChange={handleAddress}
+                  onClick={() => showPostModal()}
+                  value={address}
+                  readOnly
+                />
               </div>
 
               <div className="form-group mt-3">
@@ -168,9 +320,9 @@ export default function Cart({ onPageRender }) {
                 <h2 className="h3 mb-3 text-black">할인 쿠폰</h2>
                 <div className="p-3 p-lg-5 border bg-white">
 
-                  <label htmlFor="c_code" className="coupon_label text-black mb-3">가지고 계신 쿠폰 번호를 입력해주세요.</label>
+                  <label htmlFor="coufonInput" className="coupon_label text-black mb-3">가지고 계신 쿠폰 번호를 입력해주세요.</label>
                   <div className="input-group w-75 couponcode-wrap">
-                    <input type="text" className="form-control me-2" id="c_code" placeholder="Coupon Code"
+                    <input type="text" className="form-control me-2" id="coufonInput" placeholder="Coupon Code"
                            aria-label="Coupon Code" aria-describedby="button-addon2" />
                     <div className="input-group-append">
                       <button className="btn btn-black btn-sm" type="button" id="button-addon2">쿠폰 적용하기</button>
@@ -206,15 +358,13 @@ export default function Cart({ onPageRender }) {
 
                   <div className="payment_box border p-3 mb-3" onClick={showFirstDetailComment}>
                     <h3 className="h6 mb-0">
-                      간편 결제
+                      무통장입금
                     </h3>
 
                     <div className={`collapse ${firstIsActive ? 'show' : ''}`} id="collapsebank">
                       <div>
                         <p className="mb-0">
-                          Make your payment directly into our bank account. Please use your Order ID
-                          as the payment reference. Your order won’t be shipped until the funds have cleared in our
-                          account.
+                          FurNi에 지정된 계좌로 직접 입금하는 방식입니다. (인터넷뱅킹, 텔레뱅킹, ATM, 은행방문)
                         </p>
                       </div>
                     </div>
@@ -222,15 +372,27 @@ export default function Cart({ onPageRender }) {
 
                   <div className="payment_box border p-3 mb-3" onClick={showSecondDetailComment}>
                     <h3 className="h6 mb-0">
-                      일반 결제
+                      실시간 계좌이체
                     </h3>
 
                     <div className={`collapse ${secondIsActive ? 'show' : ''}`} id="collapsebank">
                       <div>
                         <p className="mb-0">
-                          Make your payment directly into our bank account. Please use your Order ID
-                          as the payment reference. Your order won’t be shipped until the funds have cleared in our
-                          account.
+                          은행을 거치지않고 회원님 계좌에서 바로 이체되는 편리한 서비스입니다. (이체수수료무료 / 공인인증서필수)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="payment_box border p-3 mb-3" onClick={showThirdDetailComment}>
+                    <h3 className="h6 mb-0">
+                      휴대폰 결제
+                    </h3>
+
+                    <div className={`collapse ${thirdIsActive ? 'show' : ''}`} id="collapsebank">
+                      <div>
+                        <p className="mb-0">
+                          인증번호를 통해 간단히 휴대폰으로 결제처리가 되면 익월통신요금에 합산청구됩니다.
                         </p>
                       </div>
                     </div>
@@ -249,6 +411,22 @@ export default function Cart({ onPageRender }) {
           </div>
         </div>
       </div>
+
+      <div className={`modal_wrap ${showModalValue ? 'show' : ''}`}>
+        <div className="backdrop" />
+
+        <div className={`modal_content animate__animated ${showModalValue ? 'animate__fadeIn' : ''}`}>
+          <button className="close_btn" onClick={() => closeModal()}>
+            <i className="fa-solid fa-circle-xmark"></i>
+          </button>
+
+          <DaumPostcode
+            style={postCodeStyle}
+            onComplete={onCompletePost}
+          ></DaumPostcode>
+        </div>
+      </div>
+
     </div>
 );
 };

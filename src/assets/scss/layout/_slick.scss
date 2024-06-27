@@ -11,6 +11,8 @@
             border-radius: 5rem;
             width: 6rem;
             height: 6rem;
+            cursor: pointer;
+            z-index: 1000;
             &::before {
               color: $white;
               @include font(2.8rem);

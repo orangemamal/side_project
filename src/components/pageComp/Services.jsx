@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import SectionProduct from "../sectionComp/SectionProduct";
 import SectionTestimonial from "../sectionComp/SectionTestimonial";
 
@@ -27,9 +27,37 @@ export default function Services() {
     },
   ];
 
+  const [firstScrollEvent, setFirstScrollEvent] = useState(false);
+  const [secondScrollEvent, setSecondScrollEvent] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      console.log(currentScrollY)
+
+      if (currentScrollY > 300) {
+        setFirstScrollEvent(true)
+      } else {
+        setFirstScrollEvent(false)
+      }
+
+      if(currentScrollY > 700) {
+        setSecondScrollEvent(true)
+      } else {
+        setSecondScrollEvent(false)
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    };
+  }, []);
+
   return (
     <main>
-      <div className="why-choose-section service">
+      <div className={`mb40 why-choose-section animate__animated_scroll service ${firstScrollEvent ? 'backInLeft' : ''}`}>
         <div className="container">
           <div className="row my-5">
 
@@ -49,7 +77,7 @@ export default function Services() {
         </div>
       </div>
 
-      <div className="product-section pt-0">
+      <div className={`product-section pt-0 animate__animated_scroll ${secondScrollEvent ? 'fadeInRight' : ''}`}>
         <SectionProduct />
       </div>
 

@@ -1,0 +1,61 @@
+.animate__animated:hover {
+  animation-duration: 2s;
+  animation-fill-mode: none;
+}
+
+.hover-animate-heartBeat:hover {
+  animation-name: heartBeat;
+}
+
+.animate__animated:hover {
+  animation-duration: 2s;
+  animation-fill-mode: none;
+}
+
+.hover-animate-shakeX:hover {
+  animation-name: shakeX;
+}
+
+img {
+  transition: all 0.5s;
+  transform: scale(100%);
+  &.scale:hover {
+    transform: scale(130%);
+  }
+  &.small {
+    transform: scale(90%);
+    &.scale:hover {
+      transform: scale(110%);
+    }
+  }
+}
+
+.animate__animated_scroll {
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  visibility: hidden;
+  &.fadeInRight {
+    visibility: visible;
+    animation-name: fadeInRight
+  }
+  &.fadeInLeft {
+    visibility: visible;
+    animation-name: fadeInLeft
+  }
+  &.fadeInUp {
+    visibility: visible;
+    animation-name: fadeInUp
+  }
+  &.backInLeft {
+    visibility: visible;
+    animation-name: backInLeft
+  }
+  &.backInRight {
+    visibility: visible;
+    animation-name: backInRight
+  }
+  &.rotateInDownLeft {
+    visibility: visible;
+    animation-name: rotateInDownLeft
+  }
+}

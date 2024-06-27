@@ -68,10 +68,30 @@ nav {
         margin-left: 0;
         margin-right: 0;
         .icon {
-          opacity: 0.6;
           transition: all 0.3s;
-          &:hover {
-            opacity: 1;
+          &.user:hover {
+            background: center / contain no-repeat url($icon-path + 'icon_24_user_hover.svg');
+          }
+          &.cart:hover {
+            background: center / contain no-repeat url($icon-path + 'icon_24_cart_hover.svg');
+          }
+          &.cart {
+            position: relative;
+            .cart_count {
+              width: 2rem;
+              height: 2rem;
+              border-radius: 5rem;
+              background: $secondary;
+              color: $white;
+              position: absolute;
+              top: -1rem;
+              right: -1rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: $medium;
+              @include font(1.3rem);
+            }
           }
         }
         &:first-child {

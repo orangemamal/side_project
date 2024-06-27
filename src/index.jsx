@@ -24,6 +24,8 @@ import './assets/css/main.css';
 import './assets/css/main.css.map';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import 'simplebar-react/dist/simplebar.min.css';
+import 'animate.css';
 
 import reportWebVitals from './reportWebVitals';
 import {

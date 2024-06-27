@@ -54,22 +54,21 @@ export default function Footer() {
 
   const currentYear = useMemo(() => new Date().getFullYear(), [])
 
-
   return (
     <footer className="footer-section">
       <div className="container relative">
 
         <div className="sofa-img">
-          <img src={require("assets/images/sofa.png")} alt="Image" className="img-fluid" />
+          <img src={require("assets/images/sofa.png")} alt="Image" className="img-fluid animate__animated hover-animate-shakeX" />
         </div>
 
         <div className="row">
           <div className="col-lg-8">
             <div className="subscription-form">
               <h3 className="d-flex align-items-center">
-                  <span className="me-1">
-                    <div className="icon envelope" />
-                  </span>
+                <span className="me-1">
+                  <div className="icon envelope" />
+                </span>
                 <span>이메일로 FurNi의 최신 뉴스 구독하기</span>
               </h3>
 

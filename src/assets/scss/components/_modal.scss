@@ -1,67 +1,41 @@
-//.modal_wrap {
-//  width: 100%;
-//  height: 100%;
-//  position: fixed;
-//  top: 0;
-//  left: 0;
-//  z-index: 1400;
-//  .backdrop {
-//    width: 100%;
-//    height: 100%;
-//    background: rgba(0, 0, 0, 0.5);
-//  }
-//  .modal_content_wrap {
-//    width: 42rem;
-//    position: absolute;
-//    top: 50%;
-//    left: 50%;
-//    transform: translate(-50% , -50%);
-//    background: $white;
-//    box-shadow: $boxShadow;
-//    border-radius: 0.8rem;
-//    @include font(1.4rem);
-//    color: $gray80;
-//    z-index: 1500;
-//    .cancel_btn {
-//      position: absolute;
-//      top: 2rem;
-//      right: 2rem;
-//    }
-//    .emphasis_info {
-//      color: $gray100;
-//      font-weight: $bold;
-//    }
-//    .modal_header {
-//      padding: 4rem 4rem 0;
-//      border-bottom: 1px solid $gray20;
-//      .modal_title {
-//        @include font(2.8rem);
-//        font-weight: $bold;
-//        color: $mainColor;
-//        padding-bottom: 2rem;
-//      }
-//      .modal_detail_comment {
-//        p {
-//          margin-bottom: 0.4rem;
-//          &:last-child {
-//            margin-bottom: 2rem;
-//          }
-//        }
-//      }
-//    }
-//    .modal_content {
-//      height: 21rem;
-//      overflow: auto;
-//    }
-//    .modal_table_title {
-//      padding-left: 4rem;
-//      margin-bottom: 0.8rem;
-//    }
-//    .modal_footer {
-//      padding: 6rem 4rem 4rem;
-//      button {
-//        margin-left: auto;
-//      }
-//    }
-//  }
-//}
+.modal_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 10000;
+  &.show {
+    display: block;
+  }
+  .backdrop {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .modal_content {
+    background: $white;
+    padding: 5.6rem 2rem 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.8rem;
+    box-shadow: 0 0 8px 0 rgba(77, 134, 156, 0.6);
+    .close_btn {
+      position: absolute;
+      right: 2rem;
+      top: 1.2rem;
+      .fa-circle-xmark {
+        &::before {
+          font-size: 32px;
+          color: $primary;
+        }
+      }
+    }
+  }
+}

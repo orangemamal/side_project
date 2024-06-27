@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import SectionProduct from "../sectionComp/SectionProduct";
 import SectionTestimonial from "../sectionComp/SectionTestimonial";
 import SectionBlog from "../sectionComp/SectionBlog";
@@ -21,18 +21,59 @@ const Home = () => {
     {no: 3, product: '프리미엄 회전의자', productInfo: '자유로운 움직임과 스타일리시한 편안함을 선사합니다.'},
   ]
 
+  const [firstScrollEvent, setFirstScrollEvent] = useState(false);
+  const [secondScrollEvent, setSecondScrollEvent] = useState(false);
+  const [thirdScrollEvent, setThirdScrollEvent] = useState(false);
+  const [fourthScrollEvent, setFourthScrollEvent] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      console.log(currentScrollY)
+
+      if (currentScrollY > 300) {
+        setFirstScrollEvent(true)
+      } else {
+        setFirstScrollEvent(false)
+      }
+
+      if(currentScrollY > 800) {
+        setSecondScrollEvent(true)
+      } else {
+        setSecondScrollEvent(false)
+      }
+
+      if(currentScrollY > 1600) {
+        setThirdScrollEvent(true)
+      } else {
+        setThirdScrollEvent(false)
+      }
+
+      if(currentScrollY > 2200) {
+        setFourthScrollEvent(true)
+      } else {
+        setFourthScrollEvent(false)
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    };
+  }, []);
 
   return (
     <main>
-      <div className="product-section">
+      <div className={`mb40 product-section animate__animated_scroll ${firstScrollEvent ? 'fadeInRight' : ''}`}>
         <SectionProduct />
       </div>
 
-      <div className="why-choose-section">
+      <div className={`mb40 why-choose-section animate__animated_scroll ${secondScrollEvent ? 'fadeInLeft' : ''}`}>
         <SectionWhyChoose />
       </div>
 
-      <div className="we-help-section">
+      <div className={`mb40 we-help-section animate__animated_scroll ${thirdScrollEvent ? 'fadeInUp' : ''}`}>
         <div className="container">
           <div className="row justify-content-between">
             <div className="col-lg-7 mb-5 mb-lg-0">
@@ -61,7 +102,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="popular-product">
+      <div className={`mb40 popular-product animate__animated_scroll ${fourthScrollEvent ? 'backInLeft' : ''}`}>
         <div className="container">
           <div className="row">
 
@@ -88,11 +129,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="testimonial-section">
+      <div className="mb40 testimonial-section">
         <SectionTestimonial />
       </div>
 
-      <div className="blog-section">
+      <div className="mb40 blog-section">
         <SectionBlog />
       </div>
 

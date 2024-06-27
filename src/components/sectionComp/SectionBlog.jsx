@@ -25,7 +25,7 @@ const SectionBlog = () => {
           <div className="col-12 col-sm-6 col-md-4 mb-4 mb-md-0" key={index}>
             <div className="post-entry">
               <a href="#" className="post-thumbnail">
-                <img src={require(`assets/images/post-${item.no}.jpg`)} alt="Image" className="img-fluid" />
+                <img src={require(`assets/images/post-${item.no}.jpg`)} alt="Image" className="img-fluid small scale" />
               </a>
               <div className="post-content-entry">
                 <h3>{item.title}</h3>

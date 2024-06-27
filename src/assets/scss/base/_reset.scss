@@ -34,7 +34,7 @@ html {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
     min-height: -webkit-fill-available;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth !important;
 }
 // html::-webkit-scrollbar {
 //     display: none; /* Chrome, Safari, Opera*/
@@ -62,4 +62,16 @@ input:focus {
   -webkit-transform: translateZ(0px);
   -webkit-transform: translate3d(0,0,0);
   -webkit-perspective: 1000;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox  */
+input[type='number'] {
+  -moz-appearance: textfield;
 }

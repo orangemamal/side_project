@@ -27,13 +27,16 @@ const SectionProduct = () => {
         {itemsProduct.map((item, index) => (
           <div className="col-12 col-md-4 col-lg-3 mb-5 mb-md-0" key={index}>
             <a className="product-item" href="cart.html">
-              <img src={require(`assets/images/product-${item.no}.png`)} className="img-fluid product-thumbnail" />
+              <img
+                src={require(`assets/images/product-${item.no}.png`)}
+                className="img-fluid product-thumbnail scale"
+              />
               <h3 className="product-title">{ item.product }</h3>
               <strong className="product-price">{ formatNumber(item.price) }<span>원</span></strong>
 
               <span className="icon-cross">
-                                <img src={require("assets/icons/cross.svg").default} className="img-fluid" />
-                            </span>
+                <img src={require("assets/icons/cross.svg").default} className="img-fluid" />
+              </span>
             </a>
           </div>
         ))}

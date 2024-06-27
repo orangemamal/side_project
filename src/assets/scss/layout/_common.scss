@@ -37,6 +37,10 @@ p {
   }
 }
 
+.mb40 {
+  margin-bottom: 4rem;
+}
+
 // SectionProduct Section
 .product-section {
   padding: 7rem 0;
@@ -47,6 +51,9 @@ p {
     position: relative;
     padding-bottom: 50px;
     cursor: pointer;
+    .product-title {
+      font-weight: $medium;
+    }
     .product-thumbnail {
       margin-bottom: 30px;
       position: relative;
@@ -60,10 +67,11 @@ p {
     }
     strong {
       font-weight: 800 !important;
-      @include font(2rem);
+      @include font(2.4rem);
       span {
         @include font(1.6rem);
         font-weight: $light;
+        margin-left: 0.4rem;
       }
     }
     h3, strong {
@@ -97,7 +105,7 @@ p {
       right: 0;
       position: absolute;
       content: "";
-      background: $mainLight;
+      background: rgba(77, 134, 156, 0.4);
       height: 0%;
       z-index: -1;
       border-radius: 10px;
@@ -567,7 +575,6 @@ p {
 .form-control {
   height: 50px;
   border-radius: 10px;
-
   &:active, &:focus {
     outline: none;
     box-shadow: none;
@@ -745,6 +752,7 @@ textarea {
     }
     p.lead {
       margin-bottom: 4rem !important;
+      @include font(1.5rem);
     }
   }
   &.checkout {
@@ -836,3 +844,6 @@ textarea {
     color: $gray500;
   }
 }
+
+
+
