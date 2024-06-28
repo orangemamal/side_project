@@ -24,11 +24,12 @@ export default function Navigation() {
   }, []);
 
   function handleItemClick(index, path) {
-    console.log(`${index} : ${path}`);
-    dispatch(setPath({ nowPath: path, nowPathIndex: index }));
-    navigate(path);
+    console.log(`${index} : ${path}`)
+    dispatch(setPath({ nowPath: path, nowPathIndex: index }))
+    navigate(path)
 
-    setActiveIndex(index);
+    setActiveIndex(index)
+    setIsMenuState(false)
   }
 
   function resetNavActive() {
@@ -62,7 +63,7 @@ export default function Navigation() {
 
         {/*collapse navbar-collapse show*/}
         <div className={`collapse navbar-collapse ${isMenuState ? 'show' : ''}`} id="navbarsFurni">
-          <ul className="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+          <ul className="custom-navbar-nav navbar-nav ms-auto mb-md-0">
             {menuItems.map((item, index) => (
               <li
                 key={index}

@@ -616,6 +616,10 @@ p {
   margin-bottom: 4rem;
 }
 
+.mb80 {
+  margin-bottom: 8rem;
+}
+
 .product-section {
   padding: 7rem 0;
 }
@@ -991,6 +995,18 @@ p {
   border-bottom: 1px solid #CACDD2;
   padding-bottom: 1.6rem;
 }
+@media (max-width: 768px) {
+  .blog-section .section_title_wrap {
+    justify-content: space-between;
+  }
+  .blog-section .section_title_wrap .col-md-6 {
+    width: fit-content;
+  }
+  .blog-section .section_title_wrap .col-md-6 .section-title {
+    font: 3.2rem/4rem "Spoqa Han Sans Neo", "sans-serif";
+    font-weight: 700;
+  }
+}
 .blog-section .section_title_wrap .text-start {
   display: flex;
   align-items: end;
@@ -1324,6 +1340,23 @@ textarea {
   color: #73787E;
 }
 
+@media (max-width: 768px) {
+  .untree_co-section.contact .container .bundle {
+    margin-bottom: 2.4rem;
+  }
+  .untree_co-section.contact .container .contact_input_group .name_and_call {
+    flex-direction: column;
+  }
+  .untree_co-section.contact .container .contact_input_group .name_and_call .col-6 {
+    width: 100%;
+  }
+  .untree_co-section.contact .container .contact_input_group .name_and_call .col-6 .form-group {
+    width: 100%;
+  }
+  .untree_co-section.contact .container .contact_input_group .name_and_call .col-6 .form-group .mobile_v {
+    margin-bottom: 3rem;
+  }
+}
 nav.custom-navbar {
   width: 100%;
   height: 7.4rem;
@@ -1447,11 +1480,44 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   }
 }
 @media (max-width: 768px) {
+  nav .container {
+    position: relative;
+  }
+  nav .container .collapse.navbar-collapse {
+    width: 100%;
+    position: absolute;
+    top: 5.4rem;
+    left: 0;
+    background: #4D869C;
+    box-shadow: 0 6px 6px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 0 0 1.6rem 1.6rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    transition: all 0.5s ease-out;
+    height: 0;
+  }
+  nav .container .collapse.navbar-collapse.show {
+    height: 402px;
+  }
   nav .container .collapse.navbar-collapse.show .custom-navbar-nav.navbar-nav {
-    margin: 0.8rem 0;
+    margin: 0;
   }
   nav .container .collapse.navbar-collapse.show .custom-navbar-nav.navbar-nav .nav-item {
-    margin: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    height: 5.6rem;
+    font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+    padding: 0 2.4rem !important;
+    margin: 0 !important;
+    font-weight: 700;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  nav .container .custom-navbar-cta {
+    padding: 1.6rem 2.4rem;
+    margin: 0 !important;
+  }
+  nav .container .custom-navbar-cta li:first-child {
+    margin-right: 2.4rem;
   }
 }
 .footer-section {
@@ -1539,7 +1605,7 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 .footer-section [data-type=line] {
   width: 100%;
   height: 1px;
-  background: #dee2e6;
+  background: #EAEBED;
   margin: 2rem 0 4rem;
 }
 .footer-section .sofa-img {
@@ -1550,6 +1616,14 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 .footer-section .sofa-img img {
   max-width: 30rem;
+}
+@media (max-width: 768px) {
+  .footer-section .sofa-img {
+    right: 2.4rem;
+  }
+  .footer-section .sofa-img img {
+    max-width: 20rem;
+  }
 }
 .footer-section .links-wrap {
   margin-top: 0;
@@ -1581,6 +1655,9 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
 }
 .footer-section .links-wrap .bundle ul li {
   margin-bottom: 0.8rem;
+}
+.footer-section .links-wrap .bundle ul li.emp {
+  font-weight: 700;
 }
 .footer-section .links-wrap .bundle ul li a {
   color: #9FA4A8;
@@ -1628,6 +1705,61 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
   font: 1.3rem/1.6rem "Spoqa Han Sans Neo", "sans-serif";
 }
 
+@media (max-width: 768px) {
+  footer.footer-section {
+    padding: 4rem 0;
+  }
+  footer.footer-section .subscription-form h3 {
+    font: 1.5rem/1.9rem "Spoqa Han Sans Neo", "sans-serif";
+  }
+  footer.footer-section [data-type=line] {
+    margin: 4rem 0;
+  }
+  footer.footer-section .menu_wrap {
+    margin-bottom: 2.4rem !important;
+  }
+  footer.footer-section .menu_wrap .left_side {
+    padding: 0 1.5rem;
+  }
+  footer.footer-section .menu_wrap .left_side .footer-logo-wrap {
+    margin-bottom: 2.4rem !important;
+  }
+  footer.footer-section .menu_wrap .left_side .support {
+    margin-bottom: 2.4rem !important;
+  }
+  footer.footer-section .menu_wrap .left_side .support .customer_center {
+    margin-bottom: 1.6rem;
+  }
+  footer.footer-section .menu_wrap .left_side .support p:nth-of-type(3) {
+    margin-bottom: 0.8rem;
+    color: #27282C;
+    font-weight: 500;
+  }
+  footer.footer-section .menu_wrap .right_side .links-wrap {
+    flex-direction: column;
+  }
+  footer.footer-section .menu_wrap .right_side .links-wrap .bundle {
+    width: 100%;
+    margin: 0 0 3.2rem 0;
+  }
+  footer.footer-section .menu_wrap .right_side .links-wrap .bundle h4 {
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.2rem;
+  }
+  footer.footer-section .copyright .first {
+    margin-bottom: 0.8rem;
+  }
+  footer.footer-section .copyright .second .list-unstyled {
+    flex-direction: column;
+  }
+  footer.footer-section .copyright .second .list-unstyled li a {
+    color: #4D869C;
+  }
+  footer.footer-section .copyright .second .list-unstyled li.me-4 {
+    margin-right: 0 !important;
+    margin-bottom: 0.4rem;
+  }
+}
 .hero {
   overflow: hidden;
   background: #4D869C;
@@ -1728,7 +1860,10 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
     max-width: 450px;
   }
   .hero .position .col-lg-5 .intro-excerpt h1 {
-    font-size: 40px;
+    font-size: 36px;
+  }
+  .hero .position .col-lg-5 .intro-excerpt h1 .bottom {
+    white-space: break-spaces;
   }
   .hero .position .hero-img-wrap::after {
     right: -20rem;
@@ -2238,6 +2373,12 @@ body #root .app .main_frame {
 }
 .testimonial-section .container .row.justify-content-center .slick-slider.slick-initialized .slick-dots li.slick-active button::before {
   color: #4D869C;
+}
+
+@media (max-width: 768px) {
+  .testimonial-section .container .row.justify-content-center .slick-slider.slick-initialized button.slick-arrow {
+    display: none !important;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

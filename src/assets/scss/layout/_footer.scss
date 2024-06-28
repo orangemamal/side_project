@@ -68,8 +68,6 @@
         border-color: $primary;
         box-shadow: 0 1px 4px 0 rgba($black, .2);
       }
-      &::-webkit-input-placeholder, &::-moz-placeholder, &:-ms-input-placeholder, &:-moz-placeholder {
-      }
     }
     .btn {
       border-radius: 10px!important;
@@ -86,7 +84,7 @@
   [data-type="line"] {
     width: 100%;
     height: 1px;
-    background: #dee2e6;
+    background: $gray100;
     margin: 2rem 0 4rem;
   }
   .sofa-img {
@@ -96,6 +94,12 @@
     right: 0;
     img {
       max-width: 30rem;
+    }
+    @media (max-width: $md) {
+      right: 2.4rem;
+      img {
+        max-width: 20rem;
+      }
     }
   }
   .links-wrap {
@@ -129,6 +133,9 @@
       ul {
         li {
           margin-bottom: 0.8rem;
+          &.emp {
+            font-weight: $bold;
+          }
           a {
             color: $gray400;
             @include font(1.4rem);
@@ -179,6 +186,72 @@
       @include font(1.3rem);
       .text-lg-start {
         @include font(1.3rem);
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  footer.footer-section {
+    padding: 4rem 0;
+    .subscription-form {
+      h3 {
+        @include font(1.5rem);
+      }
+    }
+    [data-type=line] {
+      margin: 4rem 0;
+    }
+    .menu_wrap {
+      margin-bottom: 2.4rem !important;
+      .left_side {
+        padding: 0 1.5rem;
+        .footer-logo-wrap {
+          margin-bottom: 2.4rem !important;
+        }
+        .support {
+          margin-bottom: 2.4rem !important;
+          .customer_center {
+            margin-bottom: 1.6rem;
+          }
+          p:nth-of-type(3) {
+            margin-bottom: 0.8rem;
+            color: $gray800;
+            font-weight: $medium;
+          }
+        }
+      }
+      .right_side {
+        .links-wrap {
+          flex-direction: column;
+          .bundle {
+            width: 100%;
+            margin: 0 0 3.2rem 0;
+            h4 {
+              padding-bottom: 0.8rem;
+              margin-bottom: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+    .copyright {
+      .first {
+        margin-bottom: 0.8rem;
+      }
+      .second {
+        .list-unstyled {
+          flex-direction: column;
+          li {
+            a {
+              color: $primary;
+            }
+            &.me-4 {
+              margin-right: 0 !important;
+              margin-bottom: 0.4rem;
+            }
+          }
+        }
       }
     }
   }

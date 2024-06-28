@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, {useState, useCallback, useEffect} from "react";
 import { useLocation } from "react-router-dom";
 import Navigation from "../components/Navigation";
 import Hero from "../components/Hero";
@@ -43,6 +43,12 @@ export default function Frame() {
     setOnCheckoutPage(true);
     setOnCartPage(false);
   }, []);
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <div className="app">

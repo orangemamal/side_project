@@ -50,3 +50,21 @@
     }
   }
 }
+
+@media (max-width: $md) {
+  .testimonial-section {
+    .container {
+      .row {
+        .section-title {
+        }
+        &.justify-content-center {
+          .slick-slider.slick-initialized {
+            button.slick-arrow {
+              display: none !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -25,34 +25,87 @@ const Home = () => {
   const [secondScrollEvent, setSecondScrollEvent] = useState(false);
   const [thirdScrollEvent, setThirdScrollEvent] = useState(false);
   const [fourthScrollEvent, setFourthScrollEvent] = useState(false);
+  const [fifthScrollEvent, setFifthScrollEvent] = useState(false);
+  const [sixthScrollEvent, setSixthScrollEvent] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-      console.log(currentScrollY)
+      const browserWidth = window.innerWidth
 
-      if (currentScrollY > 300) {
-        setFirstScrollEvent(true)
-      } else {
-        setFirstScrollEvent(false)
-      }
+      if (browserWidth > 768) {
+        if (currentScrollY > 300) {
+          setFirstScrollEvent(true)
+        } else {
+          setFirstScrollEvent(false)
+        }
 
-      if(currentScrollY > 800) {
-        setSecondScrollEvent(true)
-      } else {
-        setSecondScrollEvent(false)
-      }
+        if(currentScrollY > 800) {
+          setSecondScrollEvent(true)
+        } else {
+          setSecondScrollEvent(false)
+        }
 
-      if(currentScrollY > 1600) {
-        setThirdScrollEvent(true)
-      } else {
-        setThirdScrollEvent(false)
-      }
+        if(currentScrollY > 1400) {
+          setThirdScrollEvent(true)
+        } else {
+          setThirdScrollEvent(false)
+        }
 
-      if(currentScrollY > 2200) {
-        setFourthScrollEvent(true)
+        if(currentScrollY > 1900) {
+          setFourthScrollEvent(true)
+        } else {
+          setFourthScrollEvent(false)
+        }
+
+        if(currentScrollY > 2400) {
+          setFifthScrollEvent(true)
+        } else {
+          setFifthScrollEvent(false)
+        }
+
+        if(currentScrollY > 2900) {
+          setSixthScrollEvent(true)
+        } else {
+          setSixthScrollEvent(false)
+        }
+
       } else {
-        setFourthScrollEvent(false)
+        if (currentScrollY > 300) {
+          setFirstScrollEvent(true)
+        } else {
+          setFirstScrollEvent(false)
+        }
+
+        if(currentScrollY > 2100) {
+          setSecondScrollEvent(true)
+        } else {
+          setSecondScrollEvent(false)
+        }
+
+        if(currentScrollY > 3400) {
+          setThirdScrollEvent(true)
+        } else {
+          setThirdScrollEvent(false)
+        }
+
+        if(currentScrollY > 4000) {
+          setFourthScrollEvent(true)
+        } else {
+          setFourthScrollEvent(false)
+        }
+
+        if(currentScrollY > 4500) {
+          setFifthScrollEvent(true)
+        } else {
+          setFifthScrollEvent(false)
+        }
+
+        if(currentScrollY > 4900) {
+          setSixthScrollEvent(true)
+        } else {
+          setSixthScrollEvent(false)
+        }
       }
     };
 
@@ -96,7 +149,7 @@ const Home = () => {
                 <li>최신 트렌드</li>
                 <li>특별한 공간</li>
               </ul>
-              <p><a herf="#" className="btn">살펴보기</a></p>
+              <p><a herf="/Shop" className="btn">살펴보기</a></p>
             </div>
           </div>
         </div>
@@ -129,11 +182,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mb40 testimonial-section">
+      <div className={`mb40 testimonial-section animate__animated_scroll ${fifthScrollEvent ? 'rotateInDownLeft' : ''}`}>
         <SectionTestimonial />
       </div>
 
-      <div className="mb40 blog-section">
+      <div className={`mb40 blog-section animate__animated_scroll ${sixthScrollEvent ? 'backInLeft' : ''}`}>
         <SectionBlog />
       </div>
 

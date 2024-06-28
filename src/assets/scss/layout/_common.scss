@@ -40,6 +40,9 @@ p {
 .mb40 {
   margin-bottom: 4rem;
 }
+.mb80 {
+  margin-bottom: 8rem;
+}
 
 // SectionProduct Section
 .product-section {
@@ -454,6 +457,16 @@ p {
   .section_title_wrap {
     border-bottom: 1px solid $gray200;
     padding-bottom: 1.6rem;
+    @media (max-width: $md) {
+      justify-content: space-between;
+      .col-md-6 {
+        width: fit-content;
+        .section-title {
+          @include font(3.2rem);
+          font-weight: $bold;
+        }
+      }
+    }
     .text-start {
       display: flex;
       align-items: end;
@@ -845,5 +858,30 @@ textarea {
   }
 }
 
+@media (max-width: $md) {
+  .untree_co-section {
+    &.contact {
+      .container {
+        .bundle {
+          margin-bottom: 2.4rem;
+        }
+        .contact_input_group {
+          .name_and_call {
+            flex-direction: column;
+            .col-6 {
+              width: 100%;
+              .form-group {
+                width: 100%;
+                .mobile_v {
+                  margin-bottom: 3rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 

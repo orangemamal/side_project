@@ -12,25 +12,48 @@ export default function About() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
+      const browserWidth = window.innerWidth
+
       console.log(currentScrollY)
 
-      if (currentScrollY > 300) {
-        setFirstScrollEvent(true)
+      if(browserWidth > 768) {
+        if (currentScrollY > 300) {
+          setFirstScrollEvent(true)
+        } else {
+          setFirstScrollEvent(false)
+        }
+
+        if(currentScrollY > 1100) {
+          setSecondScrollEvent(true)
+        } else {
+          setSecondScrollEvent(false)
+        }
+
+        if(currentScrollY > 1800) {
+          setThirdScrollEvent(true)
+        } else {
+          setThirdScrollEvent(false)
+        }
       } else {
-        setFirstScrollEvent(false)
+        if (currentScrollY > 200) {
+          setFirstScrollEvent(true)
+        } else {
+          setFirstScrollEvent(false)
+        }
+
+        if(currentScrollY > 2600) {
+          setSecondScrollEvent(true)
+        } else {
+          setSecondScrollEvent(false)
+        }
+
+        if(currentScrollY > 4000) {
+          setThirdScrollEvent(true)
+        } else {
+          setThirdScrollEvent(false)
+        }
       }
 
-      if(currentScrollY > 1100) {
-        setSecondScrollEvent(true)
-      } else {
-        setSecondScrollEvent(false)
-      }
-
-      if(currentScrollY > 1800) {
-        setThirdScrollEvent(true)
-      } else {
-        setThirdScrollEvent(false)
-      }
     };
 
     window.addEventListener('scroll', handleScroll)
@@ -42,15 +65,16 @@ export default function About() {
 
   return (
     <main>
-      <div className={`mb40 why-choose-section animate__animated_scroll ${firstScrollEvent ? 'backInLeft' : ''}`}>
-        <SectionWhyChoose />
-      </div>
-
-      <div className={`mb40 untree_co-section animate__animated_scroll ${secondScrollEvent ? 'fadeInUp' : ''}`}>
+      <div className={`mb40 untree_co-section animate__animated_scroll ${firstScrollEvent ? 'fadeInLeft' : ''}`}>
         <SectionTeam />
       </div>
 
-      <div className={`testimonial-section animate__animated_scroll ${thirdScrollEvent ? 'rotateInDownLeft' : ''}`}>
+      <div className={`mb40 why-choose-section animate__animated_scroll ${secondScrollEvent ? 'backInLeft' : ''}`}>
+        <SectionWhyChoose />
+      </div>
+
+
+      <div className={`testimonial-section mb80 animate__animated_scroll ${thirdScrollEvent ? 'rotateInDownLeft' : ''}`}>
         <SectionTestimonial />
       </div>
 

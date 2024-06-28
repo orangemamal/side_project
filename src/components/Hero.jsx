@@ -102,14 +102,14 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
               <div className="intro-excerpt">
                 <h1>
                   <div className="top">{ item.mainTitleTop }</div>
-                  <span className="d-block">{ item.mainTitleBottom }</span>
+                  <span className="bottom d-block">{ item.mainTitleBottom }</span>
                 </h1>
                 <p className="sub_info mb-4">
                   <span>{ item.subTitleTop }</span>
                   <span>{ item.subTitleBottom }</span>
                 </p>
                 <p className="multi_btn_wrap">
-                  <Link to="#">
+                  <Link to="/shop">
                     <button className="btn btn-secondary me-3">구매하기</button>
                   </Link>
                   <Link to="#">

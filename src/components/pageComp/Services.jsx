@@ -29,22 +29,45 @@ export default function Services() {
 
   const [firstScrollEvent, setFirstScrollEvent] = useState(false);
   const [secondScrollEvent, setSecondScrollEvent] = useState(false);
+  const [thirdScrollEvent, setThirdScrollEvent] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-      console.log(currentScrollY)
+      const browserWidth = window.innerWidth
 
-      if (currentScrollY > 300) {
-        setFirstScrollEvent(true)
+      if (browserWidth > 768) {
+        if (currentScrollY > 200) {
+          setFirstScrollEvent(true)
+        } else {
+          setFirstScrollEvent(false)
+        }
+        if(currentScrollY > 600) {
+          setSecondScrollEvent(true)
+        } else {
+          setSecondScrollEvent(false)
+        }
+        if(currentScrollY > 1200) {
+          setThirdScrollEvent(true)
+        } else {
+          setThirdScrollEvent(false)
+        }
       } else {
-        setFirstScrollEvent(false)
-      }
-
-      if(currentScrollY > 700) {
-        setSecondScrollEvent(true)
-      } else {
-        setSecondScrollEvent(false)
+        if (currentScrollY > 200) {
+          setFirstScrollEvent(true)
+        } else {
+          setFirstScrollEvent(false)
+        }
+        if(currentScrollY > 800) {
+          setSecondScrollEvent(true)
+        } else {
+          setSecondScrollEvent(false)
+        }
+        if(currentScrollY > 2500) {
+          setThirdScrollEvent(true)
+        } else {
+          setThirdScrollEvent(false)
+        }
       }
     };
 
@@ -81,7 +104,7 @@ export default function Services() {
         <SectionProduct />
       </div>
 
-      <div className="testimonial-section">
+      <div className={`testimonial-section mb80 animate__animated_scroll ${thirdScrollEvent ? 'rotateInDownLeft' : ''}`}>
         <SectionTestimonial />
       </div>
 

@@ -124,7 +124,7 @@ export default function Footer() {
                     <ul className="list-unstyled not_link" key={detailIndex}>
                       <li>{detailItem.list_1}</li>
                       <li>{detailItem.list_2}</li>
-                      <li>{detailItem.list_3}</li>
+                      <li className="emp">{detailItem.list_3}</li>
                   </ul>
                   ))}
                 </div>
@@ -137,7 +137,7 @@ export default function Footer() {
                     <ul className="list-unstyled not_link" key={detailIndex}>
                       <li>{detailItem.list_1}</li>
                       <li>{detailItem.list_2}</li>
-                      <li>{detailItem.list_3}</li>
+                      <li className="emp">{detailItem.list_3}</li>
                     </ul>
                   ))}
                 </div>
@@ -181,7 +181,7 @@ export default function Footer() {
 
         <div className="border-top copyright">
           <div className="row pt-4">
-            <div className="col-lg-6">
+            <div className="col-lg-6 first">
               <p className="mb-2 text-center text-lg-start">
                 Copyright &copy; {currentYear}. All Rights Reserved.<br/>
                 Designed with love by <a href="https://untree.co">Untree.co </a>
@@ -189,7 +189,7 @@ export default function Footer() {
               </p>
             </div>
 
-            <div className="col-lg-6 text-center text-lg-end">
+            <div className="col-lg-6 second text-center text-lg-end">
               <ul className="list-unstyled d-inline-flex ms-auto">
                 <li className="me-4"><a href="#">Terms &amp; Conditions</a></li>
                 <li><a href="#">Privacy Policy</a></li>

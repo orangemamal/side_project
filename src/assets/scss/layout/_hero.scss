@@ -100,7 +100,10 @@
         .intro-excerpt {
           max-width: 450px;
           h1 {
-            font-size: 40px;
+            font-size: 36px;
+            .bottom {
+              white-space: break-spaces;
+            }
           }
         }
       }

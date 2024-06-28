@@ -10,18 +10,32 @@ export default function Blog() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-      console.log(currentScrollY)
+      const browserWidth = window.innerWidth
 
-      if (currentScrollY > 300) {
-        setFirstScrollEvent(true)
-      } else {
-        setFirstScrollEvent(false)
-      }
+      if(browserWidth > 768) {
+        if (currentScrollY > 300) {
+          setFirstScrollEvent(true)
+        } else {
+          setFirstScrollEvent(false)
+        }
 
-      if(currentScrollY > 900) {
-        setSecondScrollEvent(true)
+        if(currentScrollY > 900) {
+          setSecondScrollEvent(true)
+        } else {
+          setSecondScrollEvent(false)
+        }
       } else {
-        setSecondScrollEvent(false)
+        if (currentScrollY > 400) {
+          setFirstScrollEvent(true)
+        } else {
+          setFirstScrollEvent(false)
+        }
+
+        if(currentScrollY > 1300) {
+          setSecondScrollEvent(true)
+        } else {
+          setSecondScrollEvent(false)
+        }
       }
     };
 
@@ -38,7 +52,7 @@ export default function Blog() {
         <SectionBlog />
       </div>
 
-      <div className={`testimonial-section animate__animated_scroll ${secondScrollEvent ? 'rotateInDownLeft' : ''}`}>
+      <div className={`testimonial-section mb80 animate__animated_scroll ${secondScrollEvent ? 'rotateInDownLeft' : ''}`}>
         <SectionTestimonial />
       </div>
     </main>

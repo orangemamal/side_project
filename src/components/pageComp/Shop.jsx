@@ -68,7 +68,7 @@ export default function Shop() {
   }, []);
 
   return (
-    <main className={`animate__animated_scroll ${firstScrollEvent ? 'fadeInUp' : ''}`}>
+    <main className={`animate__animated_scroll${firstScrollEvent ? 'fadeInUp' : ''}`}>
       <div className="untree_co-section product-section before-footer-section">
         <div className="container">
           <div className="row">
