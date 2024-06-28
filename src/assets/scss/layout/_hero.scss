@@ -6,6 +6,15 @@
   height: calc(100vh - 7.4rem);
   &.noneMain {
     height: 30rem;
+    @media (max-width: $md) {
+      height: 16rem;
+      .inner_container {
+        padding: 0;
+        .col-lg-5 {
+          padding: 0;
+        }
+      }
+    }
   }
   .col-lg-5 {
     width: 100%;

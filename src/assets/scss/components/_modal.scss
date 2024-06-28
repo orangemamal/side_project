@@ -39,3 +39,13 @@
     }
   }
 }
+
+@media (max-width: $md) {
+  .modal_wrap {
+    .modal_content {
+      padding: 5.6rem 0 0;
+      height: 100vh;
+      border-radius: 0;
+    }
+  }
+}

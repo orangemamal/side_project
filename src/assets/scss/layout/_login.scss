@@ -111,7 +111,7 @@
   }
 }
 
-@media screen and (max-width: $lg) {
+@media screen and (max-width: $md) {
   .app {
     .login {
       .input_field_window {
@@ -142,7 +142,7 @@
           &.right {
             width: 100%;
             background: unset;
-            padding: 2.4rem 4.8rem;
+            padding: 2.4rem;
             margin-top: 4.8rem;
             h3 {
               display: none;
@@ -150,13 +150,13 @@
             input {
               background: $mainLight;
               &::placeholder {
-                color: $body_color;
+                color: $gray400;
               }
             }
             .sign_up_wrap {
               .flat {
-                @include font(1.3rem);
-                color: rgba(255, 255, 255, 0.4);
+                @include font(1.5rem);
+                color: rgba(255, 255, 255, 0.5);
                 margin-bottom: 1.6rem;
                 span {
                   color: $white;
@@ -169,8 +169,10 @@
             button.login_btn {
               background: $white;
               color: $primary;
+              @include font(2.4rem);
               height: 4.8rem;
               margin-top: 4.8rem;
+              font-weight: $bold;
             }
           }
         }

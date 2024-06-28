@@ -62,7 +62,7 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
   if (cartPage) {
     content = (
       <div className="hero">
-        <div className="container">
+        <div className="inner_container">
           <div className="row justify-content-between">
             <div className="col-lg-5">
               <div className="intro-excerpt">
@@ -79,7 +79,7 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
   } else if (checkoutPage) {
     content = (
       <div className="hero">
-        <div className="container">
+        <div className="inner_container">
           <div className="row justify-content-between">
             <div className="col-lg-5">
               <div className="intro-excerpt">

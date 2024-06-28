@@ -182,7 +182,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className={`mb40 testimonial-section animate__animated_scroll ${fifthScrollEvent ? 'rotateInDownLeft' : ''}`}>
+      <div className={`mb40 testimonial-section animate__animated_scroll ${fifthScrollEvent ? 'fadeInRight' : ''}`}>
         <SectionTestimonial />
       </div>
 

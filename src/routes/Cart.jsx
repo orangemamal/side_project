@@ -82,6 +82,17 @@ export default function Cart({ onPageRender }) {
     afterDiscount: 130000,
   }
 
+  // width 768 이하 일때는 table말고 다른 태그로 바꾸기
+  const [mediaQueryValue, setMediaQueryValue] = useState(false);
+
+  useEffect(() => {
+    const browserWidth = window.innerWidth
+    if(browserWidth < 768) {
+      setMediaQueryValue(false)
+    } else {
+      setMediaQueryValue(true)
+    }
+  })
 
   return (
     <div className="untree_co-section before-footer-section">
@@ -90,65 +101,77 @@ export default function Cart({ onPageRender }) {
           <form className="col-md-12" method="post">
             <div className="site-blocks-table">
 
-              <table className="table cart">
-                <thead>
-                  <tr>
-                    {tableHeader.map((item, index) => (
-                      <th key={index} className={`product-${item.id}`}>{item.name}</th>
-                    ))}
-                  </tr>
-                </thead>
-
-                <tbody>
-                  {products.map(product => (
-                    <tr key={product.id}>
-                      <td className="product-thumbnail">
-                        <img src={product.imageUrl} alt="Image" className="img-fluid" />
-                      </td>
-
-                      <td className="product-name">
-                        <h2 className="h5 text-black">{product.name}</h2>
-                      </td>
-
-                      <td>{product.price.toLocaleString()}원</td>
-
-                      <td className="quantity_group">
-                        <div className="input-group mb-3 d-flex align-items-center quantity-container">
-
-                          <div className="input-group-prepend">
-                            <button onClick={() => minusQuantity(product.id)} className="btn btn-outline-black decrease" type="button">
-                              <i className="fa-solid fa-circle-minus"></i>
-                            </button>
-                          </div>
-                          <input
-                            type="text"
-                            className="form-control text-center quantity-amount table_input"
-                            value={
-                                productQuantities.find(item => item.id === product.id)?.quantity || 0
-                            }
-                            placeholder=""
-                            aria-label="Example text with button addon"
-                            aria-describedby="button-addon1"
-                            readOnly
-                          />
-                          <div className="input-group-append">
-                            <button onClick={() => plusQuantity(product.id)} className="btn btn-outline-black increase" type="button">
-                              <i className="fa-solid fa-circle-plus"></i>
-                            </button>
-                          </div>
-
-                        </div>
-                      </td>
-
-                      <td>{(product.price * product.quantity).toLocaleString()}원</td>
-
-                      <td className="delete">
-                        <i className="fa-solid fa-trash-can fa-lg"></i>
-                      </td>
+              {mediaQueryValue ?
+                <table className="table cart">
+                  <thead>
+                    <tr>
+                      {tableHeader.map((item, index) => (
+                        <th key={index} className={`product-${item.id}`}>{item.name}</th>
+                      ))}
                     </tr>
-                  ))}
-                </tbody>
-              </table>
+                  </thead>
+  
+                  <tbody>
+                    {products.map(product => (
+                      <tr key={product.id}>
+                        <td className="product-thumbnail">
+                          <img src={product.imageUrl} alt="Image" className="img-fluid" />
+                        </td>
+  
+                        <td className="product-name">
+                          <h2 className="h5 text-black">{product.name}</h2>
+                        </td>
+  
+                        <td>{product.price.toLocaleString()}원</td>
+  
+                        <td className="quantity_group">
+                          <div className="input-group mb-3 d-flex align-items-center quantity-container">
+  
+                            <div className="input-group-prepend">
+                              <button onClick={() => minusQuantity(product.id)} className="btn btn-outline-black decrease" type="button">
+                                <i className="fa-solid fa-circle-minus"></i>
+                              </button>
+                            </div>
+                            <input
+                              type="text"
+                              className="form-control text-center quantity-amount table_input"
+                              value={
+                                  productQuantities.find(item => item.id === product.id)?.quantity || 0
+                              }
+                              placeholder=""
+                              aria-label="Example text with button addon"
+                              aria-describedby="button-addon1"
+                              readOnly
+                            />
+                            <div className="input-group-append">
+                              <button onClick={() => plusQuantity(product.id)} className="btn btn-outline-black increase" type="button">
+                                <i className="fa-solid fa-circle-plus"></i>
+                              </button>
+                            </div>
+  
+                          </div>
+                        </td>
+  
+                        <td>{(product.price * product.quantity).toLocaleString()}원</td>
+  
+                        <td className="delete">
+                          <i className="fa-solid fa-trash-can fa-lg"></i>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              : 
+                <div>
+                  <ul>
+                    {products.map(product => (
+                      <li>
+                        모바일용
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              }
 
             </div>
           </form>

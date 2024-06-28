@@ -94,6 +94,7 @@
     right: 0;
     img {
       max-width: 30rem;
+      filter: saturate(0.4);
     }
     @media (max-width: $md) {
       right: 2.4rem;

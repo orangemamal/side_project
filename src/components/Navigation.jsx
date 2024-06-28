@@ -33,7 +33,8 @@ export default function Navigation() {
   }
 
   function resetNavActive() {
-    setActiveIndex(null);
+    setActiveIndex(null)
+    setIsMenuState(false)
   }
 
   const toggleMenu = () => {

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import DaumPostcode from 'react-daum-postcode';
 import {useDispatch, useSelector} from 'react-redux';
@@ -33,15 +33,6 @@ export default function SignUp() {
   const [showModalValue, setShowModalValue] = useState(false);
   const [inputAddressValue, setInputAddressValue] = useState('');
   const [inputZipCodeValue, setInputZipCodeValue] = useState('');
-
-  const postCodeStyle = {
-    width: '40rem',
-    height: '50rem',
-    border: '4px double rgba(77, 134, 156, 0.4)',
-    padding: '0.8rem',
-    borderRadius: '0.8rem',
-    display: postState ? 'block' : 'none',
-  };
 
   const onCompletePost = data => {
     console.log(data)
@@ -80,12 +71,44 @@ export default function SignUp() {
     navigate(-1)
   }
 
+  const [simpleBarPadding, setSimpleBarPadding] = useState();
+  const [postModalWidth, setPostModalWidth] = useState('');
+  const [postModalHeight, setPostModalHeight] = useState('');
+  const [postModalBorder, setPostModalBorder] = useState('');
+  const [postModalPadding, setPostModalPadding] = useState('');
+
+  useEffect(() => {
+    const browserWidth = window.innerWidth
+    if(browserWidth < 768) {
+      setSimpleBarPadding(1.6)
+      setPostModalWidth('100vw')
+      setPostModalHeight('100%')
+      setPostModalBorder('none')
+      setPostModalPadding('0')
+    } else {
+      setSimpleBarPadding(4)
+      setPostModalWidth('40rem')
+      setPostModalHeight('50rem')
+      setPostModalBorder('4px double rgba(77, 134, 156, 0.4)')
+      setPostModalPadding('0.8rem')
+    }
+  })
+
+  const postCodeStyle = {
+    width: `${postModalWidth}`,
+    height: `${postModalHeight}`,
+    border: `${postModalBorder}`,
+    padding: `${postModalPadding}`,
+    borderRadius: '0.8rem',
+    display: postState ? 'block' : 'none',
+  };
+
   return (
     <div className="app">
       <div className="sign_up_content_wrap">
         <section className="input_field_window">
 
-          <SimpleBar style={{ padding: '0 4rem', maxHeight: "calc(100%)"}} autoHide={false}>
+          <SimpleBar style={{ padding: `0 ${simpleBarPadding}rem`, maxHeight: "calc(100%)"}} autoHide={false}>
             <div className="scroll_position">
               <h2>회원 가입</h2>
               <p>회원이 되어 다양한 혜택을 경험해보세요!</p>

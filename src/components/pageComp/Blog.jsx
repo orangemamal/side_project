@@ -52,7 +52,7 @@ export default function Blog() {
         <SectionBlog />
       </div>
 
-      <div className={`testimonial-section mb80 animate__animated_scroll ${secondScrollEvent ? 'rotateInDownLeft' : ''}`}>
+      <div className={`testimonial-section mb80 animate__animated_scroll ${secondScrollEvent ? 'fadeInRight' : ''}`}>
         <SectionTestimonial />
       </div>
     </main>

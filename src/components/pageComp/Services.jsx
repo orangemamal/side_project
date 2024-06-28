@@ -104,7 +104,7 @@ export default function Services() {
         <SectionProduct />
       </div>
 
-      <div className={`testimonial-section mb80 animate__animated_scroll ${thirdScrollEvent ? 'rotateInDownLeft' : ''}`}>
+      <div className={`testimonial-section mb80 animate__animated_scroll ${thirdScrollEvent ? 'fadeInRight' : ''}`}>
         <SectionTestimonial />
       </div>
 

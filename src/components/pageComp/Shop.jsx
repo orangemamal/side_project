@@ -45,6 +45,7 @@ export default function Shop() {
     },
   ];
 
+
   const [firstScrollEvent, setFirstScrollEvent] = useState(false);
 
   useEffect(() => {
@@ -68,7 +69,7 @@ export default function Shop() {
   }, []);
 
   return (
-    <main className={`animate__animated_scroll${firstScrollEvent ? 'fadeInUp' : ''}`}>
+    <main className={`animate__animated_scroll ${firstScrollEvent ? 'fadeInRight' : ''}`}>
       <div className="untree_co-section product-section before-footer-section">
         <div className="container">
           <div className="row">

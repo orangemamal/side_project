@@ -13,6 +13,7 @@ body {
       min-height: 100%;
       position: relative;
       .main_frame {
+        overflow-x: hidden;
         margin-top: 7.4rem;
       }
     }
