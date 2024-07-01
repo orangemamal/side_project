@@ -58,22 +58,22 @@ export default function Cart({ onPageRender }) {
   ];
 
   const [productQuantities, setProductQuantities] = useState(
-      products.map(product => ({ id: product.id, quantity: product.quantity }))
-  );
+    products.map(product => ({ id: product.id, quantity: product.quantity }))
+  )
 
   const minusQuantity = (id) => {
     setProductQuantities(prevQuantities =>
-        prevQuantities.map(product =>
-            product.id === id ? { ...product, quantity: product.quantity - 1 } : product
-        )
+      prevQuantities.map(product =>
+        product.id === id ? { ...product, quantity: product.quantity - 1 } : product
+      )
     );
   };
 
   const plusQuantity = (id) => {
     setProductQuantities(prevQuantities =>
-        prevQuantities.map(product =>
-            product.id === id ? { ...product, quantity: product.quantity + 1 } : product
-        )
+      prevQuantities.map(product =>
+        product.id === id ? { ...product, quantity: product.quantity + 1 } : product
+      )
     );
   };
 
@@ -94,39 +94,95 @@ export default function Cart({ onPageRender }) {
     }
   })
 
+  const [input1ValueQuantity, setInputValueQuantity] = useState('');
+
+  const quantityInputValue = (e) => {
+    const value = e.target.value
+    setInputValueQuantity(value)
+    console.log(input1ValueQuantity)
+    // 원래 수량 input에 value안에 있던 로직
+    // productQuantities.find(item => item.id === product.id)?.quantity || 0
+  }
+
   return (
-    <div className="untree_co-section before-footer-section">
+    <div className="untree_co-section before-footer-section cart">
       <div className="container">
         <div className="row mb-5">
-          <form className="col-md-12" method="post">
-            <div className="site-blocks-table">
+          <div className="site-blocks-table">
 
-              {mediaQueryValue ?
-                <table className="table cart">
-                  <thead>
-                    <tr>
-                      {tableHeader.map((item, index) => (
-                        <th key={index} className={`product-${item.id}`}>{item.name}</th>
-                      ))}
+            {mediaQueryValue ?
+              <table className="table cart">
+                <thead>
+                  <tr>
+                    {tableHeader.map((item, index) => (
+                      <th key={index} className={`product-${item.id}`}>{item.name}</th>
+                    ))}
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {products.map(product => (
+                    <tr key={product.id}>
+                      <td className="product-thumbnail">
+                        <img src={product.imageUrl} alt="Image" className="img-fluid" />
+                      </td>
+
+                      <td className="product-name">
+                        <h2 className="h5 text-black">{product.name}</h2>
+                      </td>
+
+                      <td>{product.price.toLocaleString()}원</td>
+
+                      <td className="quantity_group">
+                        <div className="input-group mb-3 d-flex align-items-center quantity-container">
+
+                          <div className="input-group-prepend">
+                            <button onClick={() => minusQuantity(product.id)} className="btn btn-outline-black decrease" type="button">
+                              <i className="fa-solid fa-circle-minus"></i>
+                            </button>
+                          </div>
+                          <input
+                            type="text"
+                            className="form-control text-center quantity-amount table_input"
+                            value={quantityInputValue}
+                            placeholder=""
+                            aria-label="Example text with button addon"
+                            aria-describedby="button-addon1"
+                            readOnly
+                          />
+                          <div className="input-group-append">
+                            <button onClick={() => plusQuantity(product.id)} className="btn btn-outline-black increase" type="button">
+                              <i className="fa-solid fa-circle-plus"></i>
+                            </button>
+                          </div>
+
+                        </div>
+                      </td>
+
+                      <td>{(product.price * product.quantity).toLocaleString()}원</td>
+
+                      <td className="delete">
+                        <i className="fa-solid fa-trash-can fa-lg"></i>
+                      </td>
                     </tr>
-                  </thead>
-  
-                  <tbody>
-                    {products.map(product => (
-                      <tr key={product.id}>
-                        <td className="product-thumbnail">
-                          <img src={product.imageUrl} alt="Image" className="img-fluid" />
-                        </td>
-  
-                        <td className="product-name">
-                          <h2 className="h5 text-black">{product.name}</h2>
-                        </td>
-  
-                        <td>{product.price.toLocaleString()}원</td>
-  
-                        <td className="quantity_group">
+                  ))}
+                </tbody>
+              </table>
+            :
+              <div className="mobile_table">
+                <ul>
+                  {products.map(product => (
+                    <li key={product.id}>
+                      <img src={product.imageUrl} alt="Image" className="img-fluid product_img" />
+
+
+                      <div className="product_info">
+                        <h2 className="h5 text-black">{product.name}</h2>
+
+                        <div>개당 {product.price.toLocaleString()}원</div>
+
+                        <div className="quantity_group">
                           <div className="input-group mb-3 d-flex align-items-center quantity-container">
-  
                             <div className="input-group-prepend">
                               <button onClick={() => minusQuantity(product.id)} className="btn btn-outline-black decrease" type="button">
                                 <i className="fa-solid fa-circle-minus"></i>
@@ -136,7 +192,7 @@ export default function Cart({ onPageRender }) {
                               type="text"
                               className="form-control text-center quantity-amount table_input"
                               value={
-                                  productQuantities.find(item => item.id === product.id)?.quantity || 0
+                                productQuantities.find(item => item.id === product.id)?.quantity || 0
                               }
                               placeholder=""
                               aria-label="Example text with button addon"
@@ -148,33 +204,23 @@ export default function Cart({ onPageRender }) {
                                 <i className="fa-solid fa-circle-plus"></i>
                               </button>
                             </div>
-  
                           </div>
-                        </td>
-  
-                        <td>{(product.price * product.quantity).toLocaleString()}원</td>
-  
-                        <td className="delete">
-                          <i className="fa-solid fa-trash-can fa-lg"></i>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              : 
-                <div>
-                  <ul>
-                    {products.map(product => (
-                      <li>
-                        모바일용
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              }
+                        </div>
 
-            </div>
-          </form>
+                        <div className="total">총 <span>{(product.price * product.quantity).toLocaleString()}</span>원</div>
+                      </div>
+
+                      <div className="delete">
+                        <i className="fa-solid fa-xmark"></i>
+                      </div>
+
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            }
+
+          </div>
         </div>
 
         <div className="row coupon_and_pay_wrap">
