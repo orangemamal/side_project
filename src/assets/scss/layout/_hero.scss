@@ -101,6 +101,24 @@
   }
 }
 
+@media (max-width: $md) {
+  .hero {
+    &.mobile_v {
+      justify-content: center !important;
+      .inner_container {
+        .justify-content-between {
+          width: 100%;
+          .intro-excerpt {
+            h1 {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @media (max-width: $sm) {
   .hero {
     .position {

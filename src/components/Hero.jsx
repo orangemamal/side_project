@@ -48,12 +48,12 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
     },
   ]
 
-  var settings = {
+  const settings = {
     dots: false,
     arrows: false,
     infinite: true,
     speed: 3000,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -61,7 +61,7 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
 
   if (cartPage) {
     content = (
-      <div className="hero">
+      <div className="hero mobile_v">
         <div className="inner_container">
           <div className="row justify-content-between">
             <div className="col-lg-5">
@@ -78,7 +78,7 @@ export default function Hero({ onCartPage, onCheckoutPage }) {
     );
   } else if (checkoutPage) {
     content = (
-      <div className="hero">
+      <div className="hero mobile_v">
         <div className="inner_container">
           <div className="row justify-content-between">
             <div className="col-lg-5">

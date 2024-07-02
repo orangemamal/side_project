@@ -135,7 +135,6 @@ export default function Cart({ onPageRender }) {
     console.log(phoneInputValueSecond) // 클릭시에 여기에 넘겨야함 set에
   }
 
-
   return (
     <div className="untree_co-section checkout">
       <div className="container">
@@ -151,8 +150,8 @@ export default function Cart({ onPageRender }) {
 
         <div className="checkout_grid">
           {/* left_side */}
-          <div className="row checkout_content left">
-            <div className="col-md-6 mb-5 mb-md-0">
+          <div className="row col-md-6 checkout_content left">
+            <div className="mb-5 mb-md-0 none_padding">
               <h2 className="h3 mb-3 text-black">주문 정보</h2>
               <div className="p-3 p-lg-5 border bg-white background_white">
                 {/*<div className="form-group">*/}
@@ -210,7 +209,8 @@ export default function Cart({ onPageRender }) {
                       placeholder="'-'없이 입력해주세요."
                     />
                   </div>
-                  <div className="col-md-6">
+
+                  <div className="col-md-6 none_mb">
                     <label htmlFor="input_04" className="text-black">이메일</label>
                     <input type="text" className="form-control" id="input_04" name="c_lname"/>
                   </div>
@@ -218,7 +218,7 @@ export default function Cart({ onPageRender }) {
 
                 <div data-type-divider="line" />
 
-                <div className="form-group row">
+                <div className="form-group row mobile_mb">
                   <div className="col-md-12">
                     <label className="text-black">배송지 선택</label>
                     <div className="radio_box">
@@ -306,7 +306,7 @@ export default function Cart({ onPageRender }) {
                   />
                 </div>
 
-                <div className="form-group mt-3">
+                <div className="form-group mt-3 mobile_mb">
                   <input type="text" className="form-control" placeholder="상세 주소" />
                 </div>
 
@@ -331,7 +331,7 @@ export default function Cart({ onPageRender }) {
           <div className="col-md-6 checkout_content right">
 
             <div className="row mb-5">
-              <div className="col-md-12">
+              <div className="col-md-12 none_padding">
                 <h2 className="h3 mb-3 text-black">할인 쿠폰</h2>
 
                 <div className="p-3 p-lg-5 border bg-white background_white">
@@ -347,8 +347,8 @@ export default function Cart({ onPageRender }) {
               </div>
             </div>
 
-            <div className="row mb-5">
-              <div className="col-md-12">
+            <div className="row mb-5 mb80">
+              <div className="col-md-12 none_padding">
                 <h2 className="h3 mb-3 text-black">주문 상품</h2>
                 <div className="p-3 p-lg-5 border bg-white background_white">
                   <table className="order table site-block-order-table mb-5">
