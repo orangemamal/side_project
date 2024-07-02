@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { setPath } from '../store/userCommon';
@@ -12,6 +12,7 @@ export default function Navigation() {
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(null);
   const [isMenuState, setIsMenuState] = useState(false);
+  const navRef = useRef(null);
 
   useEffect(() => {
     if(nowPathIndex === null) {
@@ -22,6 +23,19 @@ export default function Navigation() {
       setActiveIndex(nowPathIndex)
     }
   }, []);
+
+  useEffect(() => {
+    document.addEventListener('click', handleClickOutside, true);
+    return () => {
+      document.removeEventListener('click', handleClickOutside, true);
+    };
+  }, []);
+
+  const handleClickOutside = (event) => {
+    if (navRef.current && !navRef.current.contains(event.target)) {
+      setIsMenuState(false);
+    }
+  };
 
   function handleItemClick(index, path) {
     console.log(`${index} : ${path}`)
@@ -41,8 +55,12 @@ export default function Navigation() {
     setIsMenuState(!isMenuState)
   }
 
+  const menuBlurEvent = () => {
+    setIsMenuState(false)
+  }
+
   return (
-    <nav className="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Furni navigation bar">
+    <nav ref={navRef} className="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" aria-label="Furni navigation bar">
 
       <div className="container">
         <Link className="navbar-brand" to="/home">

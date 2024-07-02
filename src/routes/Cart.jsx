@@ -40,29 +40,25 @@ export default function Cart({ onPageRender }) {
     },
   ];
 
-  const products = [
+  const [products, setProducts] = useState([
     {
       id: 1,
       name: '프리미엄 회전의자',
       price: 50000,
       quantity: 1,
-      imageUrl: require('assets/images/product-1.png')
+      imageUrl: require('assets/images/product-1.png'),
     },
     {
       id: 2,
       name: '프리미엄 침대형의자',
       price: 80000,
       quantity: 1,
-      imageUrl: require('assets/images/product-2.png')
-    }
-  ];
-
-  const [productQuantities, setProductQuantities] = useState(
-    products.map(product => ({ id: product.id, quantity: product.quantity }))
-  )
+      imageUrl: require('assets/images/product-2.png'),
+    },
+  ]);
 
   const minusQuantity = (id) => {
-    setProductQuantities(prevQuantities =>
+    setProducts(prevQuantities =>
       prevQuantities.map(product =>
         product.id === id ? { ...product, quantity: product.quantity - 1 } : product
       )
@@ -70,7 +66,7 @@ export default function Cart({ onPageRender }) {
   };
 
   const plusQuantity = (id) => {
-    setProductQuantities(prevQuantities =>
+    setProducts(prevQuantities =>
       prevQuantities.map(product =>
         product.id === id ? { ...product, quantity: product.quantity + 1 } : product
       )
@@ -95,14 +91,6 @@ export default function Cart({ onPageRender }) {
   })
 
   const [input1ValueQuantity, setInputValueQuantity] = useState('');
-
-  const quantityInputValue = (e) => {
-    const value = e.target.value
-    setInputValueQuantity(value)
-    console.log(input1ValueQuantity)
-    // 원래 수량 input에 value안에 있던 로직
-    // productQuantities.find(item => item.id === product.id)?.quantity || 0
-  }
 
   return (
     <div className="untree_co-section before-footer-section cart">
@@ -144,7 +132,9 @@ export default function Cart({ onPageRender }) {
                           <input
                             type="text"
                             className="form-control text-center quantity-amount table_input"
-                            value={quantityInputValue}
+                            value={
+                              products.find(item => item.id === product.id)?.quantity || 0
+                            }
                             placeholder=""
                             aria-label="Example text with button addon"
                             aria-describedby="button-addon1"
@@ -192,7 +182,7 @@ export default function Cart({ onPageRender }) {
                               type="text"
                               className="form-control text-center quantity-amount table_input"
                               value={
-                                productQuantities.find(item => item.id === product.id)?.quantity || 0
+                                products.find(item => item.id === product.id)?.quantity || 0
                               }
                               placeholder=""
                               aria-label="Example text with button addon"
@@ -224,13 +214,14 @@ export default function Cart({ onPageRender }) {
         </div>
 
         <div className="row coupon_and_pay_wrap">
+
           <div className="col-md-6 coupon">
             <div className="row">
-              <div className="col-md-12">
+              <div className="col-md-12 title">
                 <label className="text-black h4" htmlFor="couponInput">쿠폰 적용</label>
                 <p>가지고 계신 쿠폰 번호를 입력해주세요.</p>
               </div>
-              <div className="col-md-8 mb-3 mb-md-0">
+              <div className="col-md-8 mb-3 mb-md-0 input_wrap">
                 <input type="text" className="form-control py-3" id="couponInput" placeholder="Coupon Code"/>
               </div>
               <div className="col-md-4">
@@ -267,7 +258,7 @@ export default function Cart({ onPageRender }) {
                 <div className="row">
                   <div className="col-md-12">
                     <button
-                      className="btn btn-black btn-lg py-3 btn-block"
+                      className="pay_btn btn btn-black btn-lg py-3 btn-block"
                       onClick={handleClick}>결제하기
                     </button>
                   </div>
@@ -275,6 +266,7 @@ export default function Cart({ onPageRender }) {
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </div>

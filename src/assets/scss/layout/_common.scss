@@ -751,6 +751,9 @@ textarea {
   }
   .pay {
     @include font(1.6rem);
+    .pay_btn {
+      height: 4rem;
+    }
     h3 {
       @include font(2rem);
     }
@@ -786,43 +789,48 @@ textarea {
         font-weight: $bold;
       }
     }
-    .checkout_content {
-      .form-group {
-        margin-bottom: 1.6rem;
-        .form-control {
-          padding: 0.8rem 1.6rem;
-          @include font(1.6rem);
-          height: 4rem;
-        }
-        .post_num {
-          display: flex;
-          button {
-            margin-left: 1.6rem;
-            white-space: nowrap;
-          }
-        }
-        label {
-          @include font(1.5rem);
-          .text-danger {
-            margin-left: 0.4rem;
-            @include font(1.2rem);
-            line-height: 1.9rem;
-          }
-        }
-      }
-      &.left {
-
-      }
-      &.right {
-        .coupon_label {
-          @include font(1.4rem);
-        }
-        .form-control {
-          height: 4rem;
-          padding: 0 1.6rem;
-          & + .input-group-append {
-            button {
+    .container {
+      .checkout_grid {
+        display: flex;
+        .checkout_content {
+          .form-group {
+            margin-bottom: 1.6rem;
+            .form-control {
+              padding: 0.8rem 1.6rem;
+              @include font(1.6rem);
               height: 4rem;
+            }
+            .post_num {
+              display: flex;
+              button {
+                margin-left: 1.6rem;
+                white-space: nowrap;
+              }
+            }
+            label {
+              @include font(1.5rem);
+              .text-danger {
+                margin-left: 0.4rem;
+                @include font(1.2rem);
+                line-height: 1.9rem;
+              }
+            }
+          }
+          &.left {
+
+          }
+          &.right {
+            .coupon_label {
+              @include font(1.4rem);
+            }
+            .form-control {
+              height: 4rem;
+              padding: 0 1.6rem;
+              & + .input-group-append {
+                button {
+                  height: 4rem;
+                }
+              }
             }
           }
         }
@@ -894,6 +902,8 @@ textarea {
           display: flex;
           margin-bottom: 1.6rem;
           padding: 4.8rem 0.8rem 2.4rem;
+          border-radius: 0.8rem;
+          background: $white;
           .product_img {
             width: 12rem;
             height: 12rem;
@@ -909,7 +919,7 @@ textarea {
             .quantity_group {
               margin: 1.6rem 0;
               .quantity-container {
-                justify-content: center;
+                justify-content: start;
                 input.quantity-amount.table_input {
                   height: 4rem;
                   border-radius: 0.8rem;
@@ -935,8 +945,109 @@ textarea {
             position: absolute;
             right: 1.2rem;
             top: 0.8rem;
-            font-size: 2.4rem;
             color: $gray400;
+            width: 2.4rem;
+            height: 2.4rem;
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            i {
+              font-size: 2.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .untree_co-section {
+    padding: 4rem 0;
+    &.cart {
+      .container {
+        .pay_btn, .coupon_btn {
+          @include font(1.5rem);
+          padding: 0 3rem !important;
+        }
+        .coupon_and_pay_wrap {
+          .coupon {
+            margin-bottom: 4rem;
+            &::after,
+            &::before {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 8px;
+              border-radius: 5rem;
+              background: rgba(77, 134, 156, 0.1);
+              margin-bottom: 4rem;
+            }
+            &::after {
+              margin-top: 4rem;
+              margin-bottom: 0;
+            }
+            .title {
+              margin-bottom: 1.6rem;
+            }
+            .input_wrap {
+              margin-bottom: 1.6rem !important;
+            }
+
+          }
+          .pay {
+            margin-bottom: 4rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .untree_co-section {
+    &.checkout {
+      .checkout_grid {
+        flex-direction: column;
+        .checkout_content {
+          [data-type-divider="line"] {
+            margin: 2.4rem 0;
+            background: $gray100;
+          }
+          .background_white {
+            padding: 2.4rem !important;
+          }
+          .form-group {
+            &.mt20 {
+              margin: 0;
+              padding: 0;
+            }
+            &.mt-3 {
+              padding: 0;
+            }
+            &.p0 {
+              padding: 0;
+            }
+            &.m0 {
+              margin: 0;
+            }
+          }
+          .col-md-6 {
+            padding: 0;
+            margin-bottom: 1.6rem;
+          }
+          .col-md-12 {
+            padding: 0 !important;
+          }
+          .left {
+
+          }
+          .right {
+            .couponcode-wrap {
+              width: 100% !important;
+              .coupon_input {
+              }
+            }
           }
         }
       }

@@ -1257,6 +1257,9 @@ textarea {
 .coupon_and_pay_wrap .pay {
   font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
 }
+.coupon_and_pay_wrap .pay .pay_btn {
+  height: 4rem;
+}
 .coupon_and_pay_wrap .pay h3 {
   font: 2rem/2.5rem "Spoqa Han Sans Neo", "sans-serif";
 }
@@ -1286,37 +1289,40 @@ textarea {
   color: #4D869C;
   font-weight: 700;
 }
-.untree_co-section.checkout .checkout_content .form-group {
+.untree_co-section.checkout .container .checkout_grid {
+  display: flex;
+}
+.untree_co-section.checkout .container .checkout_grid .checkout_content .form-group {
   margin-bottom: 1.6rem;
 }
-.untree_co-section.checkout .checkout_content .form-group .form-control {
+.untree_co-section.checkout .container .checkout_grid .checkout_content .form-group .form-control {
   padding: 0.8rem 1.6rem;
   font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
   height: 4rem;
 }
-.untree_co-section.checkout .checkout_content .form-group .post_num {
+.untree_co-section.checkout .container .checkout_grid .checkout_content .form-group .post_num {
   display: flex;
 }
-.untree_co-section.checkout .checkout_content .form-group .post_num button {
+.untree_co-section.checkout .container .checkout_grid .checkout_content .form-group .post_num button {
   margin-left: 1.6rem;
   white-space: nowrap;
 }
-.untree_co-section.checkout .checkout_content .form-group label {
+.untree_co-section.checkout .container .checkout_grid .checkout_content .form-group label {
   font: 1.5rem/1.9rem "Spoqa Han Sans Neo", "sans-serif";
 }
-.untree_co-section.checkout .checkout_content .form-group label .text-danger {
+.untree_co-section.checkout .container .checkout_grid .checkout_content .form-group label .text-danger {
   margin-left: 0.4rem;
   font: 1.2rem/1.5rem "Spoqa Han Sans Neo", "sans-serif";
   line-height: 1.9rem;
 }
-.untree_co-section.checkout .checkout_content.right .coupon_label {
+.untree_co-section.checkout .container .checkout_grid .checkout_content.right .coupon_label {
   font: 1.4rem/1.8rem "Spoqa Han Sans Neo", "sans-serif";
 }
-.untree_co-section.checkout .checkout_content.right .form-control {
+.untree_co-section.checkout .container .checkout_grid .checkout_content.right .form-control {
   height: 4rem;
   padding: 0 1.6rem;
 }
-.untree_co-section.checkout .checkout_content.right .form-control + .input-group-append button {
+.untree_co-section.checkout .container .checkout_grid .checkout_content.right .form-control + .input-group-append button {
   height: 4rem;
 }
 
@@ -1370,6 +1376,8 @@ textarea {
   display: flex;
   margin-bottom: 1.6rem;
   padding: 4.8rem 0.8rem 2.4rem;
+  border-radius: 0.8rem;
+  background: white;
 }
 .untree_co-section.cart .mobile_table ul li .product_img {
   width: 12rem;
@@ -1388,7 +1396,7 @@ textarea {
   margin: 1.6rem 0;
 }
 .untree_co-section.cart .mobile_table ul li .product_info .quantity_group .quantity-container {
-  justify-content: center;
+  justify-content: start;
 }
 .untree_co-section.cart .mobile_table ul li .product_info .quantity_group .quantity-container input.quantity-amount.table_input {
   height: 4rem;
@@ -1412,10 +1420,86 @@ textarea {
   position: absolute;
   right: 1.2rem;
   top: 0.8rem;
-  font-size: 2.4rem;
   color: #9FA4A8;
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.untree_co-section.cart .mobile_table ul li .delete i {
+  font-size: 2.4rem;
 }
 
+@media (max-width: 768px) {
+  .untree_co-section {
+    padding: 4rem 0;
+  }
+  .untree_co-section.cart .container .pay_btn, .untree_co-section.cart .container .coupon_btn {
+    font: 1.5rem/1.9rem "Spoqa Han Sans Neo", "sans-serif";
+    padding: 0 3rem !important;
+  }
+  .untree_co-section.cart .container .coupon_and_pay_wrap .coupon {
+    margin-bottom: 4rem;
+  }
+  .untree_co-section.cart .container .coupon_and_pay_wrap .coupon::after, .untree_co-section.cart .container .coupon_and_pay_wrap .coupon::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 8px;
+    border-radius: 5rem;
+    background: rgba(77, 134, 156, 0.1);
+    margin-bottom: 4rem;
+  }
+  .untree_co-section.cart .container .coupon_and_pay_wrap .coupon::after {
+    margin-top: 4rem;
+    margin-bottom: 0;
+  }
+  .untree_co-section.cart .container .coupon_and_pay_wrap .coupon .title {
+    margin-bottom: 1.6rem;
+  }
+  .untree_co-section.cart .container .coupon_and_pay_wrap .coupon .input_wrap {
+    margin-bottom: 1.6rem !important;
+  }
+  .untree_co-section.cart .container .coupon_and_pay_wrap .pay {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 768px) {
+  .untree_co-section.checkout .checkout_grid {
+    flex-direction: column;
+  }
+  .untree_co-section.checkout .checkout_grid .checkout_content [data-type-divider=line] {
+    margin: 2.4rem 0;
+    background: #EAEBED;
+  }
+  .untree_co-section.checkout .checkout_grid .checkout_content .background_white {
+    padding: 2.4rem !important;
+  }
+  .untree_co-section.checkout .checkout_grid .checkout_content .form-group.mt20 {
+    margin: 0;
+    padding: 0;
+  }
+  .untree_co-section.checkout .checkout_grid .checkout_content .form-group.mt-3 {
+    padding: 0;
+  }
+  .untree_co-section.checkout .checkout_grid .checkout_content .form-group.p0 {
+    padding: 0;
+  }
+  .untree_co-section.checkout .checkout_grid .checkout_content .form-group.m0 {
+    margin: 0;
+  }
+  .untree_co-section.checkout .checkout_grid .checkout_content .col-md-6 {
+    padding: 0;
+    margin-bottom: 1.6rem;
+  }
+  .untree_co-section.checkout .checkout_grid .checkout_content .col-md-12 {
+    padding: 0 !important;
+  }
+  .untree_co-section.checkout .checkout_grid .checkout_content .right .couponcode-wrap {
+    width: 100% !important;
+  }
+}
 nav.custom-navbar {
   width: 100%;
   height: 7.4rem;

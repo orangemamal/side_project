@@ -61,6 +61,10 @@ export default function Cart({ onPageRender }) {
     setPostState(false)
   };
 
+  const selfTyping = () => {
+    dispatch(setPostData({ postCode: '', address: '' }))
+  }
+
   const postCode = useSelector(state => state.userCommon.postCode);
   const address = useSelector(state => state.userCommon.address);
 
@@ -113,6 +117,8 @@ export default function Cart({ onPageRender }) {
     }
   };
 
+  const [possibleChecked, setPossibleChecked] = useState(false);
+
   const orderInfoPatch = () => {
     console.log(nameInputValue)
     console.log(phoneInputValue)
@@ -121,6 +127,7 @@ export default function Cart({ onPageRender }) {
       setNameInputValueSecond(nameInputValue)
       setPhoneCheckInputValueSecond(phoneInputValue)
     } else {
+      setPossibleChecked(false)
       alert("이름 또는 휴대전화 정보를 작성하지 않으셨어요!")
     }
 
@@ -142,193 +149,200 @@ export default function Cart({ onPageRender }) {
           </div>
         </div>
 
-        {/* left_side */}
-        <div className="row checkout_content left">
-          <div className="col-md-6 mb-5 mb-md-0">
-            <h2 className="h3 mb-3 text-black">주문 정보</h2>
-            <div className="p-3 p-lg-5 border bg-white">
-              {/*<div className="form-group">*/}
-              {/*  <label htmlFor="c_country" className="text-black">Country <span className="text-danger">*</span></label>*/}
-              {/*  <select id="c_country" className="form-control">*/}
-              {/*    <option value="1">Select a country</option>*/}
-              {/*    <option value="2">bangladesh</option>*/}
-              {/*    <option value="3">Algeria</option>*/}
-              {/*    <option value="4">Afghanistan</option>*/}
-              {/*    <option value="5">Ghana</option>*/}
-              {/*    <option value="6">Albania</option>*/}
-              {/*    <option value="7">Bahrain</option>*/}
-              {/*    <option value="8">Colombia</option>*/}
-              {/*    <option value="9">Dominican Republic</option>*/}
-              {/*  </select>*/}
-              {/*</div>*/}
+        <div className="checkout_grid">
+          {/* left_side */}
+          <div className="row checkout_content left">
+            <div className="col-md-6 mb-5 mb-md-0">
+              <h2 className="h3 mb-3 text-black">주문 정보</h2>
+              <div className="p-3 p-lg-5 border bg-white background_white">
+                {/*<div className="form-group">*/}
+                {/*  <label htmlFor="c_country" className="text-black">Country <span className="text-danger">*</span></label>*/}
+                {/*  <select id="c_country" className="form-control">*/}
+                {/*    <option value="1">Select a country</option>*/}
+                {/*    <option value="2">bangladesh</option>*/}
+                {/*    <option value="3">Algeria</option>*/}
+                {/*    <option value="4">Afghanistan</option>*/}
+                {/*    <option value="5">Ghana</option>*/}
+                {/*    <option value="6">Albania</option>*/}
+                {/*    <option value="7">Bahrain</option>*/}
+                {/*    <option value="8">Colombia</option>*/}
+                {/*    <option value="9">Dominican Republic</option>*/}
+                {/*  </select>*/}
+                {/*</div>*/}
 
-              <div className="form-group row mt20">
-                <div className="col-md-6">
-                  <label htmlFor="input_01" className="text-black">이름<span className="text-danger">(필수)</span></label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="input_01"
-                    name="c_fname"
-                    value={nameInputValue}
-                    onChange={nameHandleChange}
-                  />
-                </div>
-                <div className="col-md-6">
-                  <label htmlFor="input_02" className="text-black">주문조회 비밀번호<span className="text-danger">(필수)</span></label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="input_02"
-                    name="c_lname"
-                    placeholder="숫자 4자리"
-                    maxLength="4"
-                    onChange={numberMaxLength}
-                    value={orderPassword}
-                  />
-                </div>
-              </div>
-
-              <div className="form-group row">
-                <div className="col-md-6">
-                  <label htmlFor="input_03" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
-                  <input
-                    type="number"
-                    className="form-control"
-                    id="input_03"
-                    name="c_fname"
-                    value={phoneInputValue}
-                    onChange={phoneHandleChange}
-                    placeholder="'-'없이 입력해주세요."
-                  />
-                </div>
-                <div className="col-md-6">
-                  <label htmlFor="input_04" className="text-black">이메일</label>
-                  <input type="text" className="form-control" id="input_04" name="c_lname"/>
-                </div>
-              </div>
-
-              <div data-type-divider="line" />
-
-              <div className="form-group row">
-                <div className="col-md-12">
-                  <label className="text-black">배송지 선택</label>
-                  <div className="radio_box">
-
-                    <span className="radio_bundle">
-                      <input type="radio" id="sameOrder" name="delivery" onClick={() => orderInfoPatch()} />
-                      <label htmlFor="sameOrder">
-                        <div className="icon radio_inactive" />
-                        <h4>주문자 정보와 동일</h4>
-                      </label>
-                    </span>
-
-                    <span className="radio_bundle">
-                      <input type="radio" id="selfWrite" name="delivery" />
-                      <label htmlFor="selfWrite">
-                        <div className="icon radio_inactive" />
-                        <h4>직접입력</h4>
-                      </label>
-                    </span>
-
-                  </div>
-                </div>
-              </div>
-
-              <div className="form-group row mt20">
-                <div className="col-md-6">
-                  <label htmlFor="input_05" className="text-black">이름<span className="text-danger">(필수)</span></label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="input_05"
-                    name="c_fname"
-                    value={nameInputValueSecond}
-                    onChange={nameHandleChangeSecond}
-                  />
-                </div>
-
-                <div className="col-md-6">
-                  <label htmlFor="input_06" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="input_06"
-                    name="c_lname"
-                    value={phoneInputValueSecond}
-                    onChange={phoneHandleChangeSecond}
-                    placeholder="'-'없이 입력해주세요."
-                  />
-                </div>
-              </div>
-
-              <div className="form-group row">
-                <div className="col-md-12">
-                  <label htmlFor="input_07" className="text-black">주소<span className="text-danger">(필수 항목)</span></label>
-                  <div className="post_num">
+                <div className="form-group row mt20">
+                  <div className="col-md-6">
+                    <label htmlFor="input_01" className="text-black">이름<span className="text-danger">(필수)</span></label>
                     <input
                       type="text"
                       className="form-control"
-                      id="input_07"
-                      name="c_address"
-                      onChange={handlePostCode}
-                      value={postCode}
-                      onClick={() => showPostModal()}
-                      readOnly
+                      id="input_01"
+                      name="c_fname"
+                      value={nameInputValue}
+                      onChange={nameHandleChange}
                     />
-                    <button className="btn btn-primary" onClick={() => showPostModal()}>우편번호</button>
+                  </div>
+                  <div className="col-md-6">
+                    <label htmlFor="input_02" className="text-black">주문조회 비밀번호<span className="text-danger">(필수)</span></label>
+                    <input
+                      type="number"
+                      className="form-control"
+                      id="input_02"
+                      name="c_lname"
+                      placeholder="숫자 4자리"
+                      maxLength="4"
+                      onChange={numberMaxLength}
+                      value={orderPassword}
+                    />
                   </div>
                 </div>
-              </div>
 
-              <div className="form-group mt-3">
-                <input
-                  type="text"
-                  className="form-control"
-                  onChange={handleAddress}
-                  onClick={() => showPostModal()}
-                  value={address}
-                  readOnly
-                />
-              </div>
+                <div className="form-group row">
+                  <div className="col-md-6">
+                    <label htmlFor="input_03" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
+                    <input
+                      type="number"
+                      className="form-control"
+                      id="input_03"
+                      name="c_fname"
+                      value={phoneInputValue}
+                      onChange={phoneHandleChange}
+                      placeholder="'-'없이 입력해주세요."
+                    />
+                  </div>
+                  <div className="col-md-6">
+                    <label htmlFor="input_04" className="text-black">이메일</label>
+                    <input type="text" className="form-control" id="input_04" name="c_lname"/>
+                  </div>
+                </div>
 
-              <div className="form-group mt-3">
-                <input type="text" className="form-control" placeholder="상세 주소" />
-              </div>
+                <div data-type-divider="line" />
 
-              <div className="form-group">
-                <label htmlFor="c_order_notes" className="text-black">배송메모</label>
-                <textarea
-                  name="c_order_notes"
-                  id="c_order_notes"
-                  cols="30"
-                  rows="5"
-                  className="form-control"
-                  placeholder="배송시에 전달하고 싶은 말씀을 작성해주세요."
-                >
-                </textarea>
+                <div className="form-group row">
+                  <div className="col-md-12">
+                    <label className="text-black">배송지 선택</label>
+                    <div className="radio_box">
+
+                      <span className="radio_bundle">
+                        <input
+                          type="radio"
+                          id="sameOrder"
+                          name="delivery"
+                          onClick={() => orderInfoPatch()}
+                          onChange={() => possibleChecked()}
+                        />
+                        <label htmlFor="sameOrder">
+                          <div className="icon radio_inactive" />
+                          <h4>주문자 정보와 동일</h4>
+                        </label>
+                      </span>
+
+                      <span className="radio_bundle">
+                        <input type="radio" id="selfWrite" name="delivery" onClick={() => selfTyping()} />
+                        <label htmlFor="selfWrite">
+                          <div className="icon radio_inactive" />
+                          <h4>직접입력</h4>
+                        </label>
+                      </span>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div className="form-group row mt20">
+                  <div className="col-md-6">
+                    <label htmlFor="input_05" className="text-black">이름<span className="text-danger">(필수)</span></label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="input_05"
+                      name="c_fname"
+                      value={nameInputValueSecond}
+                      onChange={nameHandleChangeSecond}
+                    />
+                  </div>
+
+                  <div className="col-md-6">
+                    <label htmlFor="input_06" className="text-black">휴대전화<span className="text-danger">(필수)</span></label>
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="input_06"
+                      name="c_lname"
+                      value={phoneInputValueSecond}
+                      onChange={phoneHandleChangeSecond}
+                      placeholder="'-'없이 입력해주세요."
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group row">
+                  <div className="col-md-12">
+                    <label htmlFor="input_07" className="text-black">주소<span className="text-danger">(필수 항목)</span></label>
+                    <div className="post_num">
+                      <input
+                        type="text"
+                        className="form-control"
+                        id="input_07"
+                        name="c_address"
+                        onChange={handlePostCode}
+                        value={postCode}
+                        onClick={() => showPostModal()}
+                        readOnly
+                      />
+                      <button className="btn btn-primary" onClick={() => showPostModal()}>우편번호</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="form-group mt-3">
+                  <input
+                    type="text"
+                    className="form-control"
+                    onChange={handleAddress}
+                    onClick={() => showPostModal()}
+                    value={address}
+                    readOnly
+                  />
+                </div>
+
+                <div className="form-group mt-3">
+                  <input type="text" className="form-control" placeholder="상세 주소" />
+                </div>
+
+                <div className="form-group p0 m0">
+                  <label htmlFor="c_order_notes" className="text-black">배송메모</label>
+                  <textarea
+                    name="c_order_notes"
+                    id="c_order_notes"
+                    cols="30"
+                    rows="5"
+                    className="form-control"
+                    placeholder="배송시에 전달하고 싶은 말씀을 작성해주세요."
+                  >
+                  </textarea>
+                </div>
               </div>
             </div>
+
+
           </div>
-
-
           {/* right_side */}
           <div className="col-md-6 checkout_content right">
 
             <div className="row mb-5">
               <div className="col-md-12">
                 <h2 className="h3 mb-3 text-black">할인 쿠폰</h2>
-                <div className="p-3 p-lg-5 border bg-white">
 
+                <div className="p-3 p-lg-5 border bg-white background_white">
                   <label htmlFor="coufonInput" className="coupon_label text-black mb-3">가지고 계신 쿠폰 번호를 입력해주세요.</label>
                   <div className="input-group w-75 couponcode-wrap">
-                    <input type="text" className="form-control me-2" id="coufonInput" placeholder="Coupon Code"
+                    <input type="text" className="coupon_input form-control me-2" id="coufonInput" placeholder="Coupon Code"
                            aria-label="Coupon Code" aria-describedby="button-addon2" />
                     <div className="input-group-append">
                       <button className="btn btn-black btn-sm" type="button" id="button-addon2">쿠폰 적용하기</button>
                     </div>
                   </div>
-
                 </div>
               </div>
             </div>
@@ -336,7 +350,7 @@ export default function Cart({ onPageRender }) {
             <div className="row mb-5">
               <div className="col-md-12">
                 <h2 className="h3 mb-3 text-black">주문 상품</h2>
-                <div className="p-3 p-lg-5 border bg-white">
+                <div className="p-3 p-lg-5 border bg-white background_white">
                   <table className="order table site-block-order-table mb-5">
                     <thead>
                       <tr>
