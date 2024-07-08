@@ -15,15 +15,25 @@ import About from "../components/pageComp/About";
 import Contact from "../components/pageComp/Contact";
 
 import { Route, Routes } from "react-router-dom";
+import {setBasketListData} from "../store/userCommon";
+import {useDispatch} from "react-redux";
 
 export default function Frame() {
   const [onCartPage, setOnCartPage] = useState(false);
   const [onCheckoutPage, setOnCheckoutPage] = useState(false);
 
   const location = useLocation();
+  const dispatch = useDispatch();
+
 
   // 도메인이 벗어날 경우 원상태의 기본 Hero 변경
   React.useEffect(() => {
+    let basicBasketCount = 0
+    if(location.pathname === '/') {
+      localStorage.clear()
+      dispatch(setBasketListData({basketList: basicBasketCount}))
+    }
+
     if (
       location.pathname !== "/Cart" &&
       location.pathname !== "/Checkout" &&

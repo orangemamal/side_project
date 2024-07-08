@@ -1,6 +1,10 @@
 import React, {useEffect, useState} from 'react';
+import {useDispatch, useSelector} from "react-redux";
+import {setBasketListData} from "../../store/userCommon";
 
 export default function Shop() {
+
+  const dispatch = useDispatch();
 
   const itemsProduct = [
     {
@@ -45,13 +49,11 @@ export default function Shop() {
     },
   ];
 
-
   const [firstScrollEvent, setFirstScrollEvent] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-      console.log(currentScrollY)
 
       if (currentScrollY > 300) {
         setFirstScrollEvent(true)
@@ -68,6 +70,13 @@ export default function Shop() {
     };
   }, []);
 
+  let nowBasketCount = useSelector(state => state.userCommon.basketList);
+
+  const addBasketList = () => {
+    nowBasketCount++
+    dispatch(setBasketListData({basketList: nowBasketCount}))
+  }
+
   return (
     <main className={`animate__animated_scroll ${firstScrollEvent ? 'fadeInRight' : ''}`}>
       <div className="untree_co-section product-section before-footer-section">
@@ -76,7 +85,7 @@ export default function Shop() {
 
             {itemsProduct.map((item, index) => (
               <div className="col-12 col-md-4 col-lg-3 mb-5" key={index}>
-                <a className="product-item" href="#">
+                <a className="product-item" onClick={addBasketList}>
                   <img src={require(`assets/images/product-${item.id}.png`)} className="img-fluid product-thumbnail scale" />
                   <h3 className="product-title">{item.productName}</h3>
                   <strong className="product-price">{item.price.toLocaleString()}<span>원</span></strong>

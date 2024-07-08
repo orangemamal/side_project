@@ -7,7 +7,7 @@ export default function Navigation() {
   const menuItems = ['Home', 'Shop', 'Services', 'Blog', 'About', 'Contact'];
   const dispatch = useDispatch();
   const nowPathIndex = useSelector(state => state.userCommon.nowPathIndex);
-  console.log(nowPathIndex)
+  const nowBasketCount = useSelector(state => state.userCommon.basketList);
 
   const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(null);
@@ -104,7 +104,7 @@ export default function Navigation() {
             <li>
               <Link className="nav-link" to="/Cart" onClick={() => resetNavActive()}>
                 <div className="icon cart animate__animated hover-animate-heartBeat">
-                  <div className="cart_count">{'0'}</div>
+                  <div className="cart_count">{nowBasketCount}</div>
                 </div>
               </Link>
             </li>
