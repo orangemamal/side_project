@@ -1,0 +1,27 @@
+.error_page_wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: $primary;
+  background: $mainLight;
+  .fa-circle-exclamation {
+    font-size: 6.4rem;
+    margin-bottom: 1.6rem;
+  }
+  h1 {
+    margin-bottom: 2.4rem;
+    font-weight: $bold;
+  }
+  .home {
+    padding: 0.8rem 2.4rem;
+    border-radius: 5rem;
+    color: $primary;
+    @include font(1.6rem);
+    // font-weight: $medium;
+    color: $white;
+    background: $gray600;
+  }
+}

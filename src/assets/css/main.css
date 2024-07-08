@@ -1952,6 +1952,33 @@ nav.custom-navbar .custom-navbar-cta li:first-child {
     margin-bottom: 0.4rem;
   }
 }
+.error_page_wrap {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #4D869C;
+  background: #dce5e4;
+}
+.error_page_wrap .fa-circle-exclamation {
+  font-size: 6.4rem;
+  margin-bottom: 1.6rem;
+}
+.error_page_wrap h1 {
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+}
+.error_page_wrap .home {
+  padding: 0.8rem 2.4rem;
+  border-radius: 5rem;
+  color: #4D869C;
+  font: 1.6rem/2rem "Spoqa Han Sans Neo", "sans-serif";
+  color: white;
+  background: #474C52;
+}
+
 .hero {
   overflow: hidden;
   background: #4D869C;

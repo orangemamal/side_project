@@ -3,7 +3,6 @@ import userCommonReducer from './userCommon';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { combineReducers } from 'redux';
-import userCommon from "./userCommon";
 
 const rootReducer = combineReducers({
   userCommon: userCommonReducer,
